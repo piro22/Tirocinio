@@ -1,0 +1,39 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef SmarActCfgMap:
+    !cfg.required max_velocity:            !cfg.type:string
+    !cfg.required velocity:                !cfg.type:string
+    !cfg.required in_position_threshold:   !cfg.type:string
+    !cfg.required in_position_delay:       !cfg.type:string
+    !cfg.required in_position_hold_time:   !cfg.type:string
+    !cfg.required min_limit:               !cfg.type:string
+    !cfg.required max_limit:               !cfg.type:string
+    !cfg.required name:                    !cfg.type:string
+    !cfg.required unit:                    !cfg.type:string
+    !cfg.required position_reference:      !cfg.type:string
+    !cfg.required velocity_reference:      !cfg.type:string
+    !cfg.required positioning_options:     !cfg.type:string
+    !cfg.required referencing_options:     !cfg.type:string
+    !cfg.required calibration_options:     !cfg.type:string
+    !cfg.required scale_factor:            !cfg.type:string
+    !cfg.required channel:                 !cfg.type:string
+    !cfg.required enable:                  !cfg.type:string
+
+
+!cfg.typedef SmarActStatMap(DevStatMap):
+    pos_target:        !cfg.type:string
+    pos_actual:        !cfg.type:string
+    axis_inposition:   !cfg.type:string
+    initialised:       !cfg.type:string
+
+!cfg.typedef SmarActRpcMap(DevRpcMap):
+    rpcMoveAbs:       !cfg.type:string
+    rpcMoveRel:       !cfg.type:string
+
+
+# SmarAct Map Definition
+!cfg.typedef SmarActMap:
+    cfg                     : !cfg.type:SmarActCfgMap
+    stat                    : !cfg.type:SmarActStatMap
+    !cfg.required rpc       : !cfg.type:SmarActRpcMap

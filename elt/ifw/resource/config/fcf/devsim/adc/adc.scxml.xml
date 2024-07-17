@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM" version="1.0" initial="On">
+  <final id="Off"/>
+  <state id="On">
+    <initial>
+      <transition target="On::NotOperational"/>
+    </initial>
+  
+    <state id="On::Operational">
+      <initial>
+        <transition target="On::Operational::Standstill"/>
+      </initial>
+    
+      <state id="On::Operational::Error">
+        <transition event="Move" target="On::Operational::Moving"/>
+      </state>
+    
+      <state id="On::Operational::Tracking">
+        <invoke id="Tracking"/>
+        <transition event="Stop" target="On::Operational::Stopping"/>
+        <transition event="Timeout" target="On::Operational::Error"/>
+        <transition event="StopTrack" target="On::Operational::Standstill"/>
+      </state>
+    
+      <state id="On::Operational::Standstill">
+        <transition event="Move" target="On::Operational::Moving"/>
+        <transition event="Disable" target="On::Operational::Disabling"/>
+        <transition event="StartTrack" target="On::Operational::Presetting"/>
+      </state>
+    
+      <state id="On::Operational::Stopping">
+        <invoke id="Stopping"/>
+        <transition event="StopDone" target="On::Operational::Standstill"/>
+      </state>
+    
+      <state id="On::Operational::Moving">
+        <invoke id="Moving"/>
+        <transition event="MoveDone" target="On::Operational::Standstill"/>
+        <transition event="Stop" target="On::Operational::Stopping"/>
+      </state>
+    
+      <state id="On::Operational::Disabling">
+        <invoke id="Disabling"/>
+        <transition event="DisableDone" target="On::NotOperational::Ready"/>
+      </state>
+    
+      <state id="On::Operational::Presetting">
+        <invoke id="Presetting"/>
+        <transition event="PresetDone" target="On::Operational::Tracking"/>
+        <transition event="Stop" target="On::Operational::Stopping"/>
+      </state>
+
+      <transition event="Reset" target="On::NotOperational::Resetting"/>
+      <transition event="Error" target="On::Operational::Error"/>
+      
+    </state>
+  
+    <state id="On::NotOperational">
+      <initial>
+        <transition target="On::NotOperational::NotReady"/>
+      </initial>
+    
+      <state id="On::NotOperational::NotReady">
+        <transition event="Init" target="On::NotOperational::Initialising"/>
+      </state>
+    
+      <state id="On::NotOperational::Initialising">
+        <invoke id="Initialising"/>
+        <transition event="InitDone" target="On::NotOperational::Ready"/>
+        <transition event="Reset" target="On::NotOperational::Resetting"/>
+        <transition event="Stop" target="On::NotOperational::Aborting"/>
+      </state>
+    
+      <state id="On::NotOperational::Ready">
+        <transition event="Reset" target="On::NotOperational::Resetting"/>
+        <transition event="Enable" target="On::NotOperational::Enabling"/>
+      </state>
+    
+      <state id="On::NotOperational::Aborting">
+        <invoke id="Aborting"/>
+        <transition event="StopDone" target="On::NotOperational::NotReady"/>
+        <transition event="Reset" target="On::NotOperational::Resetting"/>
+      </state>
+    
+      <state id="On::NotOperational::Error">
+        <transition event="Init" target="On::NotOperational::Initialising"/>
+        <transition event="Reset" target="On::NotOperational::Resetting"/>
+        <transition event="HwOk" target="On::NotOperational::NotReady"/>
+      </state>
+    
+      <state id="On::NotOperational::Resetting">
+        <invoke id="Resetting"/>
+        <transition event="ResetDone" target="On::NotOperational::NotReady"/>
+      </state>
+    
+      <state id="On::NotOperational::Enabling">
+        <invoke id="Enabling"/>
+        <transition event="EnableDone" target="On::Operational::Standstill"/>
+      </state>
+      <transition event="Error" target="On::NotOperational::Error"/>
+    </state>
+    <transition event="" target="Off"/>
+  </state>
+</scxml>

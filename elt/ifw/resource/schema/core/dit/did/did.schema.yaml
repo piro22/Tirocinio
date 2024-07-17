@@ -1,0 +1,24 @@
+# @ingroup core_dit_did
+# @copyright ESO - European Southern Observatory
+# @brief IFW Core Dictionary CIi Cfg Service Schema.
+
+!cfg.typedef DidHeader:
+  !cfg.required name:         !cfg.type:string
+  !cfg.required scope:        !cfg.type:string
+  !cfg.required description:  !cfg.type:string
+
+!cfg.typedef DidKeyBase:
+  !cfg.required comment:      !cfg.type:string
+  !cfg.required description:  !cfg.type:string
+
+!cfg.typedef DidBoolKey(DidKeyBase):
+
+!cfg.typedef DidDblKey(DidKeyBase):
+  !cfg.required format:       !cfg.type:string
+  unit:                       !cfg.type:string
+
+!cfg.typedef DidIntKey(DidKeyBase):
+  unit:                       !cfg.type:string
+
+!cfg.typedef DidStrKey(DidKeyBase):
+  unit:                       !cfg.type:string

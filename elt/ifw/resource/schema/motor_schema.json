@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+     "motor": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["MOVE_ABS", "MOVE_REL", "MOVE_BY_NAME", "MOVE_BY_SPEED"],
+          "description": "Motor action."
+        },
+        "pos": {
+          "type": "number",
+          "description": "Motor position in user units."
+        },
+        "enc": {
+          "type": "integer",
+          "description": "Motor position in encoders."
+        },
+        "unit": {
+          "type": "string",
+          "enum": ["UU", "ENC"],
+          "description": "Motor position unit."
+        },
+        "name": {
+          "type": "string",
+          "description": "Motor named position."
+        },
+        "speed": {
+          "type": "number",
+          "description": "Motor speed."
+        }
+      },
+      "required": ["action"]
+    }
+  }
+}

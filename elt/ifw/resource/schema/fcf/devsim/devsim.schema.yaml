@@ -1,0 +1,11 @@
+# @copyright ESO - European Southern Observatory
+# @brief Base schema for the DevSim configuration.
+
+!cfg.include schema/core/opcua/opcuaScxmlSrv.schema.yaml:
+
+!cfg.typedef DevSimCommonCfg(CoreOpcuaSmSrvCfg):
+  local_mode:                 !cfg.type:boolean false
+  update_frequency:           !cfg.type:double  5.0
+  sim_acceleration:           !cfg.type:double  1.0
+  sim_init_time:              !cfg.type:double  0.0
+  sim_delay:                  !cfg.type:double  0.0

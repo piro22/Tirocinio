@@ -1,0 +1,18 @@
+# CCF Camera Name Mapping for the ENVision protocol.
+
+dcs.expo:
+  mode:              "ctrl.nOpMode"
+  time:              "ctrl.lrExpoTime"
+  win_start_x:       "ctrl.nOffsetX"
+  win_start_y:       "ctrl.nOffsetY"
+  win_width:         "ctrl.nWidth"
+  win_height:        "ctrl.nHeight"
+  windowing:         "ctrl.bWindowing"
+  nb:                "ctrl.nFrameTarget"
+
+dcs.status:
+  frame_rate:        "stat.lrFrameRate"
+  frame_count:       "stat.nExpNum"
+  total_frames:      "stat.nTotalExp"
+  state:             "stat.State"
+  sub_state:         "stat.sSubstate"

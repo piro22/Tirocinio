@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM" version="1.0" initial="On">
+  <final id="Off"/>
+  <state id="On">
+    <initial>
+      <transition target="On::NotOperational"/>
+    </initial>
+  
+    <state id="On::NotOperational">
+      <initial>
+        <transition target="On::NotOperational::NotReady"/>
+      </initial>
+    
+      <state id="On::NotOperational::NotReady">
+        <transition event="StdCmds.Init" target="On::NotOperational::Initialising">
+          <customActionDomain:StdActions.Init name="StdActions.Init"/>
+        </transition>
+        <transition event="DcsCmds.SetConfig">
+          <customActionDomain:DcsActions.SetConfig name="DcsActions.SetConfig"/>
+        </transition>
+      </state>
+    
+      <state id="On::NotOperational::Ready">
+        <transition event="StdCmds.Enable" target="On::Operational">
+          <customActionDomain:StdActions.Enable name="StdActions.Enable"/>
+        </transition>
+        <transition event="StdCmds.Init" target="On::NotOperational::Initialising">
+          <customActionDomain:StdActions.Init name="StdActions.Init"/>
+        </transition>
+        <transition event="DcsCmds.WritePars">
+          <customActionDomain:DcsActions.WritePars name="DcsActions.WritePars"/>
+        </transition>
+      </state>
+    
+      <state id="On::NotOperational::Initialising">
+        <invoke id="ActivityInitialising"/>
+        <transition event="DcsCmds.Abort" target="On::NotOperational::NotReady">
+          <customActionDomain:DcsActions.Abort name="DcsActions.Abort"/>
+        </transition>
+        <transition event="Events.InitFailure" target="On::NotOperational::NotReady">
+          <customActionDomain:StdActions.InitFailure name="StdActions.InitFailure"/>
+        </transition>
+        <transition event="Events.InitDone" target="On::NotOperational::Ready">
+          <customActionDomain:StdActions.InitDone name="StdActions.InitDone"/>
+        </transition>
+      </state>
+    
+      <state id="On::NotOperational::Error">
+        <transition event="Events.Recovery" target="On::NotOperational::NotReady"/>
+        <transition event="DcsCmds.Recover">
+          <customActionDomain:DcsActions.Recover name="DcsActions.Recover"/>
+        </transition>
+      </state>
+      <transition event="Events.Error" target="On::NotOperational::Error"/>
+    </state>
+  
+    <state id="On::Operational">
+      <initial>
+        <transition target="On::Operational::Idle"/>
+      </initial>
+    
+      <state id="On::Operational::Acquisition">
+        <initial>
+          <transition target="On::Operational::Acquisition::NotRecording"/>
+        </initial>
+      
+        <state id="On::Operational::Acquisition::NotRecording">
+          <transition event="RecCmds.RecStart" target="On::Operational::Acquisition::Recording">
+            <customActionDomain:RecActions.RecStart name="RecActions.RecStart"/>
+          </transition>
+          <transition event="DcsCmds.Setup">
+            <customActionDomain:DcsActions.Setup name="DcsActions.Setup"/>
+          </transition>
+        </state>
+      
+        <state id="On::Operational::Acquisition::Recording">
+          <invoke id="ActivityRecording"/>
+          <transition event="RecCmds.RecStop" target="On::Operational::Acquisition::NotRecording">
+            <customActionDomain:RecActions.RecStop name="RecActions.RecStop"/>
+          </transition>
+          <transition event="RecCmds.RecAbort" target="On::Operational::Acquisition::NotRecording">
+            <customActionDomain:RecActions.RecAbort name="RecActions.RecAbort"/>
+          </transition>
+          <transition event="Events.RecCompleted" target="On::Operational::Acquisition::NotRecording">
+            <customActionDomain:RecActions.RecCompleted name="RecActions.RecCompleted"/>
+          </transition>
+          <transition event="Events.RecFailure" target="On::Operational::Acquisition::NotRecording">
+            <customActionDomain:RecActions.RecFailure name="RecActions.RecFailure"/>
+          </transition>
+          <transition event="RecCmds.RecPause" target="On::Operational::Acquisition::RecPaused">
+            <customActionDomain:RecActions.RecPause name="RecActions.RecPause"/>
+          </transition>
+        </state>
+      
+        <state id="On::Operational::Acquisition::RecPaused">
+          <transition event="RecCmds.RecContinue" target="On::Operational::Acquisition::Recording">
+            <customActionDomain:RecActions.RecContinue name="RecActions.RecContinue"/>
+          </transition>
+          <transition event="RecCmds.RecStop" target="On::Operational::Acquisition::NotRecording">
+            <customActionDomain:RecActions.RecStop name="RecActions.RecStop"/>
+          </transition>
+          <transition event="RecCmds.RecAbort" target="On::Operational::Acquisition::NotRecording">
+            <customActionDomain:RecActions.RecAbort name="RecActions.RecAbort"/>
+          </transition>
+          <transition event="DcsCmds.Setup">
+            <customActionDomain:DcsActions.Setup name="DcsActions.Setup"/>
+          </transition>
+        </state>
+        <transition event="StdCmds.Stop" target="On::Operational::Idle">
+          <customActionDomain:StdActions.Stop name="StdActions.Stop"/>
+        </transition>
+        <transition event="Events.Completed" target="On::Operational::Idle">
+          <customActionDomain:DcsActions.AcqCompleted name="DcsActions.AcqCompleted"/>
+        </transition>
+        <transition event="DcsCmds.Abort" target="On::Operational::Idle">
+          <customActionDomain:DcsActions.Abort name="DcsActions.Abort"/>
+        </transition>
+        <transition event="Events.Failed" target="On::Operational::Idle">
+          <customActionDomain:DcsActions.AcqFailed name="DcsActions.AcqFailed"/>
+        </transition>
+      </state>
+    
+      <state id="On::Operational::Idle">
+        <transition event="RecCmds.RecStart" target="On::Operational::Acquisition::Recording">
+          <customActionDomain:RecActions.RecStart name="RecActions.RecStart"/>
+        </transition>
+        <transition event="DcsCmds.Start" target="On::Operational::Acquisition">
+          <customActionDomain:DcsActions.Start name="DcsActions.Start"/>
+        </transition>
+        <transition event="DcsCmds.Setup">
+          <customActionDomain:DcsActions.Setup name="DcsActions.Setup"/>
+        </transition>
+        <transition event="DcsCmds.WritePars">
+          <customActionDomain:DcsActions.WritePars name="DcsActions.WritePars"/>
+        </transition>
+      </state>
+    
+      <state id="On::Operational::Error">
+        <transition event="Events.Recovery" target="On::Operational::Idle"/>
+        <transition event="DcsCmds.Recover">
+          <customActionDomain:DcsActions.Recover name="DcsActions.Recover"/>
+        </transition>
+      </state>
+      <transition event="StdCmds.Disable" target="On::NotOperational::Ready">
+        <customActionDomain:StdActions.Disable name="StdActions.Disable"/>
+      </transition>
+      <transition event="Events.Error" target="On::Operational::Error"/>
+    </state>
+    <transition event="StdCmds.Exit" target="Off">
+      <customActionDomain:StdActions.Exit name="StdActions.Exit"/>
+    </transition>
+    <transition event="StdCmds.Reset" target="On::NotOperational::NotReady">
+      <customActionDomain:StdActions.Reset name="StdActions.Reset"/>
+    </transition>
+    <transition event="Events.CtrlC" target="Off">
+      <customActionDomain:DcsActions.ExitNoReply name="DcsActions.ExitNoReply"/>
+    </transition>
+    <transition event="DcsCmds.GetDiagnostics">
+      <customActionDomain:DcsActions.GetDiagnostics name="DcsActions.GetDiagnostics"/>
+    </transition>
+    <transition event="DcsCmds.Execute">
+      <customActionDomain:DcsActions.Execute name="DcsActions.Execute"/>
+    </transition>
+    <transition event="DcsCmds.GetConfig">
+      <customActionDomain:DcsActions.GetConfig name="DcsActions.GetConfig"/>
+    </transition>
+    <transition event="DcsCmds.GetSetup">
+      <customActionDomain:DcsActions.GetSetup name="DcsActions.GetSetup"/>
+    </transition>
+    <transition event="StdCmds.GetVersion">
+      <customActionDomain:StdActions.GetVersion name="StdActions.GetVersion"/>
+    </transition>
+    <transition event="DcsCmds.Ping">
+      <customActionDomain:DcsActions.Ping name="DcsActions.Ping"/>
+    </transition>
+    <transition event="DcsCmds.ReadPars">
+      <customActionDomain:DcsActions.ReadPars name="DcsActions.ReadPars"/>
+    </transition>
+    <transition event="RecCmds.RecStatus">
+      <customActionDomain:RecActions.RecStatus name="RecActions.RecStatus"/>
+    </transition>
+    <transition event="RecCmds.RecWait">
+      <customActionDomain:RecActions.RecWait name="RecActions.RecWait"/>
+    </transition>
+    <transition event="DcsCmds.Scan">
+      <customActionDomain:DcsActions.Scan name="DcsActions.Scan"/>
+    </transition>
+    <transition event="StdCmds.SetLogLevel">
+      <customActionDomain:StdActions.SetLogLevel name="StdActions.SetLogLevel"/>
+    </transition>
+    <transition event="StdCmds.GetState">
+      <customActionDomain:StdActions.GetState name="StdActions.GetState"/>
+    </transition>
+    <transition event="StdCmds.GetStatus">
+      <customActionDomain:StdActions.GetStatus name="StdActions.GetStatus"/>
+    </transition>
+  </state>
+</scxml>

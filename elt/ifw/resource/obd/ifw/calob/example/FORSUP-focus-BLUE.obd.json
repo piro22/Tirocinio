@@ -1,0 +1,152 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-focus-BLUE",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-focus-BLUE",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_img_tec_focus",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Instrument internal Focus calibration (BLUE)."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 5
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.CALC",
+          "type": "string",
+          "value": "T"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 7
+        },
+        {
+          "name": "SEQ.STEPSIZE",
+          "type": "string",
+          "value": 0.15
+        },
+        {
+          "name": "TEL.ADC.TYPE",
+          "type": "string",
+          "value": "COORD"
+        },
+        {
+          "name": "INS.COLL.NAID",
+          "type": "string",
+          "value": "COLL_SR+6"
+        },
+        {
+          "name": "INS.DRIV50.POS",
+          "type": "string",
+          "value": -0.8
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "R_SPECIAL+76"
+        },
+        {
+          "name": "INS.FILT2.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS.LAMP1.NAID",
+          "type": "string",
+          "value": "FlatBlue+1"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.NAID",
+          "type": "string",
+          "value": "FlatBlue+2"
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP3.NAID",
+          "type": "string",
+          "value": "FlatRed+1"
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.NAID",
+          "type": "string",
+          "value": "FlatRed+2"
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.PINH.NAID",
+          "type": "string",
+          "value": "pinh0_1arcsec"
+        }
+      ]
+    }
+  ]
+}

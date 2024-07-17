@@ -1,0 +1,175 @@
+!cfg.include config/fcf/devmgr/definitions/pdu7979-402.yaml:
+
+
+pdu2: !cfg.type:Pdu7979402
+  mapfile: "config/fcf/devmgr/mapping/iodev.yaml"
+  dev_endpoint: opc.tcp://134.171.12.68:4840
+  sim_endpoint: opc.tcp://134.171.12.68:4840
+  fits_prefix: "SENSOR1"
+  channels: [
+  {
+  name: current01,
+  description: "Socket 01 current",
+  fits_prefix: "CH1 STAT",
+  type: AI,
+  unit: A,
+  map: ai1
+  },
+  {
+  name: current02,
+  description: "Socket 02 current",
+  fits_prefix: "CH2 STAT",
+  type: AI,
+  unit: A,
+  map: ai2
+  },
+  {
+  name: current03,
+  description: "Socket 03 current",
+  fits_prefix: "CH3 STAT",
+  type: AI,
+  unit: A,
+  map: ai3
+  },
+  {
+  name: current04,
+  description: "Socket 04 current",
+  fits_prefix: "CH4 STAT",
+  type: AI,
+  unit: A,
+  map: ai4
+  },
+  {
+  name: current05,
+  description: "Socket 05 current",
+  fits_prefix: "CH5 STAT",
+  type: AI,
+  unit: A,
+  map: ai5
+  },
+  {
+  name: current06,
+  description: "Socket 06 current",
+  fits_prefix: "CH6 STAT",
+  type: AI,
+  unit: A,
+  map: ai6
+  },
+  {
+  name: total_current,
+  description: "Total Current",
+  fits_prefix: "CH7 STAT",
+  type: AI,
+  unit: A,
+  map: ai7
+  },
+  {
+  name: socket01,
+  description: "channel1",
+  fits_prefix: "CH8 STAT",
+  type: IO,
+  unit: "A",
+  map: io1,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: socket02,
+  description: "channel2",
+  fits_prefix: "CH9 STAT",
+  type: IO,
+  unit: "A",
+  map: io2,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: socket03,
+  description: "channel3",
+  fits_prefix: "CH10 STAT",
+  type: IO,
+  unit: "A",
+  map: io3,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: socket04,
+  description: "channel4",
+  fits_prefix: "CH11 VAL",
+  type: IO,
+  unit: "A",
+  map: io4,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: socket05,
+  description: "channel5",
+  fits_prefix: "CH12 VAL",
+  type: IO,
+  unit: "A",
+  map: io5,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: socket06,
+  description: "channel6",
+  fits_prefix: "CH13 VAL",
+  type: IO,
+  unit: "A",
+  map: io6,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  }
+  ]
+

@@ -1,0 +1,4157 @@
+- uri: "states/state"
+  type: "STRING"
+  default_value: ""
+
+- uri: "states/substate"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter1/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter1/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter1/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter1/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter1/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter2/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter2/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter2/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter2/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter2/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter3/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter3/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter3/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter3/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter3/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter4/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter4/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter4/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter4/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter4/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter5/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter5/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter5/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter5/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter5/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter6/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter6/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter6/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter6/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter6/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter7/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter7/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter7/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter7/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter7/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter8/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter8/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter8/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter8/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter8/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/shutter9/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter9/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter9/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/shutter9/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/shutter9/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp1/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp1/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp1/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp1/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp1/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp1/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp1/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp1/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp1/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp1/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp2/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp2/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp2/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp2/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp2/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp2/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp2/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp2/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp2/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp2/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp3/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp3/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp3/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp3/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp3/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp3/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp3/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp3/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp3/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp3/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp4/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp4/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp4/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp4/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp4/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp4/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp4/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp4/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp4/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp4/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp5/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp5/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp5/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp5/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp5/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp5/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp5/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp5/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp5/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp5/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp6/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp6/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp6/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp6/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp6/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp6/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp6/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp6/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp6/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp6/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp7/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp7/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp7/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp7/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp7/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp7/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp7/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp7/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp7/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp7/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp8/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp8/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp8/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp8/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp8/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp8/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp8/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp8/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp8/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp8/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/lamp9/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp9/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp9/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp9/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp9/lcs/intensity"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/lamp9/lcs/time_left"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp9/lcs/analog_feedback"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/lamp9/lcs/on_analog"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp9/lcs/on_digital"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/lamp9/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor1/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor1/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor1/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor1/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor1/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor1/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor2/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor2/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor2/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor2/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor2/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor3/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor3/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor3/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor3/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor3/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor4/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor4/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor4/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor4/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor4/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor5/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor5/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor5/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor5/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor5/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor6/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor6/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor6/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor6/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor6/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor7/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor7/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor7/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+- uri: "devices/motor7/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor7/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor8/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor8/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor8/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor8/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor8/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor9/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor9/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor9/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor9/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor9/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor10/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor10/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor10/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor10/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor10/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor11/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor11/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor11/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor11/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor11/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor12/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor12/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor12/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor12/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor12/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor13/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor13/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor13/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor13/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor13/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor14/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor14/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor14/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor14/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor14/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor15/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor15/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor15/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor15/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor15/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor16/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor16/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor16/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor16/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor16/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor17/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor17/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor17/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor17/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor17/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor18/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor18/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor18/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor18/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor18/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor19/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor19/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor19/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor19/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor19/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor20/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor20/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor20/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor20/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor20/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor21/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor21/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor21/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor21/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor21/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor22/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor22/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor22/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor22/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor22/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor23/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor23/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor23/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor23/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor23/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor24/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor24/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor24/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor24/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor24/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor25/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor25/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor25/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor25/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor25/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor26/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor26/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor26/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor26/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor26/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor27/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor27/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor27/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor27/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor27/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+
+- uri: "devices/motor28/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor28/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor28/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor28/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor28/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/state"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/substate"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/local"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/error_code"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/pos_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/vel_actual"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/pos_error"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/pos_actual_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor29/lcs/initialised"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/init_step"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/init_action"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/mode"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/axis_ready"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/axis_enable"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/axis_brake"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/axis_lock"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/axis_inposition"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/signal_lstop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/signal_lhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/signal_ref"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/signal_index"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/signal_uhw"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/signal_ustop"
+  type: "BOOLEAN"
+  default_value: false
+
+- uri: "devices/motor29/lcs/axis_info_data1"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/axis_info_data2"
+  type: "INT16"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/pos_target"
+  type: "DOUBLE"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/pos_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/target_enc"
+  type: "INT32"
+  default_value: 0
+
+- uri: "devices/motor29/lcs/pos_target_name"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor29/lcs/error_str"
+  type: "STRING"
+  default_value: ""
+
+- uri: "devices/motor29/lcs/scale_factor"
+  type: "DOUBLE"
+  default_value: 0
+

@@ -1,0 +1,27 @@
+!cfg.include config/fcf/devmgr/definitions/adc.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+adc1: !cfg.type:Adc
+  overview: 'Adc device example 1'
+  description: "Adc device example 1 description"
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN_FAST.adc                       # OPCUA attribute prefix
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://134.171.57.209:4840       # Simulation address
+  fits_prefix: "ADC1"
+  motors         : [
+  {
+  name: 'adc1_motor1',
+  prefix: 'motor1',
+  cfgfile: "config/fcf/devmgr/devices/adc1Motor1.yaml"
+  },
+  {
+  name: 'adc1_motor2',
+  prefix: 'motor2',
+  cfgfile: "config/fcf/devmgr/devices/adc1Motor2.yaml"
+  }
+  ]
+  ctrl_config:
+    trk_threshold:   1.0
+
+

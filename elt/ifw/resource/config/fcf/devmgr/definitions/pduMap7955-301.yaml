@@ -1,0 +1,24 @@
+# device mapping configuration
+
+!cfg.typedef AIMap:
+    ai1:              !cfg.type:vector_string
+    ai2:              !cfg.type:vector_string
+
+!cfg.typedef IOMap:
+    io1:              !cfg.type:vector_string
+    io2:              !cfg.type:vector_string
+    io3:              !cfg.type:vector_string
+    io4:              !cfg.type:vector_string
+    io5:              !cfg.type:vector_string
+    io6:              !cfg.type:vector_string
+    io7:              !cfg.type:vector_string
+    io8:              !cfg.type:vector_string
+    io9:              !cfg.type:vector_string
+    io10:              !cfg.type:vector_string
+    io11:              !cfg.type:vector_string
+    io12:              !cfg.type:vector_string
+
+
+!cfg.typedef IODevMap:
+    aiChannels              : !cfg.type:AIMap
+    ioChannels              : !cfg.type:IOMap

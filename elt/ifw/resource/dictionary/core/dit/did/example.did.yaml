@@ -1,0 +1,31 @@
+!cfg.include schema/core/dit/did/did.schema.yaml:
+
+header: !cfg.type:DidHeader
+  name: core/dit/did/example_cii.did.yaml
+  scope: Generic
+  description: |
+    *Heading1*
+    Bla bla bla
+    
+    **Heading2**
+    Bla bla bla
+
+SIMPLE: !cfg.type:DidBoolKey
+  comment: Standard FITS
+  description: |
+    SIMPLE must be equal to 'T' to conform to FITS.
+
+FCS# MOT# POS: !cfg.type:DidDblKey
+  format: f
+  unit: UU
+  comment: Motor position
+  description: |
+    Motor position
+
+FCS# MOT# ID: !cfg.type:DidStrKey
+  format: s
+  comment: Filter ID
+  description: |
+    Description line 1
+    Description line 2
+    Description line 3

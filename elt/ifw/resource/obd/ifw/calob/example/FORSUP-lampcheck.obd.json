@@ -1,0 +1,1048 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-lampcheck",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-lampcheck",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_lss_tec_flatLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_flatLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 3
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_flatLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 4
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 3
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+4"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+4"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_flatLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 5
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 1.8
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+4"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+4"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_flatLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 6
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 7.2
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_flatLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 7
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 5
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_waveLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit wavelength calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 8
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_waveLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit wavelength calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 9
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_waveLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit wavelength calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 10
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_waveLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit wavelength calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 11
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_waveLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit wavelength calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 12
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_waveLampcheck",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit wavelength calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 13
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/motorMap.yaml:
+
+!cfg.typedef DrotCfgMap(MotorCfgMap):
+    !cfg.required focus_sign:         !cfg.type:string
+    !cfg.required dir_sign:           !cfg.type:string
+    !cfg.required stat_ref:           !cfg.type:string
+    !cfg.required sky_ref:            !cfg.type:string
+    !cfg.required elev_ref:           !cfg.type:string
+    !cfg.required user_ref:           !cfg.type:string
+    !cfg.required user_par1:          !cfg.type:string
+    !cfg.required user_par2:          !cfg.type:string
+    !cfg.required user_par3:          !cfg.type:string
+    !cfg.required user_par4:          !cfg.type:string
+    !cfg.required trk_period:         !cfg.type:string
+    !cfg.required trk_threshold:      !cfg.type:string
+
+!cfg.typedef DrotStatMap(MotorStatMap):
+    track_mode:        !cfg.type:string
+    track_offset:        !cfg.type:string
+    rotation:          !cfg.type:string
+    pupil:             !cfg.type:string
+    angle_on_sky:      !cfg.type:string
+
+!cfg.typedef DrotRpcMap(MotorRpcMap):
+    rpcMoveAngle:     !cfg.type:string
+    rpcStartTrack:    !cfg.type:string
+    rpcStopTrack:     !cfg.type:string
+    rpcTrackOffset:   !cfg.type:string
+
+
+# Drot Map Definition
+!cfg.typedef DrotMap:
+    !cfg.required cfg       : !cfg.type:DrotCfgMap
+    !cfg.required stat      : !cfg.type:DrotStatMap
+    !cfg.required rpc       : !cfg.type:DrotRpcMap

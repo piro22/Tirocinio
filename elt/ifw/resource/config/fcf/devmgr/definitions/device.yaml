@@ -1,0 +1,23 @@
+# device basic configuration
+
+!cfg.typedef DeviceBase:
+    type       : !cfg.type:string
+    interface  : !cfg.type:string  'Open62541'
+    simulated  : !cfg.type:boolean false
+    ignored    : !cfg.type:boolean false
+    !cfg.required dev_endpoint    : !cfg.type:string
+    !cfg.required sim_endpoint    : !cfg.type:string
+    !cfg.required mapfile    : !cfg.type:string
+    alias       : !cfg.type:string ''
+    id          : !cfg.type:string ''
+    description : !cfg.type:string ''
+    overview    : !cfg.type:string ''
+    !cfg.required fits_prefix : !cfg.type:string
+
+
+# Specific configuration for devices with OPCUA interface
+!cfg.typedef DeviceOpcua(DeviceBase):
+    !cfg.required identifier: !cfg.type:string         # OPCUA Object Identifier
+    !cfg.required prefix:     !cfg.type:string         # OPCUA attribute prefix
+    namespace:  !cfg.type:uint32 4                     # OPCUA namespace
+

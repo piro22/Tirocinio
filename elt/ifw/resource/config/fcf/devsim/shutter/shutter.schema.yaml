@@ -1,0 +1,9 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the Shutter DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimShutterCfg(DevSimCommonCfg):
+  opcua_profile:                        !cfg.type:string "config/fcf/devsim/shutter/shutter.namespace.yaml"
+  state_machine_scxml:                  !cfg.type:string "config/fcf/devsim/shutter/shutter.scxml.xml"
+  initial_state:                        !cfg.type:boolean

@@ -1,0 +1,75 @@
+
+InfoDate:             info.sDate
+InfoDescription:      info.sDescription
+InfoName:             info.sName
+InfoPlatform:         info.sPlatform
+InfoSynopsis:         info.sSynopsis
+InfoVersionMajor:     info.nVersionMajor
+InfoVersionMinor:     info.nVersionMinor
+
+CtrlExecute:          ctrl.bExecute
+CtrlIntensity:        ctrl.lrIntensity(Double)
+CtrlCommand:          ctrl.nCommand
+CtrlTimeOnLimit:      ctrl.nTimeOnLimit(UInt32)
+
+CfgAnalogRange:       cfg.nAnalogRange(UInt32)
+CfgAnalogThreshold:   cfg.nAnalogThreshold
+CfgCoolDown:          cfg.nCooldown(UInt32)
+CfgDebug:             cfg.bDebug
+CfgIgnoreFault:       cfg.bIgnoreFault
+CfgInitialState:      cfg.bInitialState
+CfgInvertAnalog:      cfg.bInvertAnalog
+CfgLogExtTime:        cfg.bLogExtTime
+CfgLog:               cfg.bLog
+CfgLowFault:          cfg.bActiveLowFault
+CfgLowOn:             cfg.bActiveLowOn
+CfgLowSwitch:         cfg.bActiveLowSwitch
+CfgMaxon:             cfg.nMaxOn(UInt32)
+CfgName:              cfg.sName
+CfgSigStablePeriod:   cfg.nSigStablePeriod(UInt32)
+CfgTimeout:           cfg.nTimeout(UInt32)
+CfgWarmUp:            cfg.nWarmup(UInt32)
+CfgInitialIntensity:  cfg.lrInitialIntensity(Double)
+
+StatActionDesc:       stat.sActionDesc
+StatCheckTimeLeft:    stat.bCheckTimeLeft
+StatCycleCounter:     stat.nCycleCounter(UInt32)
+StatErrorCode:        stat.nErrorCode
+StatErrorText:        stat.sErrorText
+StatEventDesc:        stat.sEventDesc
+StatHwStatus:         stat.sHwStatus
+StatHwStatusNum:      stat.nHwStatus
+StatIntensity:        stat.lrIntensity(Double)
+StatLastCommand:      stat.sLastCommand
+StatLastCommandNum:   stat.nLastCommand
+StatLibVersion:       stat.sLibVersion
+StatLocal:            stat.bLocal
+StatRpcErrorCode:     stat.nRpcErrorCode
+StatRpcErrorText:     stat.sRpcErrorText
+StatState:            stat.sState
+StatStateNum:         stat.nState
+StatStatus:           stat.sStatus
+StatStatusNum:        stat.nStatus
+StatSubstate:         stat.sSubstate
+StatSubstateNum:      stat.nSubstate
+StatTimeLeft:         stat.nTimeLeft(UInt32)
+StatTimeOff:          stat.nTimeOff(UInt32)
+StatTimeOffStart:     stat.nTimeOffStart(UInt32)
+StatTimeOn:           stat.nTimeOn(UInt32)
+StatTimeOnLimit:      stat.nTimeOnLimit(UInt32)
+StatTimeOnStart:      stat.nTimeOnStart(UInt32)
+StatTimeOnTotal:      stat.nTimeOnTotal(UInt32)
+StatTimeOnTotalStart: stat.nTimeOnTotalStart(UInt32)
+StatOnAnalog:         stat.bOnAnalog
+StatOnDigital:        stat.bOnDigital
+StatOn:               stat.nOn
+
+RpcDisable:           rpc.Disable(O:ReturnValue(Int16))
+RpcEnable:            rpc.Enable(O:ReturnValue(Int16))
+RpcExit:              rpc.Exit(O:ReturnValue(Int16))
+RpcInit:              rpc.Init(O:ReturnValue(Int16))
+RpcReset:             rpc.Reset(O:ReturnValue(Int16))
+RpcState:             rpc.State(O:StateStat(String))
+RpcStop:              rpc.Stop(O:ReturnValue(Int16))
+RpcSwitchOff:         rpc.Off(O:ReturnValue(Int16))
+RpcSwitchOn:          rpc.On(I:in_lrIntensity(Double), I:in_nTimeOnLimit(UInt32), O:ReturnValue(Int16))

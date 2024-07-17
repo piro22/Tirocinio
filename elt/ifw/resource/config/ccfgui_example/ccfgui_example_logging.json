@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "handlers": {
+        "cii-logsink": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "backupCount": 10,
+            "filename": "/home_local/eltdev/NGCII/LOG_SINK/wdglib_dcs_ccfgui_example.log",
+            "formatter": "cii"
+
+        },
+        "cii-console": {
+            "class": "logging.StreamHandler",
+            "formatter": "cii-brief",
+            "stream": "ext://sys.stdout"
+        }
+    },
+    "formatters": {
+        "cii-brief": {
+            "format": "%(asctime)s.%(msecs)03d %(levelname)05s %(threadName)s %(name)s %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%SZ"
+        }
+    },
+    "root": {
+        "handlers": [ 
+            "cii-logsink",
+            "cii-console"
+        ],
+        "level": "DEBUG"
+    }
+}

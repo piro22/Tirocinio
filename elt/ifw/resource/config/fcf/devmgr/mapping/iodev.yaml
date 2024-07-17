@@ -1,0 +1,29 @@
+!cfg.include config/fcf/devmgr/definitions/iodevMap.yaml:
+
+IODev: !cfg.type:IODevMap
+  stat:
+    state:            stat.nState
+    substate:         stat.nSubstate
+    status:           stat.nStatus
+    local:            stat.bLocal
+    error_code:       stat.nErrorCode
+
+  rpc:
+    rpcInit:          RPC_Init
+    rpcEnable:        RPC_Enable
+    rpcDisable:       RPC_Disable
+    rpcStop:          RPC_Stop
+    rpcReset:         RPC_Reset
+    rpcSetOutputs:    RPC_SetOutputs
+
+  doChannels:
+    do1:              ctrl.arrDO[0].bValue
+    do2:              ctrl.arrDO[1].bValue
+    do3:              ctrl.arrDO[2].bValue
+    do4:              ctrl.arrDO[3].bValue
+
+  aoChannels:
+    ao1:              ctrl.arrAO[0].lrValueUser
+    ao2:              ctrl.arrAO[1].lrValueUser
+    ao3:              ctrl.arrAO[2].lrValueUser
+    ao4:              ctrl.arrAO[3].lrValueUser

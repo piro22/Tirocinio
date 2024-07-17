@@ -1,0 +1,8 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the Actuator DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimActuatorCfg(DevSimCommonCfg):
+  opcua_profile:              !cfg.type:string "config/fcf/devsim/actuator/actuator.namespace.yaml"
+  state_machine_scxml:        !cfg.type:string "config/fcf/devsim/actuator/actuator.scxml.xml"

@@ -1,0 +1,18 @@
+!cfg.include config/fcf/devmgr/definitions/smaract.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+smaract1: !cfg.type:Smaract
+  identifier: PLC1
+  prefix: MAIN.SmarAct_Sim.x_fw1
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://127.0.0.1:7578
+  fits_prefix: "MOT1"
+
+  ctrl_config:
+    max_velocity:              3.0
+    velocity:                  10.0
+    name:                      "Filter Wheel 1"
+    unit:                      "deg"
+    in_position_delay:         500
+    position_reference:        60
+    velocity_reference:        20

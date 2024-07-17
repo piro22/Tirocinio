@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "handlers": {
+        "cii-logsink": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "backupCount": 10,
+            "filename": "ccfGui.log",
+            "formatter": "cii"
+
+        },
+        "cii-console": {
+            "class": "logging.StreamHandler",
+            "formatter": "cii-brief",
+            "stream": "ext://sys.stdout"
+        }
+    },
+    "formatters": {
+        "cii-brief": {
+            "format": "%(asctime)s.%(msecs)03d %(levelname)05s %(threadName)s %(name)s %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%SZ"
+        }
+    },
+    "root": {
+        "handlers": [ 
+            "cii-logsink"
+        ],
+        "level": "INFO"
+    }
+}

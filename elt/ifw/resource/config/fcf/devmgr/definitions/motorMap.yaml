@@ -1,0 +1,113 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef MotorCfgMap:
+    !cfg.required brake:              !cfg.type:string
+    !cfg.required backlash:           !cfg.type:string
+    !cfg.required axis_type:          !cfg.type:string
+
+    !cfg.required velocity:           !cfg.type:string
+    !cfg.required max_pos:            !cfg.type:string
+    !cfg.required min_pos:            !cfg.type:string
+    !cfg.required check_inpos:        !cfg.type:string
+    !cfg.required lock:               !cfg.type:string
+    !cfg.required lock_pos:           !cfg.type:string
+    !cfg.required lock_tolerance:     !cfg.type:string
+    !cfg.required disable:            !cfg.type:string
+
+    !cfg.required init_timeout:       !cfg.type:string
+    !cfg.required move_timeout:       !cfg.type:string
+    !cfg.required switch_timeout:     !cfg.type:string
+
+    !cfg.required low_brake:          !cfg.type:string
+    !cfg.required low_inpos:          !cfg.type:string
+    !cfg.required active_low_lstop:   !cfg.type:string
+    !cfg.required active_low_lhw:     !cfg.type:string
+    !cfg.required active_low_ref:     !cfg.type:string
+    !cfg.required active_low_index:   !cfg.type:string
+    !cfg.required active_low_uhw:     !cfg.type:string
+    !cfg.required active_low_ustop:   !cfg.type:string
+
+    !cfg.required exec_pre_init:      !cfg.type:string
+    !cfg.required exec_post_init:     !cfg.type:string
+    !cfg.required exec_pre_move:      !cfg.type:string
+    !cfg.required exec_post_move:     !cfg.type:string
+
+    !cfg.required init_seq1_action:   !cfg.type:string
+    !cfg.required init_seq1_value1:   !cfg.type:string
+    !cfg.required init_seq1_value2:   !cfg.type:string
+
+    !cfg.required init_seq2_action:   !cfg.type:string
+    !cfg.required init_seq2_value1:   !cfg.type:string
+    !cfg.required init_seq2_value2:   !cfg.type:string
+
+    !cfg.required init_seq3_action:   !cfg.type:string
+    !cfg.required init_seq3_value1:   !cfg.type:string
+    !cfg.required init_seq3_value2:   !cfg.type:string
+
+    !cfg.required init_seq4_action:   !cfg.type:string
+    !cfg.required init_seq4_value1:   !cfg.type:string
+    !cfg.required init_seq4_value2:   !cfg.type:string
+
+    !cfg.required init_seq5_action:   !cfg.type:string
+    !cfg.required init_seq5_value1:   !cfg.type:string
+    !cfg.required init_seq5_value2:   !cfg.type:string
+
+    !cfg.required init_seq6_action:   !cfg.type:string
+    !cfg.required init_seq6_value1:   !cfg.type:string
+    !cfg.required init_seq6_value2:   !cfg.type:string
+
+    !cfg.required init_seq7_action:   !cfg.type:string
+    !cfg.required init_seq7_value1:   !cfg.type:string
+    !cfg.required init_seq7_value2:   !cfg.type:string
+
+    !cfg.required init_seq8_action:   !cfg.type:string
+    !cfg.required init_seq8_value1:   !cfg.type:string
+    !cfg.required init_seq8_value2:   !cfg.type:string
+
+    !cfg.required init_seq9_action:   !cfg.type:string
+    !cfg.required init_seq9_value1:   !cfg.type:string
+    !cfg.required init_seq9_value2:   !cfg.type:string
+
+    !cfg.required init_seq10_action:  !cfg.type:string
+    !cfg.required init_seq10_value1:  !cfg.type:string
+    !cfg.required init_seq10_value2:  !cfg.type:string
+
+!cfg.typedef MotorStatMap(DevStatMap):
+    pos_target:        !cfg.type:string
+    pos_actual:        !cfg.type:string
+    pos_error:         !cfg.type:string
+    vel_actual:        !cfg.type:string
+    vel_target:        !cfg.type:string
+    scale_factor:      !cfg.type:string
+    backlash_step:     !cfg.type:string
+    mode:              !cfg.type:string
+    initialised:       !cfg.type:string
+    init_step:         !cfg.type:string
+    init_action:       !cfg.type:string
+    axis_ready:        !cfg.type:string
+    axis_enable:       !cfg.type:string
+    axis_inposition:   !cfg.type:string
+    axis_lock:         !cfg.type:string
+    axis_brake:        !cfg.type:string
+    axis_info_data1:   !cfg.type:string
+    axis_info_data2:   !cfg.type:string
+    user_unit:         !cfg.type:string
+
+    signal_lstop:      !cfg.type:string
+    signal_lhw:        !cfg.type:string
+    signal_ref:        !cfg.type:string
+    signal_index:      !cfg.type:string
+    signal_uhw:        !cfg.type:string
+    signal_ustop:      !cfg.type:string
+
+!cfg.typedef MotorRpcMap(DevRpcMap):
+    rpcMoveAbs:       !cfg.type:string
+    rpcMoveRel:       !cfg.type:string
+    rpcMoveVel:       !cfg.type:string
+
+# Motor Map Definition
+!cfg.typedef MotorMap:
+    !cfg.required cfg       : !cfg.type:MotorCfgMap
+    stat      : !cfg.type:MotorStatMap
+    !cfg.required rpc       : !cfg.type:MotorRpcMap

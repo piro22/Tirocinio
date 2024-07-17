@@ -1,0 +1,24 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef ShutterCfgMap:
+    !cfg.required low_closed:     !cfg.type:string
+    !cfg.required low_fault:      !cfg.type:string
+    !cfg.required low_open:       !cfg.type:string
+    !cfg.required low_switch:     !cfg.type:string
+    !cfg.required ignore_closed:  !cfg.type:string
+    !cfg.required ignore_fault:   !cfg.type:string
+    !cfg.required ignore_open:    !cfg.type:string
+    !cfg.required initial_state:  !cfg.type:string
+    !cfg.required timeout:        !cfg.type:string
+
+!cfg.typedef ShutterRpcMap(DevRpcMap):
+    !cfg.required rpcClose:       !cfg.type:string
+    !cfg.required rpcOpen:        !cfg.type:string
+
+!cfg.typedef ShutterMap:
+    !cfg.required cfg       : !cfg.type:ShutterCfgMap
+    !cfg.required stat      : !cfg.type:DevStatMap
+    !cfg.required rpc       : !cfg.type:ShutterRpcMap
+
+

@@ -1,0 +1,22 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/pduMap7979-402.yaml:
+
+
+IODev: !cfg.type:IODevMap
+  aiChannels: 
+    ai1:              "V1.69"
+    ai2:              "V1.102"
+    ai3:              "V1.135"
+    ai4:              "V1.168"
+    ai5:              "V1.201"
+    ai6:              "V1.234"
+    ai7:              "V1.2"
+
+  ioChannels:
+    io1:              "V1.62"
+    io2:              "V1.95"
+    io3:              "V1.128"
+    io4:              "V1.161"
+    io5:              "V1.194"
+    io6:              "V1.227"
+

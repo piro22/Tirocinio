@@ -1,0 +1,9 @@
+# @copyright ESO - European Southern Observatory
+# @brief Base schema for the Core OPCUA/SCXML Server configuration.
+
+!cfg.typedef CoreOpcuaSmSrvCfg:
+  server_name:                         !cfg.type:string
+  !cfg.required opcua_profile:         !cfg.type:string
+  !cfg.required state_machine_scxml:   !cfg.type:string
+  auto_enter_op:                       !cfg.type:boolean false
+  log_cfg:                             !cfg.type:string "config/core/opcua/log_config.json"

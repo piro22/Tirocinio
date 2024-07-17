@@ -1,0 +1,43 @@
+# @ingroup ccf_control
+# @copyright ESO - European Southern Observatory
+# @brief CCF Control Application example setup schema.
+
+!cfg.include schema/ccf/common/setup.schema.yaml:
+
+# 1: Finite
+# 2: Infinite
+# !cfg.typedef EnvisionExpoModeTypeDef(string):
+#     allowed_values: ['1', '2']
+#     default: '2'
+
+!cfg.typedef EnvisionExpoTypeDef:
+    !cfg.required mode:                  !cfg.type:ExpoModeTypeDef
+    !cfg.required time:                  !cfg.type:double
+    !cfg.required win_start_x:           !cfg.type:int16
+    !cfg.required win_start_y:           !cfg.type:int16
+    !cfg.required win_width:             !cfg.type:int16
+    !cfg.required win_height:            !cfg.type:int16
+    !cfg.required nb:                    !cfg.type:int32
+    !cfg.required windowing:             !cfg.type:boolean
+
+!cfg.typedef Pipeline1TypeDef(PipelineSetupTypeDef):
+  !cfg.required recipe_1_1_centroid:        !cfg.type:CentroidRecipeTypeDef
+  !cfg.required recipe_1_2:                 !cfg.type:RecipeSetupTypeDef
+  !cfg.required recipe_1_3:                 !cfg.type:RecipeSetupTypeDef
+  !cfg.required pub_1_1_ddt:                !cfg.type:DdtPublisherTypeDef
+  !cfg.required pub_1_2_fits:               !cfg.type:FitsPublisherTypeDef
+  !cfg.required pub_1_3_rtms:               !cfg.type:RtmsPublisherTypeDef
+
+!cfg.typedef Pipeline2TypeDef(PipelineSetupTypeDef):
+  !cfg.required recipe_2_1:                 !cfg.type:RecipeSetupTypeDef
+  !cfg.required recipe_2_2:                 !cfg.type:RecipeSetupTypeDef
+  !cfg.required pub_2_1_fits:               !cfg.type:FitsPublisherTypeDef
+  !cfg.required pub_2_2_test:               !cfg.type:PublisherSetupTypeDef
+
+!cfg.typedef DcsExTypeDef:
+  !cfg.required expo:                       !cfg.type:EnvisionExpoTypeDef
+  !cfg.required sim:                        !cfg.type:SimulationTypeDef
+  !cfg.required proc_1:                     !cfg.type:Pipeline1TypeDef
+  !cfg.required proc_2:                     !cfg.type:Pipeline2TypeDef
+
+# EOF

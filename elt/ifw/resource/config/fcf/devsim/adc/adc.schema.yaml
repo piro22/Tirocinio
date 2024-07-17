@@ -1,0 +1,16 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the ADC DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimAdcCfg(DevSimCommonCfg):
+  opcua_profile:                        !cfg.type:string "config/fcf/devsim/adc/adc.namespace.yaml"
+  state_machine_scxml:                  !cfg.type:string "config/fcf/devsim/adc/adc.scxml.xml"
+
+  !cfg.required cfg_motor1:             !cfg.type:string
+  !cfg.required cfg_motor2:             !cfg.type:string
+  
+  !cfg.required motor1_step:            !cfg.type:double
+  !cfg.required motor2_step:            !cfg.type:double
+
+  !cfg.required default_velocity:       !cfg.type:double

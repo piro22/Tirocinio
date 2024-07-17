@@ -1,0 +1,24 @@
+# server definition
+!cfg.include config/utils/bat/definitions.yaml:
+
+!cfg.typedef CommandInfo:
+    name        : !cfg.type:string
+    reply_ok       : !cfg.type:boolean
+        default: true
+    !cfg.optional reply_delay    : !cfg.type:string
+        default: 5000
+    !cfg.optional reply_ok_message    : !cfg.type:string
+        default: "OK"
+    !cfg.optional reply_error_msg     : !cfg.type:string
+        default: "Command returned an ERROR"
+    !cfg.optional reply_error_code     : !cfg.type:int32
+        default: -1
+
+!cfg.typedef SubSim(IfwServer):
+    !cfg.required commands: !cfg.type:vector_CommandInfo
+
+
+
+
+
+

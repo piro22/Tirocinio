@@ -1,0 +1,20 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef ActuatorCfgMap:
+    !cfg.required low_on:           !cfg.type:string
+    !cfg.required low_switch:       !cfg.type:string
+    !cfg.required initial_state:     !cfg.type:string
+    !cfg.required maxon:            !cfg.type:string
+    !cfg.required timeout:          !cfg.type:string
+
+!cfg.typedef ActuatorRpcMap(DevRpcMap):
+    !cfg.required rpcSwitchOn:      !cfg.type:string
+    !cfg.required rpcSwitchOff:     !cfg.type:string
+
+!cfg.typedef ActuatorMap:
+    !cfg.required cfg       : !cfg.type:ActuatorCfgMap
+    !cfg.required stat      : !cfg.type:DevStatMap
+    !cfg.required rpc       : !cfg.type:ActuatorRpcMap
+
+

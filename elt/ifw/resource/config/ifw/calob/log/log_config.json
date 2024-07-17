@@ -1,0 +1,40 @@
+{
+    "version": 1,
+    "handlers": {
+        "logsink": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "backupCount": 5,
+            "filename": "ifw-calob.log",
+            "formatter": "cii",
+            "maxBytes": 10485760
+        },
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "cii-brief",
+            "stream": "ext://sys.stdout"
+        }
+    },
+    "root": {
+        "handlers": [
+            "logsink"],
+        "level": "INFO"
+    },
+    "formatters": {
+        "cii": {
+            "format": "CII_LOG_PATTERN",
+            "datefmt": "CII_LOG_PATTERN_DATE"
+        },
+        "cii-brief": {
+            "format": "CII_SIMPLE_LOG_PATTERN",
+            "datefmt": "CII_LOG_PATTERN_DATE"
+        }
+    },
+    "loggers": {
+        "elt.log.test": {
+          "handlers": [
+              "console"
+          ],
+          "level": "DEBUG"
+        }
+    }
+}

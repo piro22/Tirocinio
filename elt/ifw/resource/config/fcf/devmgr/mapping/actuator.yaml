@@ -1,0 +1,27 @@
+!cfg.include config/fcf/devmgr/definitions/actuatorMap.yaml:
+
+Actuator: !cfg.type:ActuatorMap
+  cfg:
+    low_on:            cfg.bActiveLowOn
+    low_switch:        cfg.bActiveLowSwitch
+    initial_state:     cfg.bInitialState
+    maxon:             cfg.nMaxOn
+    timeout:           cfg.nTimeout
+
+  stat:
+    state:             stat.nState
+    substate:          stat.nSubstate
+    status:            stat.nStatus
+    local:             stat.bLocal
+    error_code:        stat.nErrorCode
+
+  rpc:
+    rpcInit:           RPC_Init
+    rpcEnable:         RPC_Enable
+    rpcDisable:        RPC_Disable
+    rpcSwitchOn:       RPC_On
+    rpcSwitchOff:      RPC_Off
+    rpcStop:           RPC_Stop
+    rpcReset:          RPC_Reset
+
+

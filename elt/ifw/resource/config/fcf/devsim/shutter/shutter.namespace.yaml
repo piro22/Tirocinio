@@ -1,0 +1,82 @@
+# @file ShutterNamespace.yaml
+# @copyright ESO - European Southern Observatory
+# @brief Name Mapping File for standard shutter device.
+
+
+################################################################################
+# Firmware Info Mapping:
+#-------------------------------------------------------------------------------
+InfoDate:               info.sDate
+InfoDescription:        info.sDescription
+InfoName:               info.sName
+InfoPlatform:           info.sPlatform
+InfoSynopsis:           info.sSynopsis
+InfoVersionMajor:       info.nVersionMajor
+InfoVersionMinor:       info.nVersionMinor
+#-------------------------------------------------------------------------------
+
+################################################################################
+# Configuration Parameters:
+#-------------------------------------------------------------------------------
+CfgName:                    cfg.sName
+CfgActiveLowClosed:         cfg.bActiveLowClosed
+CfgActiveLowFault:          cfg.bActiveLowFault
+CfgActiveLowOpen:           cfg.bActiveLowOpen
+CfgActiveLowSwitch:         cfg.bActiveLowSwitch
+CfgIgnoreClosed:            cfg.bIgnoreClosed
+CfgIgnoreFault:             cfg.bIgnoreFault
+CfgIgnoreOpen:              cfg.bIgnoreOpen
+CfgInitialState:            cfg.bInitialState
+CfgTimeout:                 cfg.nTimeout(UInt32)
+
+CfgSimDelay:                cfg.lrSimDelay
+#-------------------------------------------------------------------------------
+
+################################################################################
+# Control Parameters:
+#-------------------------------------------------------------------------------
+# No control parameters defined.
+#-------------------------------------------------------------------------------
+
+################################################################################
+# Status Parameters:
+#-------------------------------------------------------------------------------
+StatLocal:                    stat.bLocal
+StatCounter:                  stat.nCounter(UInt32)
+StatCycleCounter:             stat.nCycleCounter
+StatErrorCode:                stat.nErrorCode
+StatLastCommand:              stat.nLastCommand
+StatLastTimeToClose:          stat.nLastTimeToClose
+StatLastTimeToOpen:           stat.nLastTimeToOpen
+StatRpcErrorCode:             stat.nRpcErrorCode
+StatState:                    stat.nState
+StatStatus:                   stat.nStatus
+StatSubstate:                 stat.nSubstate
+StatActionDesc:               stat.sActionDesc
+StatErrorText:                stat.sErrorText
+StatEventDesc:                stat.sEventDesc
+StatLastCommandName:          stat.sLastCommand
+StatLibVersion:               stat.sLibVersion
+StatRpcErrorText:             stat.nRpcErrorText
+StatStateName:                stat.sState
+StatStatusName:               stat.sStatus
+StatSubstateName:             stat.sSubstate
+#-------------------------------------------------------------------------------
+
+################################################################################
+# RPC Methods:
+#-------------------------------------------------------------------------------
+RpcClose:                     rpc.Close(O:RpcCloseStat(Int16))
+RpcDisable:                   rpc.Disable(O:RpcDisableStat(Int16))
+RpcEnable:                    rpc.Enable(O:RpcEnableStat(Int16))
+RpcExit:                      rpc.Exit(O:RpcExitStat(Int16))
+RpcInit:                      rpc.Init(O:RpcInitStat(Int16))
+RpcOff:                       rpc.Off(O:RpcOffStat(Int16))
+RpcOpen:                      rpc.Open(O:RpcOpenStat(Int16))
+RpcReset:                     rpc.Reset(O:RpcResetStat(Int16))
+RpcState:                     rpc.State(O:StateStat(String))
+RpcStop:                      rpc.Stop(O:RpcStopStat(Int16))
+
+# Only for the simulator, for test/engineering purposes:
+RpcGetNamespace:              rpc.GetNamespace(O:Namespace(String))
+#-------------------------------------------------------------------------------

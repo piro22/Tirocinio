@@ -1,0 +1,103 @@
+
+InfoDate:               info.sDate
+InfoDescription:        info.sDescription
+InfoName:               info.sName
+InfoPlatform:           info.sPlatform
+InfoSynopsis:           info.sSynopsis
+InfoVersionMajor:       info.nVersionMajor
+InfoVersionMinor:       info.nVersionMinor
+
+# No configuration parameters.
+
+# No control parameters.
+CtrlCommand:            ctrl.nCommand
+CtrlExecute:            ctrl.bExecute
+
+# Standard status nodes:
+StatState:              stat.sState
+StatSubstate:           stat.sSubstate
+StatNState:             stat.nState
+StatNSubstate:          stat.nSubstate
+StatSnitialised:        stat.bInitialised
+StatErrorCode:          stat.nErrorCode
+StatErrorText:          stat.sErrorText
+StatStatus:             stat.nStatus
+StatLocal:              stat.bLocal
+StatCounter:            stat.nCounter(UInt32)
+StatLastCommandStr:     stat.sLastCommand
+StatActionDesc:         stat.sActionDesc
+StatEventDesc:          stat.sEventDesc
+StatRpcErrorCode:       stat.nRpcErrorCode
+StatRpcErrorText:       stat.sRpcErrorText
+
+# Digital Input Channels:
+StatDI1:                stat.arrDI[0].bValue
+StatDI2:                stat.arrDI[1].bValue
+StatDI3:                stat.arrDI[2].bValue
+StatDI4:                stat.arrDI[3].bValue
+StatDI5:                stat.arrDI[4].bValue
+StatDI6:                stat.arrDI[5].bValue
+StatDI7:                stat.arrDI[6].bValue
+StatDI8:                stat.arrDI[7].bValue
+
+# Analog Input Channels:
+StatAI1:                stat.arrAI[0].lrValueUser(Double)
+StatAI2:                stat.arrAI[1].lrValueUser(Double)
+StatAI3:                stat.arrAI[2].lrValueUser(Double)
+StatAI4:                stat.arrAI[3].lrValueUser(Double)
+StatAI5:                stat.arrAI[4].lrValueUser(Double)
+StatAI6:                stat.arrAI[5].lrValueUser(Double)
+StatAI7:                stat.arrAI[6].lrValueUser(Double)
+StatAI8:                stat.arrAI[7].lrValueUser(Double)
+
+# Integer Input Channels:
+StatII1:                stat.arrII[0].nValueUser
+StatII2:                stat.arrII[1].nValueUser
+StatII3:                stat.arrII[2].nValueUser
+StatII4:                stat.arrII[3].nValueUser
+StatII5:                stat.arrII[4].nValueUser
+StatII6:                stat.arrII[5].nValueUser
+StatII7:                stat.arrII[6].nValueUser
+StatII8:                stat.arrII[7].nValueUser
+
+# Digital Output Channels:
+CtrlDO1:                ctrl.arrDO[0].bValue
+CtrlDO2:                ctrl.arrDO[1].bValue
+CtrlDO3:                ctrl.arrDO[2].bValue
+CtrlDO4:                ctrl.arrDO[3].bValue
+CtrlDO5:                ctrl.arrDO[4].bValue
+CtrlDO6:                ctrl.arrDO[5].bValue
+CtrlDO7:                ctrl.arrDO[6].bValue
+CtrlDO8:                ctrl.arrDO[7].bValue
+
+# Analog Output Channels:
+CtrlAO1:                ctrl.arrAO[0].lrValueUser(Double)
+CtrlAO2:                ctrl.arrAO[1].lrValueUser(Double)
+CtrlAO3:                ctrl.arrAO[2].lrValueUser(Double)
+CtrlAO4:                ctrl.arrAO[3].lrValueUser(Double)
+CtrlAO5:                ctrl.arrAO[4].lrValueUser(Double)
+CtrlAO6:                ctrl.arrAO[5].lrValueUser(Double)
+CtrlAO7:                ctrl.arrAO[6].lrValueUser(Double)
+CtrlAO8:                ctrl.arrAO[7].lrValueUser(Double)
+
+# Integer Output Channels:
+CtrlIO1:                ctrl.arrIO[0].nValue
+CtrlIO2:                ctrl.arrIO[1].nValue
+CtrlIO3:                ctrl.arrIO[2].nValue
+CtrlIO4:                ctrl.arrIO[3].nValue
+CtrlIO5:                ctrl.arrIO[4].nValue
+CtrlIO6:                ctrl.arrIO[5].nValue
+CtrlIO7:                ctrl.arrIO[6].nValue
+CtrlIO8:                ctrl.arrIO[7].nValue
+
+# RPC methods:
+RpcInit:                rpc.Init(O:ReturnValue(Int16))
+RpcEnable:              rpc.Enable(O:ReturnValue(Int16))
+RpcDisable:             rpc.Disable(O:ReturnValue(Int16))
+RpcStop:                rpc.Stop(O:ReturnValue(Int16))
+RpcReset:               rpc.Reset(O:ReturnValue(Int16))
+RpcSetOutputs:          rpc.SetOutputs(O:ReturnValue(Int16))
+
+RpcExit:                rpc.Exit(O:ReturnValue(Int16))
+RpcState:               rpc.State(O:StateStat(String))
+RpcGetNamespace:        rpc.GetNamespace(O:Namespace(String))

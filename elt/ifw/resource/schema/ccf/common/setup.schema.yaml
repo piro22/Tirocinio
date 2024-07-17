@@ -1,0 +1,81 @@
+# @ingroup ccf_common
+# @copyright ESO - European Southern Observatory
+# @brief CCF Control Application setup basic schema definitions.
+
+!cfg.typedef ExpoModeTypeDef(string):
+    allowed_values: ['Continuous', 'Finite']
+    default: 'Continuous'
+
+!cfg.typedef ExposureTypeDef:
+    !cfg.required mode:                  !cfg.type:ExpoModeTypeDef
+    !cfg.required nb:                    !cfg.type:int32
+    !cfg.required time:                  !cfg.type:double
+    !cfg.required frame_rate:            !cfg.type:double
+    !cfg.required win_start_x:           !cfg.type:int16
+    !cfg.required win_start_y:           !cfg.type:int16
+    !cfg.required win_width:             !cfg.type:int16
+    !cfg.required win_height:            !cfg.type:int16
+    !cfg.required bin_x:                 !cfg.type:int16
+    !cfg.required bin_y:                 !cfg.type:int16
+
+!cfg.typedef SimTypeModeTypeDef(string):
+    allowed_values: ['File', 'Pattern']
+    default: 'File'
+
+!cfg.typedef SimulationTypeDef:
+    !cfg.required type:                  !cfg.type:SimTypeModeTypeDef
+    !cfg.required file:                  !cfg.type:string
+    !cfg.required max_shift_pr_frame:    !cfg.type:int16
+    !cfg.required max_shift:             !cfg.type:int16
+    !cfg.required noise:                 !cfg.type:int16
+
+!cfg.typedef PipelineSetupTypeDef:
+    !cfg.required enabled:               !cfg.type:boolean
+
+!cfg.typedef RecipeSetupTypeDef:
+    !cfg.required enabled:               !cfg.type:boolean
+    delay:                               !cfg.type:double
+
+!cfg.typedef CentroidRecipeTypeDef(RecipeSetupTypeDef):
+    !cfg.required max_centre_error:      !cfg.type:double
+    !cfg.required max_sigma_error:       !cfg.type:double
+    !cfg.required robustness:            !cfg.type:double
+
+!cfg.typedef PublisherSetupTypeDef:
+    !cfg.required enabled:               !cfg.type:boolean
+    delay:                               !cfg.type:double
+
+!cfg.typedef DdtPublisherTypeDef(PublisherSetupTypeDef):
+    !cfg.required ddt_id:                !cfg.type:string
+    !cfg.required ddt_broker:            !cfg.type:string
+    !cfg.required ddt_max_rate:          !cfg.type:double
+
+!cfg.typedef FitsPubFormatTypeDef(string):
+    allowed_values: ['Single', 'Cube', 'MEF']
+    default: 'Single'
+
+!cfg.typedef FitsPubRecModeTypeDef(string):
+    allowed_values: ['All', 'Interval', 'Period']
+    default: 'All'
+
+!cfg.typedef FitsPublisherTypeDef(PublisherSetupTypeDef):
+    !cfg.required basename:              !cfg.type:string
+    !cfg.required max_size:              !cfg.type:int32
+    !cfg.required nb_of_frames:          !cfg.type:int32
+    !cfg.required format:                !cfg.type:FitsPubFormatTypeDef
+    !cfg.required overwrite:             !cfg.type:boolean
+    !cfg.required rec_mode:              !cfg.type:FitsPubRecModeTypeDef
+    rec_mode_prop:                       !cfg.type:string   # Interval: <nb>, Period: <period>
+
+!cfg.typedef RtmsPublisherTypeDef(PublisherSetupTypeDef):
+    !cfg.required id:                    !cfg.type:string
+    !cfg.required max_rate:              !cfg.type:double
+    !cfg.required bpp:                   !cfg.type:int16
+    !cfg.required interface:             !cfg.type:string
+    !cfg.required address:               !cfg.type:string
+    !cfg.required port:                  !cfg.type:int32
+    !cfg.required topic_id:              !cfg.type:int32
+    !cfg.required sample_id:             !cfg.type:int32
+    !cfg.required pkt_send_delay:        !cfg.type:double
+
+# EOF

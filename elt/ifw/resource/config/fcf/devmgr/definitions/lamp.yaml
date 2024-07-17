@@ -1,0 +1,22 @@
+# Lamp configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+# Lamp configuration for the controller
+!cfg.typedef LampController:
+    low_fault         : !cfg.type:boolean false   # If T, signal is active low
+    low_on            : !cfg.type:boolean false   # If T, signal is active low
+    low_switch        : !cfg.type:boolean false   # If T, signal is active low
+    ignore_fault      : !cfg.type:boolean false
+    initial_state     : !cfg.type:boolean false   # if T, shutter will be initially closed
+    initial_intensity : !cfg.type:double 0
+    timeout           : !cfg.type:uint32 2000
+    maxon             : !cfg.type:uint32 0        # zero mean no maximum is defined.
+    cooldown          : !cfg.type:uint32 0
+    warmup            : !cfg.type:uint32 0
+    invert_analog     : !cfg.type:boolean false   # If T, signal is active low
+    analog_threshold  : !cfg.type:int32  0   # if T, shutter will be initially closed
+
+!cfg.typedef Lamp(DeviceOpcua):
+    type:    !cfg.type:string Lamp
+    mapfile: !cfg.type:string "config/fcf/devmgr/mapping/lamp.yaml"
+    ctrl_config: !cfg.type:LampController

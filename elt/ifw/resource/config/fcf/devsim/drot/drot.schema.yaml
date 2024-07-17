@@ -1,0 +1,10 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the Lamp DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimDrotCfg(DevSimCommonCfg):
+  opcua_profile:                        !cfg.type:string "config/fcf/devsim/drot/drot.namespace.yaml"
+  state_machine_scxml:                  !cfg.type:string "config/fcf/devsim/drot/drot.scxml.xml"
+  !cfg.required cfg_motor:              !cfg.type:string
+  !cfg.required motor1_step:            !cfg.type:double

@@ -1,0 +1,8 @@
+# @copyright ESO - European Southern Observatory
+# @brief Example configuration for the Piezo DevSim device.
+
+!cfg.include config/fcf/devsim/piezo/piezo.schema.yaml:
+
+piezo: !cfg.type:DevSimPiezoCfg
+  server_name:           "Piezo1"
+  initial_state:         false

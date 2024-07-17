@@ -1,0 +1,23 @@
+# Sensor configuration type definition
+!cfg.include config/fcf/devmgr/definitions/iodev.yaml:
+
+!cfg.typedef IOChannelType(string):
+    # IO channel type
+    # reach the target position.
+    allowed_values: ['DI', 'AI', 'II']
+    default: 'DI'
+
+# Sensor Channel type
+!cfg.typedef SensorChannel(BaseChannel):
+    !cfg.required type:    !cfg.type:IOChannelType
+
+
+!cfg.typedef Sensor(DeviceOpcua):
+    type:    !cfg.type:string IODev
+    mapfile: !cfg.type:string 'notdefined'
+    norpc: !cfg.type:boolean false
+    sensor: !cfg.type:boolean true
+    ctrl_config: !cfg.type:SensorController
+    channels: !cfg.type:vector_SensorChannel
+
+

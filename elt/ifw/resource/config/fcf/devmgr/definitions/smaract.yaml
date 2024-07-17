@@ -1,0 +1,37 @@
+# Motor configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+
+# Named Positions
+!cfg.typedef NamedPosition:
+    name:                  !cfg.type:string
+    value:                 !cfg.type:double
+
+# Motor configuration for the controller
+!cfg.typedef SmarActController:
+    max_velocity:               !cfg.type:double 3.0
+    velocity:                   !cfg.type:double 3.0
+    in_position_threshold:      !cfg.type:double 0.001
+    in_position_delay:          !cfg.type:uint32 0.0
+    in_position_hold_time:      !cfg.type:int32 -1
+    min_limit:                  !cfg.type:double 0.0
+    max_limit:                  !cfg.type:double 0.0
+    scale_factor:               !cfg.type:double 1.0
+    name:                       !cfg.type:string ""
+    unit:                       !cfg.type:string ""
+    position_reference:         !cfg.type:double 0.0
+    velocity_reference:         !cfg.type:double 0.0
+    positioning_options:        !cfg.type:uint16 256
+    referencing_options:        !cfg.type:uint16 0
+    calibration_options:        !cfg.type:uint16 0
+    channel:                    !cfg.type:uint16 0
+    module:                     !cfg.type:uint16 0
+    enable:                     !cfg.type:boolean true
+
+!cfg.typedef Smaract(DeviceOpcua):
+    type:                  !cfg.type:string Smaract
+    mapfile:               !cfg.type:string "config/fcf/devmgr/mapping/smaract.yaml"
+    ctrl_config:           !cfg.type:SmarActController
+    positions:             !cfg.type:vector_NamedPosition
+    tolerance:             !cfg.type:double 1                # Tolerance in UU
+

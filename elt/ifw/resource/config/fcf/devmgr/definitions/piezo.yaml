@@ -1,0 +1,36 @@
+# Piezo configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+# Piezo configuration for the controller
+!cfg.typedef PiezoController:
+    num_axis:       !cfg.type:int16               3
+    max_on:         !cfg.type:int32               180
+    full_range1:    !cfg.type:int16               32767
+    full_range2:    !cfg.type:int16               32767
+    full_range3:    !cfg.type:int16               32767
+    home1:          !cfg.type:int16               0
+    home2:          !cfg.type:int16               0
+    home3:          !cfg.type:int16               0
+    lower_limit1:   !cfg.type:int16               0
+    lower_limit2:   !cfg.type:int16               0
+    lower_limit3:   !cfg.type:int16               0
+    upper_limit1:   !cfg.type:int16               32767
+    upper_limit2:   !cfg.type:int16               32767
+    upper_limit3:   !cfg.type:int16               32767
+    user_to_bit_input1:     !cfg.type:double      3276.7
+    user_to_bit_input2:     !cfg.type:double      3276.7
+    user_to_bit_input3:     !cfg.type:double      3276.7
+    user_offset_input1:     !cfg.type:int16       0
+    user_offset_input2:     !cfg.type:int16       0
+    user_offset_input3:     !cfg.type:int16       0
+    user_to_bit_output1:    !cfg.type:double      3276.7
+    user_to_bit_output2:    !cfg.type:double      3276.7
+    user_to_bit_output3:    !cfg.type:double      3276.7
+    user_offset_output1:    !cfg.type:int16       0
+    user_offset_output2:    !cfg.type:int16       0
+    user_offset_output3:    !cfg.type:int16       0
+
+!cfg.typedef Piezo(DeviceOpcua):
+    type:    !cfg.type:string Piezo
+    mapfile: !cfg.type:string "config/fcf/devmgr/mapping/piezo.yaml"
+    ctrl_config: !cfg.type:PiezoController

@@ -1,0 +1,12 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the Lamp DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimLampCfg(DevSimCommonCfg):
+  opcua_profile:                 !cfg.type:string "config/fcf/devsim/lamp/lamp.namespace.yaml"
+  state_machine_scxml:           !cfg.type:string "config/fcf/devsim/lamp/lamp.scxml.xml"
+  !cfg.required initial_state:   !cfg.type:boolean
+  !cfg.required warm_up:         !cfg.type:double
+  !cfg.required cool_down:       !cfg.type:double
+  !cfg.required max_on:          !cfg.type:double

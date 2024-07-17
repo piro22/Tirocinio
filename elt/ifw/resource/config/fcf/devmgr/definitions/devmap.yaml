@@ -1,0 +1,20 @@
+# device mapping configuration
+
+!cfg.typedef DevStatMap:
+    !cfg.required state:          !cfg.type:string
+    !cfg.required substate:       !cfg.type:string
+    !cfg.required status:         !cfg.type:string
+    !cfg.required local:          !cfg.type:string
+    !cfg.required error_code:     !cfg.type:string
+
+!cfg.typedef DevRpcMap:
+    !cfg.required rpcInit:        !cfg.type:string
+    !cfg.required rpcEnable:      !cfg.type:string
+    !cfg.required rpcDisable:     !cfg.type:string
+    !cfg.required rpcStop:        !cfg.type:string
+    !cfg.required rpcReset:       !cfg.type:string
+
+!cfg.typedef DeviceMap:
+    !cfg.optional cfg       : !cfg.type:vector_string
+    !cfg.required stat      : !cfg.type:vector_string
+    !cfg.optional rpc       : !cfg.type:vector_string

@@ -1,0 +1,10 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the Lamp DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimPiezoCfg(DevSimCommonCfg):
+  opcua_profile:                        !cfg.type:string "config/fcf/devsim/piezo/piezo.namespace.yaml"
+  state_machine_scxml:                  !cfg.type:string "config/fcf/devsim/piezo/piezo.scxml.xml"
+
+  !cfg.required initial_state:          !cfg.type:boolean

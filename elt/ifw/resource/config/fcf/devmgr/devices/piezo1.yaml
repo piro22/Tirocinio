@@ -1,0 +1,14 @@
+!cfg.include config/fcf/devmgr/definitions/piezo.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+piezo1: !cfg.type:Piezo
+  overview: 'Piezo device example 1'
+  description: "Piezo device example 1 description"
+  identifier: PLC1
+  prefix: MAIN.Piezo1
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://134.171.2.213:7677
+  fits_prefix: "OPTI1"
+  ctrl_config:
+     num_axis:      2
+     max_on:        180

@@ -1,0 +1,50 @@
+# server definition
+!cfg.include config/utils/bat/definitions.yaml:
+
+# Widget dimensions
+!cfg.typedef WdgDimension:
+    width:  !cfg.type:uint32
+    height: !cfg.type:uint32
+
+# Widget position on the Docking Widget group in the main GUI
+!cfg.typedef WdgPosition(string):   
+    allowed_values: ['LEFT', 'RIGHT']
+    default: 'LEFT'
+
+# Information of the custom widget.
+!cfg.typedef WdgCustom:
+    !cfg.required library:     !cfg.type:string
+    !cfg.required class:       !cfg.type:string
+
+# Sensor Channel type
+!cfg.typedef WdgBase:
+    !cfg.required container:   !cfg.type:string
+    !cfg.optional custom   :   !cfg.type:WdgCustom
+    !cfg.optional dimension:   !cfg.type:WdgDimension
+
+!cfg.typedef DeviceInfo:
+    !cfg.required name       : !cfg.type:string
+    !cfg.required type       : !cfg.type:string
+    !cfg.required cfgfile    : !cfg.type:string
+    interface                : !cfg.type:string 'Open62541'
+    # Information about the devive widget to be consumed by the GUI
+    !cfg.optional widget     : !cfg.type:WdgBase
+
+!cfg.typedef GuiDockContainer:
+    !cfg.required name       : !cfg.type:string
+    !cfg.required position   : !cfg.type:WdgPosition
+
+!cfg.typedef GuiContents:
+    !cfg.required containers: !cfg.type:vector_GuiDockContainer
+    tabify: !cfg.type:boolean true
+
+
+# overwrite some definition to define a default value
+!cfg.typedef FcfServer(IfwServer):
+    db_timeout      : !cfg.type:Timeout 2000
+    scxml           : !cfg.type:string 'config/fcf/devmgr/server/sm.xml'
+    log_properties  : !cfg.type:string "config/fcf/devmgr/server/log_properties.cfg"
+    !cfg.required devices: !cfg.type:vector_DeviceInfo
+    req_timeout     : !cfg.type:Timeout 300000
+    !cfg.optional gui             : !cfg.type:GuiContents
+

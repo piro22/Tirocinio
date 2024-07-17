@@ -1,0 +1,32 @@
+# server definition
+!cfg.include config/sup/subsim/server/definitions.yaml:
+
+
+server: !cfg.type:SubSim
+    server_id       : 'subsim1'
+    req_endpoint    : "zpb.rr://127.0.0.1:15086/"
+    pub_endpoint    : "zpb.ps://127.0.0.1:15046/"
+    db_timeout      : 2000
+    log_properties  : "config/utils/bat/log_properties.cfg"
+    scxml           : "config/sup/subsim/server/sm.xml"
+    oldb_prefix     : "ins1"
+    commands: [
+    {
+    name: 'Init',
+    reply_ok: true,
+    reply_delay: 3000,
+    reply_error_msg: "Init failed - subsystem could not initialize"
+    },
+    {
+    name: 'Enable',
+    reply_ok: true,
+    reply_delay: 3000,
+    reply_error_msg: "ERROR: Enable failed"
+    },
+    {
+    name: 'Disable',
+    reply_ok: true,
+    reply_delay: 3000,
+    reply_error_msg: "ERROR: Enable failed"
+    },
+    ]

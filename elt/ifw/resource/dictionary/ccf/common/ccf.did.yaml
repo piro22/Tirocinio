@@ -1,0 +1,79 @@
+!cfg.include schema/core/dit/did/did.schema.yaml:
+
+#===============================================================================
+header: !cfg.type:DidHeader
+  name: dictionary/ccf/common/ccf.did.yaml
+  scope: CCF
+  description: |
+    Dictionary for the Camera Control Framework, Control Application.
+#===============================================================================
+
+#===============================================================================
+# Mandatory keywords:
+#===============================================================================
+FRAMECNT: !cfg.type:DidIntKey
+  comment: Frame counter
+  description: |
+    Camera from counter.
+
+DET EXPO WIN STARTX: !cfg.type:DidDblKey
+  format: .1f
+  comment: X coordinate of ROI
+  description: |
+    X coordinate of ROI.
+
+DET EXPO WIN STARTY: !cfg.type:DidDblKey
+  format: .1f
+  comment: Y coordinate of ROI
+  description: |
+    Y coordinate of ROI.
+
+DET EXPO TIME: !cfg.type:DidDblKey
+  format: .4f
+  unit: s
+  comment: Exposure time [s]
+  description: |
+    Exposure time in seconds.
+
+DET EXPO WIN BINX: !cfg.type:DidIntKey
+  comment: Binning in X
+  description: |
+    Binning factor in X direction.
+
+DET EXPO WIN BINY: !cfg.type:DidIntKey
+  comment: Binning in Y
+  description: |
+    Binning factor in Y direction.
+
+DET SYSTEM: !cfg.type:DidStrKey
+  comment: System name for which camera is used
+  description: |
+    System name for which the camera is deployed.
+
+DET CAM NAME: !cfg.type:DidStrKey
+  comment: Name of camera
+  description: |
+    Name of camera.
+
+DET CAM ID: !cfg.type:DidStrKey
+  comment: System wide unique ID allocated to camera
+  description: |
+    System wide unique ID allocated to camera
+
+DET CAM MODEL: !cfg.type:DidStrKey
+  comment: Camera model
+  description: |
+    Camera model.
+
+DET CAM CHIP MODEL: !cfg.type:DidStrKey
+  comment: Chip used in camera
+  description: |
+    Chip model used in camera
+
+DET CAM TYPE: !cfg.type:DidStrKey
+  comment: Type of camera
+  description: |
+    Type of camera, normally "IR", "CMOS" or "CCD".
+#===============================================================================
+
+# EOF

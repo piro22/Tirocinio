@@ -1,0 +1,147 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "FORSUP_hitms_cal_wave",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "FORSUP_hitms_cal_wave",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_hitms_cal_wave",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "HIT-MS wavelength calibration"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.LAMP1.NAID",
+          "type": "string",
+          "value": "He+1"
+        },
+        {
+          "name": "INS.LAMP2.NAID",
+          "type": "string",
+          "value": "HgCd+2"
+        },
+        {
+          "name": "INS.LAMP3.NAID",
+          "type": "string",
+          "value": "Ar+1"
+        },
+        {
+          "name": "INS.LAMP4.NAID",
+          "type": "string",
+          "value": "Ar+2"
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "Ne+1"
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "Ne+2"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "<% clb.x.forsup_grism(h) %>"
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "<% clb.x.forsup_filter(h) %>"
+        },
+        {
+          "name": "INS.FILT2.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "HIT-MS"
+        },
+        {
+          "name": "DET.WIN1.STRX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRX'] %>"
+        },
+        {
+          "name": "DET.WIN1.STRY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRY'] %>"
+        },
+        {
+          "name": "DET.WIN1.NX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NX'] * h.get('DET.WIN1.BINX') %>"
+        },
+        {
+          "name": "DET.WIN1.NY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NY'] * h.get('DET.WIN1.BINY') %>"
+        },
+        {
+          "name": "DET.WIN1.ST",
+          "type": "string",
+          "value": "F"
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": "<% clb.x.forsup_exptime(h, clb, 'HIT', 'WAVE') %>"
+        },
+        {
+          "name": "INS.FOCF.SETUP",
+          "type": "string",
+          "value": "<% clb.x.forsup_file(h) %>"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP1.ARC.TIME'][(h.get('INS.GRIS.NAME'),h.get('INS.FILT1.NAME'))], h.get('DET.WIN1.UT1')*clb.tbl['USERVAR']['N_SHIFT']+120)  %>"
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.ARC.TIME'][(h.get('INS.GRIS.NAME'),h.get('INS.FILT1.NAME'))], h.get('DET.WIN1.UT1')*clb.tbl['USERVAR']['N_SHIFT']+120)  %>"
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP3.ARC.TIME'][(h.get('INS.GRIS.NAME'),h.get('INS.FILT1.NAME'))], h.get('DET.WIN1.UT1')*clb.tbl['USERVAR']['N_SHIFT']+120)  %>"
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP4.ARC.TIME'][(h.get('INS.GRIS.NAME'),h.get('INS.FILT1.NAME'))], h.get('DET.WIN1.UT1')*clb.tbl['USERVAR']['N_SHIFT']+120)  %>"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP5.ARC.TIME'][(h.get('INS.GRIS.NAME'),h.get('INS.FILT1.NAME'))], h.get('DET.WIN1.UT1')*clb.tbl['USERVAR']['N_SHIFT']+120)  %>"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP6.ARC.TIME'][(h.get('INS.GRIS.NAME'),h.get('INS.FILT1.NAME'))], h.get('DET.WIN1.UT1')*clb.tbl['USERVAR']['N_SHIFT']+120)  %>"
+        }
+      ]
+    }
+  ]
+}

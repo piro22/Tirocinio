@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM" version="1.0" initial="On">  
+  <state id="On"> 
+    <initial>
+      <transition target="On::Operational"/>
+    </initial>  
+    <state id="On::Operational"> 
+      <initial>
+        <transition target="On::Operational::Executing"/>
+      </initial>  
+      <state id="On::Operational::Executing"/>
+    </state>  
+    <transition event="" target="Off"/>  
+  </state>  
+  <final id="Off"/> 
+</scxml>

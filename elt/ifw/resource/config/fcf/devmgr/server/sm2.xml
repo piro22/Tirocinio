@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- exmalserver StateMachine --> 
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM"
+       version="1.0"
+       initial="On">
+
+  <state id="On">
+    <initial>
+      <transition target="NotOperational"/>
+    </initial>
+       
+    <state id="NotOperational">
+      <initial>
+        <transition target="NotReady"/>
+      </initial>
+  
+      <state id="NotReady">   
+        <transition event="Events.Init" target="Initialising"/>
+        <transition event="Events.Reset" target="NotReady">
+           <customActionDomain:ActionsStd.Reset name="ActionsStd.Reset"/>
+        </transition>
+        <transition event="Events.Config">
+         <customActionDomain:ActionsStd.Config name="ActionsStd.Config"/>
+        </transition>
+        <transition event="Events.InitError" target="NotReady">
+           <customActionDomain:ActionsInit.Error name="ActionsInit.Error"/>
+        </transition>
+      </state>
+
+      <state id="Initialising">
+        <onentry>
+            <customActionDomain:ActionsInit.Start name="ActionsInit.Start"/>
+        </onentry>
+        <invoke id="ActivityInitialising"/>
+        <transition event="Events.InitDone" target="Ready">
+            <customActionDomain:ActionsInit.Done name="ActionsInit.Done"/>
+        </transition>
+        <transition event="Events.InitError" target="NotReady">
+            <customActionDomain:ActionsInit.Error name="ActionsInit.Error"/>
+        </transition>
+        <transition event="Events.InitTimeout" target="NotReady">
+            <customActionDomain:ActionsInit.Timeout name="ActionsInit.Timeout"/>
+        </transition>
+        <transition event="Events.Stop" target="NotReady">
+           <customActionDomain:ActionsInit.Stop name="ActionsInit.Stop"/>
+        </transition>
+        <transition event="Events.Reset" target="NotReady">
+           <customActionDomain:ActionReset name="ActionReset"/>
+        </transition>
+      </state>
+
+      <state id="Ready">   
+         <transition event="Events.Enable" target="Enabling"/>
+         <transition event="Events.Reset" target="NotReady">
+           <customActionDomain:ActionsStd.Reset name="ActionsStd.Reset"/>
+         </transition>
+         <transition event="Events.HwReset">
+           <customActionDomain:ActionsStd.HwReset name="ActionsStd.HwReset"/>
+         </transition>
+         <transition event="Events.HwInit">
+           <customActionDomain:ActionsStd.HwInit name="ActionsStd.HwInit"/>
+         </transition>
+         <transition event="Events.HwEnable">
+           <customActionDomain:ActionsStd.HwEnable name="ActionsStd.HwEnable"/>
+         </transition>
+         <transition event="Events.HwDisable">
+           <customActionDomain:ActionsStd.HwDisable name="ActionsStd.HwDisable"/>
+         </transition>
+         <transition event="Events.EnableError" target="Ready">
+              <customActionDomain:ActionsEnable.Error name="ActionsEnable.Error"/>
+         </transition>
+      </state>
+
+      <state id="Enabling">
+        <onentry>
+            <customActionDomain:ActionsEnable.Start name="ActionsEnable.Start"/>
+        </onentry>
+      <invoke id="ActivityEnabling"/>
+        <transition event="Events.EnableDone" target="Operational">
+            <customActionDomain:ActionsEnable.Done name="ActionsEnable.Done"/>
+        </transition>
+        <transition event="Events.EnableError" target="Ready">
+          <customActionDomain:ActionsEnable.Error name="ActionsEnable.Error"/>
+        </transition>
+        <transition event="Events.EnableTimeout" target="Ready">
+          <customActionDomain:ActionsEnable.Timeout name="ActionsEnable.Timeout"/>
+        </transition>
+        <transition event="Events.Stop" target="Ready">
+           <customActionDomain:ActionsEnable.Stop name="ActionsEnable.Stop"/>
+        </transition>
+        <transition event="Events.Reset" target="NotReady">
+            <customActionDomain:ActionReset name="ActionReset"/>
+        </transition>
+       </state>
+
+    </state>
+
+    <state id="Operational">
+      <initial>
+        <transition target="Idle"/>
+      </initial>
+
+      <transition event="Events.Disable" target="Ready">
+        <customActionDomain:ActionsStd.Disable name="ActionsStd.Disable"/>
+      </transition>
+
+      <transition event="Events.HwReset">
+        <customActionDomain:ActionsStd.HwReset name="ActionsStd.HwReset"/>
+      </transition>
+      <transition event="Events.HwInit">
+        <customActionDomain:ActionsStd.HwInit name="ActionsStd.HwInit"/>
+      </transition>
+      <transition event="Events.HwEnable">
+        <customActionDomain:ActionsStd.HwEnable name="ActionsStd.HwEnable"/>
+      </transition>
+      <transition event="Events.HwDisable">
+        <customActionDomain:ActionsStd.HwDisable name="ActionsStd.HwDisable"/>
+      </transition>
+      <transition event="Events.StartDaq">
+         <customActionDomain:ActionsStd.StartDaq name="ActionsStd.StartDaq"/>
+      </transition>
+      <state id="Idle">
+        <transition event="Events.HwFailure" target="Error"/>
+        <transition event="Events.HwNormal" target="Idle"/>
+        <transition event="Events.Reset" target="NotReady">
+          <customActionDomain:ActionsStd.Reset name="ActionsStd.Reset"/>
+        </transition>
+        <transition event="Events.Setup">
+          <customActionDomain:ActionsSetup.Start name="ActionsSetup.Start"/>
+        </transition>
+        <transition event="Events.SetupDone">
+          <customActionDomain:ActionsSetup.Done name="ActionsSetup.Done"/>
+        </transition>
+        <transition event="Events.SetupError">
+          <customActionDomain:ActionsSetup.Error name="ActionsSetup.Error"/>
+        </transition>
+        <transition event="Events.SetupTimeout">
+          <customActionDomain:ActionsSetup.Timeout name="ActionsSetup.Timeout"/>
+        </transition>
+        <transition event="Events.Stop" name="ActionsSetup.Stop">
+           <customActionDomain:ActionsSetup.Stop name="ActionsSetup.Stop"/>
+        </transition>
+      </state>
+
+    <state id="Error">
+        <onentry>
+            <customActionDomain:ActionsStd.Error name="ActionsStd.Error"/>
+        </onentry>
+        <transition event="Events.Reset" target="NotReady">
+            <customActionDomain:ActionsStd.Reset name="ActionsStd.Reset"/>
+        </transition>
+        <transition event="Events.HwNormal" target="Idle"/>
+        <transition event="Events.HwFailure" target="Error"/>
+        <transition event="Events.Recover" target="Recovering"/>
+        <transition event="Events.IsOk" target="Idle"/>
+        <transition event="Events.Setup">
+            <customActionDomain:ActionsSetup.Start name="ActionsSetup.Start"/>
+        </transition>
+        <transition event="Events.Stop">
+            <customActionDomain:ActionsSetup.Stop name="ActionsSetup.Stop"/>
+        </transition>
+        <transition event="Events.SetupDone">
+            <customActionDomain:ActionsSetup.Done name="ActionsSetup.Done"/>
+        </transition>
+        <transition event="Events.SetupError">
+            <customActionDomain:ActionsSetup.Error name="ActionsSetup.Error"/>
+        </transition>
+        <transition event="Events.SetupTimeout">
+            <customActionDomain:ActionsSetup.Timeout name="ActionsSetup.Timeout"/>
+        </transition>
+        <transition event="Events.HwReset">
+            <customActionDomain:ActionsStd.HwReset name="ActionsStd.HwReset"/>
+        </transition>
+    </state>
+    <state id="Recovering">
+       <onentry>
+         <customActionDomain:ActionsRecover.Start name="ActionsRecover.Start"/>
+       </onentry>
+       <invoke id="ActivityRecovering"/>
+       <transition event="Events.RecoverDone" target="Operational">
+           <customActionDomain:ActionsRecover.Done name="ActionsRecover.Done"/>
+       </transition>
+       <transition event="Events.RecoverError" target="Error">
+            <customActionDomain:ActionsRecover.Error name="ActionsRecover.Error"/>
+       </transition>
+       <transition event="Events.RecoverTimeout" target="Error">
+            <customActionDomain:ActionsRecover.Timeout name="ActionsRecover.Timeout"/>
+       </transition>
+       <transition event="Events.Stop" target="Error">
+             <customActionDomain:ActionsRecover.Stop name="ActionsRecover.Stop"/>
+       </transition>
+    </state>
+    </state>
+    
+    <transition event="Events.GetState">
+      <customActionDomain:ActionsStd.GetState name="ActionsStd.GetState"/>
+    </transition>
+
+    <transition event="Events.GetStatus">
+      <customActionDomain:ActionsStd.GetStatus name="ActionsStd.GetStatus"/>
+    </transition>
+
+    <transition event="Events.GetVersion">
+      <customActionDomain:ActionsStd.GetVersion name="ActionsStd.GetVersion"/>
+    </transition>
+
+    <transition event="Events.DevStatus">
+        <customActionDomain:ActionsStd.DevStatus name="ActionsStd.DevStatus"/>
+    </transition>
+
+    <transition event="Events.DevNames">
+        <customActionDomain:ActionsStd.DevNames name="ActionsStd.DevNames"/>
+    </transition>
+
+    <transition event="Events.DevInfo">
+        <customActionDomain:ActionsStd.DevInfo name="ActionsStd.DevInfo"/>
+    </transition>
+
+    <transition event="Events.DevConfig">
+        <customActionDomain:ActionsStd.DevConfig name="ActionsStd.DevConfig"/>
+    </transition>
+
+    <transition event="Events.Config" target="NotReady">
+      <customActionDomain:ActionsStd.Config name="ActionsStd.Config"/>
+    </transition>
+
+    <transition event="Events.GetConfig">
+      <customActionDomain:ActionsStd.GetConfig name="ActionsStd.GetConfig"/>
+    </transition>
+
+    <transition event="Events.SetLogLevel">
+      <customActionDomain:ActionsStd.SetLogLevel name="ActionsStd.SetLogLevel"/>
+    </transition>
+    
+    <transition event="Events.Exit">
+      <customActionDomain:ActionsStd.Exit name="ActionsStd.Exit"/>
+    </transition>
+ 
+    <transition event="Events.CtrlC">
+      <customActionDomain:ActionsStd.ExitNoReply name="ActionsStd.ExitNoReply"/>
+    </transition>
+    
+    <transition event="Events.Reset" target="NotReady">
+      <customActionDomain:ActionsStd.Reset name="ActionsStd.Reset"/>
+    </transition>
+        
+    <transition event="Events.Stop">
+      <customActionDomain:ActionsStd.Stop name="ActionsStd.Stop"/>
+    </transition>
+
+    <transition event="Events.Simulate">
+      <customActionDomain:ActionsStd.Simulate name="ActionsStd.Simulate"/>
+    </transition>
+
+    <transition event="Events.StopSim">
+     <customActionDomain:ActionsStd.StopSim name="ActionsStd.StopSim"/>
+    </transition>
+
+    <transition event="Events.Ignore">
+     <customActionDomain:ActionsStd.Ignore name="ActionsStd.Ignore"/>
+    </transition>
+
+    <transition event="Events.StopIgn">
+     <customActionDomain:ActionsStd.StopIgn name="ActionsStd.StopIgn"/>
+    </transition>
+
+    <transition event="Events.StopDaq">
+       <customActionDomain:ActionsStd.StopDaq name="ActionsStd.StopDaq"/>
+    </transition>
+
+    <transition event="Events.AbortDaq">
+       <customActionDomain:ActionsStd.AbortDaq name="ActionsStd.AbortDaq"/>
+    </transition>
+
+    <transition event="Events.GetDaqStatus">
+       <customActionDomain:ActionsStd.GetDaqStatus name="ActionsStd.GetDaqStatus"/>
+    </transition>
+
+  </state>
+ 
+</scxml>

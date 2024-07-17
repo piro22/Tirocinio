@@ -1,0 +1,11 @@
+# @copyright ESO - European Southern Observatory
+# @brief Example configuration for the Actuator DevSim device.
+
+!cfg.include config/fcf/devsim/actuator/actuator.schema.yaml:
+
+actuator: !cfg.type:DevSimActuatorCfg
+  server_name:                   Actuator1
+  auto_enter_op:                 false
+  initial_state:                 false
+  sim_init_time:                 2.0
+  sim_delay:                     1.0

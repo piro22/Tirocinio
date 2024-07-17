@@ -1,0 +1,11 @@
+# @copyright ESO - European Southern Observatory
+# @brief Example configuration for the DROT DevSim device.
+
+!cfg.include config/fcf/devsim/drot/drot.schema.yaml:
+
+drot: !cfg.type:DevSimDrotCfg
+  server_name:            "Drot1"
+  cfg_motor:              "config/fcf/devsim/drot/drot1Motor.cfg.yaml"
+  motor_step:             1.01
+  update_frequency:       1.1
+  default_velocity:       1.9898

@@ -1,0 +1,35 @@
+!cfg.include config/fcf/devmgr/definitions/drot.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+drot1: !cfg.type:Drot
+  overview: 'Drot device example 1'
+  description: "Drot device example 1 description"
+  identifier: PLC1
+  prefix: MAIN_FAST.drot
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://127.0.0.1:7578
+  fits_prefix: "DROT1"
+  initialisation: [
+         {
+          step: 'END',
+          value1: 0.0,
+          value2: 0.0
+         }
+       ]
+  positions: [
+       {
+        name: 'ON',
+        value: 30
+       },
+       {
+        name: 'OFF',
+        value: 100
+        }
+       ]
+
+  ctrl_config:
+    velocity:              3.0 
+    active_low_ref:        true
+    active_low_uhw:        true
+
+

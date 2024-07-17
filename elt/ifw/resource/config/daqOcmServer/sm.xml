@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- server StateMachine -->
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM"
+       version="1.0"
+       initial="On">
+
+  <state id="On">
+    <initial>
+      <transition target="NotOperational"/>
+    </initial>
+
+    <state id="NotOperational">
+      <initial>
+        <transition target="NotReady"/>
+      </initial>
+
+      <state id="NotReady">
+        <transition event="Events.Init" target="Ready">
+          <customActionDomain:ActionsStd.Init name="ActionsStd.Init"/>
+        </transition>
+      </state>
+
+      <state id="Ready">
+         <transition event="Events.Enable" target="Operational">
+           <customActionDomain:ActionsStd.Enable name="ActionsStd.Enable"/>
+         </transition>
+      </state>
+    </state>
+
+	<state id="Operational">
+	  <onentry>
+        <customActionDomain:OcmDaq.RegisterService name="OcmDaq.RegisterService"/>
+	  </onentry>
+	  <onexit>
+        <customActionDomain:OcmDaq.UnregisterService name="OcmDaq.UnregisterService"/>
+	  </onexit>
+      <initial>
+        <transition target="Idle"/>
+      </initial>
+
+      <state id="Idle">
+        <transition event="Events.AnyDaqActive" target="Active">
+        </transition>
+      </state>
+
+      <state id="Active">
+        <transition event="Events.AllDaqInactive" target="Idle">
+        </transition>
+      </state>
+
+      <transition event="Events.Stop" target="Ready">
+         <customActionDomain:ActionsStd.Stop name="ActionsStd.Stop"/>
+      </transition>
+      <transition event="Events.Disable" target="Ready">
+        <customActionDomain:ActionsStd.Disable name="ActionsStd.Disable"/>
+      </transition>
+    </state>
+
+    <transition event="Events.Reset" target="NotReady">
+      <customActionDomain:ActionsStd.Reset name="ActionsStd.Reset"/>
+    </transition>
+
+    <transition event="Events.Stop">
+      <customActionDomain:ActionsStd.Stop name="ActionsStd.Stop"/>
+    </transition>
+
+    <transition event="Events.GetState">
+        <customActionDomain:ActionsStd.GetState name="ActionsStd.GetState"/>
+    </transition>
+
+    <transition event="Events.GetStatus">
+        <customActionDomain:ActionsStd.GetStatus name="ActionsStd.GetStatus"/>
+    </transition>
+
+    <transition event="Events.Config">
+      <customActionDomain:ActionsStd.Config name="ActionsStd.Config"/>
+    </transition>
+
+    <transition event="Events.SetLogLevel">
+      <customActionDomain:ActionsStd.SetLogLevel name="ActionsStd.SetLogLevel"/>
+    </transition>
+
+    <transition event="Events.Exit" target="Off">
+      <customActionDomain:ActionsStd.Exit name="ActionsStd.Exit"/>
+    </transition>
+
+    <transition event="Events.CtrlC" target="Off">
+      <customActionDomain:ActionsStd.ExitNoReply name="ActionsStd.ExitNoReply"/>
+    </transition>
+  </state>
+
+  <final id="Off">
+  </final>
+</scxml>
+

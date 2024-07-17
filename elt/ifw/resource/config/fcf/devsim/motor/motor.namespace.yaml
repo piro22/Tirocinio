@@ -1,0 +1,200 @@
+# @copyright ESO - European Southern Observatory
+# @brief Name Mapping File for the general purpose ELT ICS FCF Motor Device.
+
+# Source:
+# http://svnhq9.hq.eso.org/p9/trunk/EELT/ICS/ifw/fcf/controllers/motor/Motor/DUTs/Structures/Motor/
+
+################################################################################
+# Firmware Info Mapping:
+#-------------------------------------------------------------------------------
+InfoDate:               info.sDate
+InfoDescription:        info.sDescription
+InfoName:               info.sName
+InfoPlatform:           info.sPlatform
+InfoSynopsis:           info.sSynopsis
+InfoVersionMajor:       info.nVersionMajor
+InfoVersionMinor:       info.nVersionMinor
+################################################################################
+
+################################################################################
+# Configuration Parameters:
+#-------------------------------------------------------------------------------
+CfgBacklash:            cfg.lrBacklash(Double)
+CfgDefaultVelocity:     cfg.lrDefaultVelocity(Double)
+CfgMaxPosition:         cfg.lrMaxPosition(Double)
+CfgMinPosition:         cfg.lrMinPosition(Double)
+CfgAxisType:            cfg.nAxisType
+CfgTimeoutInit:         cfg.nTimeoutInit(UInt32)
+CfgTimeoutMove:         cfg.nTimeoutMove(UInt32)
+CfgTimeoutSwitch:       cfg.nTimeoutSwitch(UInt32)
+CfgUseBrake:            cfg.bUseBrake
+CfgActiveLowBrake:      cfg.bActiveLowBrake
+
+CfgArrActiveLow00:      cfg.bArrActiveLow[0].bValue
+CfgArrActiveLow01:      cfg.bArrActiveLow[1].bValue
+CfgArrActiveLow02:      cfg.bArrActiveLow[2].bValue
+CfgArrActiveLow03:      cfg.bArrActiveLow[3].bValue
+CfgArrActiveLow04:      cfg.bArrActiveLow[4].bValue
+CfgArrActiveLow05:      cfg.bArrActiveLow[5].bValue
+
+CfgActiveLowInPos:      cfg.bActiveLowInPos
+
+#============================================================
+# Initialisation Sequence:
+#------------------------------------------------------------
+CfgInitSeq00Action:     cfg.strArrInitSeq[0].nAction
+CfgInitSeq00Value1:     cfg.strArrInitSeq[0].lrValue1(Double)
+CfgInitSeq00Value2:     cfg.strArrInitSeq[0].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq01Action:     cfg.strArrInitSeq[1].nAction
+CfgInitSeq01Value1:     cfg.strArrInitSeq[1].lrValue1(Double)
+CfgInitSeq01Value2:     cfg.strArrInitSeq[1].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq02Action:     cfg.strArrInitSeq[2].nAction
+CfgInitSeq02Value1:     cfg.strArrInitSeq[2].lrValue1(Double)
+CfgInitSeq02Value2:     cfg.strArrInitSeq[2].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq03Action:     cfg.strArrInitSeq[3].nAction
+CfgInitSeq03Value1:     cfg.strArrInitSeq[3].lrValue1(Double)
+CfgInitSeq03Value2:     cfg.strArrInitSeq[3].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq04Action:     cfg.strArrInitSeq[4].nAction
+CfgInitSeq04Value1:     cfg.strArrInitSeq[4].lrValue1(Double)
+CfgInitSeq04Value2:     cfg.strArrInitSeq[4].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq05Action:     cfg.strArrInitSeq[5].nAction
+CfgInitSeq05Value1:     cfg.strArrInitSeq[5].lrValue1(Double)
+CfgInitSeq05Value2:     cfg.strArrInitSeq[5].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq06Action:     cfg.strArrInitSeq[6].nAction
+CfgInitSeq06Value1:     cfg.strArrInitSeq[6].lrValue1(Double)
+CfgInitSeq06Value2:     cfg.strArrInitSeq[6].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq07Action:     cfg.strArrInitSeq[7].nAction
+CfgInitSeq07Value1:     cfg.strArrInitSeq[7].lrValue1(Double)
+CfgInitSeq07Value2:     cfg.strArrInitSeq[7].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq08Action:     cfg.strArrInitSeq[8].nAction
+CfgInitSeq08Value1:     cfg.strArrInitSeq[8].lrValue1(Double)
+CfgInitSeq08Value2:     cfg.strArrInitSeq[8].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq09Action:     cfg.strArrInitSeq[9].nAction
+CfgInitSeq09Value1:     cfg.strArrInitSeq[9].lrValue1(Double)
+CfgInitSeq09Value2:     cfg.strArrInitSeq[9].lrValue2(Double)
+#============================================================
+
+CfgBLock:               cfg.bLock
+CfgLockPos:             cfg.lrLockPos
+CfgLockTol:             cfg.lrLockTol
+
+CfgExecUserPreInit:     cfg.bExecUserPreInit
+CfgExecUserPostInit:    cfg.bExecUserPostInit
+CfgExecUserPreMove:     cfg.bExecUserPreMove
+CfgExecUserPostMove:    cfg.bExecUserPostMove
+
+CfgCheckInPos:          cfg.bCheckInPos
+CfgDisableAfterMove:    cfg.bDisableAfterMove
+
+CfgSoE_Drive:           cfg.bSoE_Drive
+
+CfgLogExtTime:          cfg.bLogExtTime
+CfgDebug:               cfg.bDebug
+CfgLog:                 cfg.bLog
+
+CfgSimDelay:            cfg.lrSimDelay
+################################################################################
+
+################################################################################
+# Control Parameters:
+#-------------------------------------------------------------------------------
+CtrlCommand:            ctrl.nCommand
+CtrlExecute:            ctrl.bExecute
+CtrlLocalCmd:           ctrl.bLocalCmd
+CtrlMoveType:           ctrl.nMoveType
+CtrlDirection:          ctrl.nDirection
+CtrlPosition:           ctrl.lrPosition
+CtrlVelocity:           ctrl.lrVelocity
+################################################################################
+
+################################################################################
+# Status Parameters:
+#-------------------------------------------------------------------------------
+StatLocal:              stat.bLocal
+StatCounter:            stat.nCounter(UInt32)
+StatCmdCycleCounter:    stat.nCmdCycleCounter
+StatLastCommand:        stat.nLastCommand
+StatLastCommandStr:     stat.sLastCommand
+
+StatErrorCode:          stat.nErrorCode
+StatStatus:             stat.nStatus
+StatRpcErrorCode:       stat.nRpcErrorCode
+
+StatErrorText:          stat.sErrorText
+StatRpcErrorText:       stat.sRpcErrorText
+StatStatus:             stat.sStatus
+StatLibVersion:         stat.sLibVersion
+
+StatState:              stat.sState
+StatSubstate:           stat.sSubstate
+StatNState:             stat.nState
+StatNSubstate:          stat.nSubstate
+
+StatActionDesc:         stat.sActionDesc
+StatEventDesc:          stat.sEventDesc
+
+StatPosError:           stat.lrPosError(Double)
+StatPosTarget:          stat.lrPosTarget(Double)
+StatPosActual:          stat.lrPosActual(Double)
+
+StatScaleFactor:        stat.lrScaleFactor(Double)
+StatVelActual:          stat.lrVelActual(Double)
+
+StatBacklashStep:       stat.nBacklashStep
+StatInitStep:           stat.nInitStep
+StatInitAction:         stat.nInitAction
+
+StatInfoData1:          stat.nInfoData1(Int16)
+StatInfoData2:          stat.nInfoData2(Int16)
+
+StatMode:               stat.nMode
+
+StatAxisReady:          stat.bAxisReady
+StatBrakeActive:        stat.bBrakeActive
+StatEnabled:            stat.bEnabled
+StatInitialised:        stat.bInitialised
+StatInPosition:         stat.bInPosition
+StatStopSwitchPos:      stat.bStopSwitchPos
+StatStopSwitchNeg:      stat.bStopSwitchNeg
+
+StatLock:               stat.bLock
+
+StatSignal0Active:      stat.signals[0].bActive
+StatSignal1Active:      stat.signals[1].bActive
+StatSignal2Active:      stat.signals[2].bActive
+StatSignal3Active:      stat.signals[3].bActive
+StatSignal4Active:      stat.signals[4].bActive
+StatSignal5Active:      stat.signals[5].bActive
+
+StatAxisAccel:          stat.axis.lrAccel(Double)
+StatAxisScaleFactor:    stat.axis.lrScaleFactor(Double)
+StatAxisUnit:           stat.axis.sUnits(String)
+################################################################################
+
+################################################################################
+# RPC Methods:
+#-------------------------------------------------------------------------------
+RpcDisable:             rpc.Disable(O:ReturnValue(Int16))
+RpcEnable:              rpc.Enable(O:ReturnValue(Int16))
+RpcExit:                rpc.Exit(O:ReturnValue(Int16))
+RpcInit:                rpc.Init(O:ReturnValue(Int16))
+RpcMoveAbs:             rpc.MoveAbs(I:in_lrPos(Double), I:in_lrVel(Double), O:ReturnValue(Int16))
+RpcMoveRel:             rpc.MoveRel(I:in_lrPos(Double), I:in_lrVel(Double), O:ReturnValue(Int16))
+RpcMoveVel:             rpc.MoveVel(I:in_lrVel(Double), O:ReturnValue(Int16))
+RpcOff:                 rpc.Off(O:ReturnValue(Int16))
+RpcReset:               rpc.Reset(O:ReturnValue(Int16))
+RpcState:               rpc.State(O:StateStat(String))
+RpcStop:                rpc.Stop(O:ReturnValue(Int16))
+
+# Only for the simulator, for test/engineering purposes:
+RpcGetNamespace:        rpc.GetNamespace(O:Namespace(String))
+################################################################################

@@ -1,0 +1,11 @@
+# Sensor configuration type definition
+!cfg.include config/fcf/devmgr/definitions/iodev.yaml:
+
+
+!cfg.typedef Pdu7955301(IODev):
+    mapfile: !cfg.type:string "config/fcf/devmgr/mapping/pdu_7955-301.yaml"
+    norpc: !cfg.type:boolean true
+    namespace: !cfg.type:uint32 2
+    identifier: !cfg.type:string ''
+    prefix: !cfg.type:string ''
+

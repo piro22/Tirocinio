@@ -1,0 +1,19 @@
+# Shutter configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+# Shutter configuration for the controller
+!cfg.typedef ShutterController:
+    low_closed   : !cfg.type:boolean false  # If T, signal is active low
+    low_fault    : !cfg.type:boolean false  # If T, signal is active low
+    low_open     : !cfg.type:boolean false  # If T, signal is active low
+    low_switch   : !cfg.type:boolean false  # If T, signal is active low
+    ignore_closed: !cfg.type:boolean false  # If T, ignore the signal
+    ignore_fault : !cfg.type:boolean false  # If T, ignore the signal
+    ignore_open  : !cfg.type:boolean false  # If T, ignore the signal
+    initial_state: !cfg.type:boolean false  # if T, shutter will be initially closed
+    timeout      : !cfg.type:uint32  2000
+
+!cfg.typedef Shutter(DeviceOpcua):
+    type:    !cfg.type:string Shutter
+    mapfile: !cfg.type:string "config/fcf/devmgr/mapping/shutter.yaml"
+    ctrl_config: !cfg.type:ShutterController

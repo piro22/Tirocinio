@@ -1,0 +1,15 @@
+# @ingroup fcf_devsim
+# @copyright ESO - European Southern Observatory
+# @brief Example configuration for the Lamp DevSim device.
+
+!cfg.include config/fcf/devsim/lamp/lamp.schema.yaml:
+
+lamp: !cfg.type:DevSimLampCfg
+  server_name:                   Lamp1
+  local_mode:                    false
+  auto_enter_op:                 false
+  initial_state:                 false
+  sim_init_time:                 2
+  warm_up:                       2
+  cool_down:                     2
+  max_on:                        30

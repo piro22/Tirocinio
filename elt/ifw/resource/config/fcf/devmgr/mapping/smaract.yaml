@@ -1,0 +1,43 @@
+!cfg.include config/fcf/devmgr/definitions/smaractMap.yaml:
+
+Smaract:
+  cfg:
+    max_velocity:               cfg.lrMaxVelocity
+    velocity:                   cfg.lrMaxVelocity
+    in_position_threshold:      cfg.lrINP_THR
+    in_position_delay:          cfg.nINP_DEL
+    in_position_hold_time:      cfg.nHOLD
+    min_limit:                  cfg.lrRangeLimitMin
+    max_limit:                  cfg.lrRangeLimitMax
+    name:                       cfg.sName
+    unit:                       cfg.sUnits
+    position_reference:         cfg.lrREF_POS
+    velocity_reference:         cfg.lrREF_VEL
+    positioning_options:        cfg.nPCON_OPT
+    referencing_options:        cfg.nREF_OPT
+    calibration_options:        cfg.nCAL_OPT
+    scale_factor:               cfg.lrScale
+    channel:                    cfg.nCHAN
+    module:                     cfg.nMOD
+    enable:                     cfg.bUsed
+
+  stat:
+    state:             stat.nState
+    substate:          stat.nSubstate
+    pos_target:        stat.lrPosTarget
+    pos_actual:        stat.lrPosActual
+    local:             stat.bLocal
+    initialised:       stat.bInitialised
+    error_code:        stat.nErrorCode
+    initialised:       stat.bInitialised
+
+
+
+  rpc:
+    rpcInit:          RPC_Init
+    rpcEnable:        RPC_Enable
+    rpcDisable:       RPC_Disable
+    rpcMoveAbs:       RPC_MoveAbs
+    rpcMoveRel:       RPC_MoveRel
+    rpcStop:          RPC_Stop
+    rpcReset:         RPC_Reset

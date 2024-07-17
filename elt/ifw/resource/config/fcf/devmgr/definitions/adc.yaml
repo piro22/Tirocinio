@@ -1,0 +1,47 @@
+# Adc configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+# Adc configuration for the controller
+
+!cfg.typedef AdcAxisInfo:
+    !cfg.required name:               !cfg.type:string
+    !cfg.required prefix:             !cfg.type:string
+    !cfg.required cfgfile:            !cfg.type:string
+
+# These offsets are according the known parameters for an ADC control
+
+!cfg.typedef AdcController:
+    pslope:                 !cfg.type:double 0.0023
+    poffset:                !cfg.type:double 743.0
+    tslope:                 !cfg.type:double -0.0061
+    toffset:                !cfg.type:double 12.0
+    afactor:                !cfg.type:double 3.32
+    zdlimit:                !cfg.type:double 0.0174533
+    minelev:                !cfg.type:double 27.64
+    trk_period:             !cfg.type:int32  20
+    trk_threshold:          !cfg.type:double 1.0
+
+    mot1_signoff:                !cfg.type:int32  1
+    mot1_signauto:               !cfg.type:int32  1
+    mot1_signphi:                !cfg.type:int32  1
+    mot1_refoff:                 !cfg.type:double 0.0
+    mot1_refauto:                !cfg.type:double 0.0
+    mot1_coffset:                !cfg.type:double 1.7387
+    mot1_poffset:                !cfg.type:double 90
+    mot1_drotfactor:             !cfg.type:double 2
+
+    mot2_signoff:                !cfg.type:int32  1
+    mot2_signauto:               !cfg.type:int32  1
+    mot2_signphi:                !cfg.type:int32  1
+    mot2_refoff:                 !cfg.type:double 0.0
+    mot2_refauto:                !cfg.type:double 0.0
+    mot2_coffset:                !cfg.type:double 1.7387
+    mot2_poffset:                !cfg.type:double 90
+    mot2_drotfactor:             !cfg.type:double 2
+
+!cfg.typedef Adc(DeviceOpcua):
+    type:                  !cfg.type:string Adc
+    mapfile:               !cfg.type:string "config/fcf/devmgr/mapping/adc.yaml"
+    !cfg.required motors:  !cfg.type:vector_AdcAxisInfo
+    ctrl_config:           !cfg.type:AdcController
+    tolerance:             !cfg.type:double 1                # Tolerance in UU

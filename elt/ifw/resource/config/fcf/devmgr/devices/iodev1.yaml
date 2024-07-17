@@ -1,0 +1,88 @@
+!cfg.include config/fcf/devmgr/definitions/iodev.yaml:
+
+
+iodev1: !cfg.type:IODev
+  overview: 'IODev device example 1'
+  description: "IODev device example 1 description"
+  identifier: PLC1
+  prefix: MAIN.IODev2
+  mapfile: "config/fcf/devmgr/mapping/iodev.yaml"
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://134.171.57.209:4840
+  fits_prefix: "IODEV1"
+  channels: [
+  {
+  name: ch1,
+  description: "channel1",
+  fits_prefix: "CH1 STAT",
+  type: DO,
+  unit: mm,
+  map: do1,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: ch2,
+  description: "channel2",
+  fits_prefix: "CH2 STAT",
+  type: DO,
+  unit: dd,
+  map: do2,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: ch3,
+  description: "channel3",
+  fits_prefix: "CH3 STAT",
+  type: DO,
+  unit: dd,
+  map: do3,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  },
+  {
+  name: ch4,
+  description: "channel4",
+  fits_prefix: "CH4 VAL",
+  type: DO,
+  unit: volts,
+  map: do4,
+  named_values: [
+       {
+        name: 'ON',
+        value: '1'
+       },
+       {
+        name: 'OFF',
+        value: '0'
+        }
+       ]
+  }
+
+  ]
+

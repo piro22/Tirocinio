@@ -1,0 +1,59 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the IO Dev DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimIoDevCfg(DevSimCommonCfg):
+  opcua_profile:              !cfg.type:string "config/fcf/devsim/iodev/iodev.namespace.yaml"
+  state_machine_scxml:        !cfg.type:string "config/fcf/devsim/iodev/iodev.scxml.xml"
+
+  di1_function:               !cfg.type:string
+  di1_value:                  !cfg.type:boolean
+  di2_function:               !cfg.type:string
+  di2_value:                  !cfg.type:boolean
+  di3_function:               !cfg.type:string
+  di3_value:                  !cfg.type:boolean
+  di4_function:               !cfg.type:string
+  di4_value:                  !cfg.type:boolean
+  di5_function:               !cfg.type:string
+  di5_value:                  !cfg.type:boolean
+  di6_function:               !cfg.type:string
+  di6_value:                  !cfg.type:boolean
+  di7_function:               !cfg.type:string
+  di7_value:                  !cfg.type:boolean
+  di8_function:               !cfg.type:string
+  di8_value:                  !cfg.type:boolean
+
+  ai1_function:               !cfg.type:string
+  ai1_value:                  !cfg.type:float
+  ai2_function:               !cfg.type:string
+  ai2_value:                  !cfg.type:float
+  ai3_function:               !cfg.type:string
+  ai3_value:                  !cfg.type:float
+  ai4_function:               !cfg.type:string
+  ai4_value:                  !cfg.type:float
+  ai5_function:               !cfg.type:string
+  ai5_value:                  !cfg.type:float
+  ai6_function:               !cfg.type:string
+  ai6_value:                  !cfg.type:float
+  ai7_function:               !cfg.type:string
+  ai7_value:                  !cfg.type:float
+  ai8_function:               !cfg.type:string
+  ai8_value:                  !cfg.type:float
+
+  ii1_function:               !cfg.type:string
+  ii1_value:                  !cfg.type:int16
+  ii2_function:               !cfg.type:string
+  ii2_value:                  !cfg.type:int16
+  ii3_function:               !cfg.type:string
+  ii3_value:                  !cfg.type:int16
+  ii4_function:               !cfg.type:string
+  ii4_value:                  !cfg.type:int16
+  ii5_function:               !cfg.type:string
+  ii5_value:                  !cfg.type:int16
+  ii6_function:               !cfg.type:string
+  ii6_value:                  !cfg.type:int16
+  ii7_function:               !cfg.type:string
+  ii7_value:                  !cfg.type:int16
+  ii8_function:               !cfg.type:string
+  ii8_value:                  !cfg.type:int16

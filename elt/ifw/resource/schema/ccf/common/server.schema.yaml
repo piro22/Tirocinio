@@ -1,0 +1,72 @@
+# @ingroup ccf_common
+# @copyright ESO - European Southern Observatory
+# @brief CCF Control Application configuration schema.
+
+!cfg.include config/utils/bat/definitions.yaml:
+
+!cfg.typedef PropertyTypeDef:
+    !cfg.required name:                  !cfg.type:string
+    !cfg.required value:                 !cfg.type:string
+    write_on_init:                       !cfg.type:boolean false
+
+!cfg.typedef DeviceTypeDef:
+    !cfg.required name:                  !cfg.type:string
+    !cfg.required id:                    !cfg.type:string
+    !cfg.required type:                  !cfg.type:string
+    !cfg.required model:                 !cfg.type:string
+    !cfg.required manufacturer:          !cfg.type:string
+    !cfg.required width:                 !cfg.type:int32
+    !cfg.required height:                !cfg.type:int32
+    !cfg.required resolution:            !cfg.type:int16
+    !cfg.required max_resolution:        !cfg.type:int16
+    !cfg.required protocol:              !cfg.type:string
+    !cfg.required mapping:               !cfg.type:string
+    !cfg.required sdk:                   !cfg.type:string
+    !cfg.required address:               !cfg.type:string
+    !cfg.required sim_address:           !cfg.type:string
+    !cfg.required properties:            !cfg.type:vector_PropertyTypeDef
+
+!cfg.typedef RecordingTypeDef:
+    !cfg.required metadata_map:              !cfg.type:string
+    !cfg.required rec_hist_size:             !cfg.type:int32
+    !cfg.required rec_hist_expiration:       !cfg.type:int32
+    auto_stop_acq_after_rec:                 !cfg.type:boolean false
+
+!cfg.typedef MonitoringTypeDef:
+    !cfg.required period:                !cfg.type:int32
+    !cfg.required nb_of_samples:         !cfg.type:int32
+
+!cfg.typedef AcquisitionTypeDef:
+    !cfg.required max_rate:              !cfg.type:double
+    !cfg.required input_queue_size:      !cfg.type:int16
+    !cfg.required allow_lost_frames:     !cfg.type:boolean false
+    !cfg.required allow_frame_skipping:  !cfg.type:boolean false
+
+!cfg.typedef RecipeTypeDef:
+    !cfg.required name:                  !cfg.type:string
+    !cfg.required adapter:               !cfg.type:string
+
+!cfg.typedef PublisherTypeDef:
+    !cfg.required name:                  !cfg.type:string
+    !cfg.required adapter:               !cfg.type:string
+
+!cfg.typedef PipelineTypeDef:
+    !cfg.required pipeline:              !cfg.type:string
+    !cfg.required output_queue_size:     !cfg.type:int16
+    !cfg.required allow_frame_skipping:  !cfg.type:boolean
+    !cfg.required recipes:               !cfg.type:vector_RecipeTypeDef
+    !cfg.required publishers:            !cfg.type:vector_PublisherTypeDef
+
+!cfg.typedef TasksTypeDef:
+    !cfg.required monitoring:            !cfg.type:MonitoringTypeDef
+    !cfg.required acquisition:           !cfg.type:AcquisitionTypeDef
+    !cfg.required processing:            !cfg.type:vector_PipelineTypeDef
+
+!cfg.typedef CcfServerTypeDef(IfwServer):
+    !cfg.required simulation:            !cfg.type:boolean false
+    !cfg.required init_setup:            !cfg.type:string
+    !cfg.required recording:             !cfg.type:RecordingTypeDef
+    !cfg.required tasks:                 !cfg.type:TasksTypeDef
+    !cfg.required devices:               !cfg.type:vector_DeviceTypeDef
+
+# EOF

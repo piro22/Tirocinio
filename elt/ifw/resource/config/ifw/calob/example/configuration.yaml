@@ -1,0 +1,27 @@
+!cfg.include config/ifw/calob/schema/calob_cfg.schema.yaml:
+
+# IFW Calob Tool Example Configuration
+
+database: !cfg.type:DatabaseDef
+  db_path: "calob/db/calibration_history.db"
+
+calob: !cfg.type:CalobDef
+  calib_schedule_module: "ifw.calob.example.FORSUP_calibration_schedule"
+  log_property_file: "config/ifw/calob/log/log_config.json"
+  console_logger: "elt.log.test"
+
+fits_crawler: !cfg.type:FitsCrawlerDef
+  # Note: Normally data will be stored under the "DATAROOT" area and "data_path"
+  # should be set to the relative path under "DATAROOT".
+  data_path: "$INTROOT/resource/image/ifw/calob/example"
+  #data_path: "/home_local/eltdev/CRE/C/extra_data/2023-07-22"
+  #data_path: "/home_local/eltdev/CRE/C/extra_data/FORS2.TEST"
+  file_pattern: "*.fits"
+  timeframe_start: ""
+  timeframe_end: ""
+
+exporter_ob: !cfg.type:ExporterObDef
+  path_dc_template: "resource/template/ifw/calob/daily_calib.obd.json"
+  path_dc: "calob/daily_calibration/daily_calib.obd.json"
+  obd_path: "resource/obd/ifw/calob/example" 
+  obdx_path: "resource/obdx/ifw/calob/example" 

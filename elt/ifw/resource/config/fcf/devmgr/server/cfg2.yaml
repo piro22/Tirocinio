@@ -1,0 +1,96 @@
+# server definition
+!cfg.include config/fcf/devmgr/definitions/server.yaml:
+
+server: !cfg.type:FcfServer
+    server_id       : 'fcs2'
+    req_endpoint    : "zpb.rr://127.0.0.1:12086/"
+    pub_endpoint    : "zpb.ps://127.0.0.1:7779/"
+    db_timeout      : 2000
+    scxml           : "config/fcf/devmgr/server/sm.xml"
+    dictionaries    : ['dictionary/dit/stddid/primary.did.yaml', 'dictionary/fcf/devmgr/server/fcf.did']
+    log_properties  : "config/fcf/devmgr/server/log_cii_properties.cfg"
+    fits_prefix     : "INS2"
+    oldb_prefix     : "elt/ins9"
+    req_timeout     : 300000
+    version         : '5.0.0'
+    gui: {
+           containers: [
+               {
+                 name: 'Devices',
+                 position: 'LEFT'
+               },
+               {
+                 name: 'Tracking',
+                 position: 'LEFT'
+               },
+               {
+                 name: 'Sensors',
+                 position: 'RIGHT'
+               },
+               {
+                 name: 'IO Control',
+                 position: 'RIGHT'
+               }
+             ]
+           }
+
+    devices         : [
+    {
+    name: 'shutter1',
+    type: Shutter,
+    cfgfile: "config/fcf/devmgr/devices/shutter1.yaml"
+    },
+    {
+    name: 'lamp1',
+    type: Lamp,
+    cfgfile: "config/fcf/devmgr/devices/lamp1.yaml"
+    },
+    {
+    name: 'actuator1',
+    type: Actuator,
+    cfgfile: "config/fcf/devmgr/devices/actuator1.yaml"
+    },
+    {
+    name: 'motor2',
+    type: Motor,
+    cfgfile: "config/fcf/devmgr/devices/motor2.yaml"
+    },
+    {
+    name: 'sensor1',
+    type: IODev,
+    cfgfile: "config/fcf/devmgr/devices/sensor1.yaml",
+    widget: {
+         container: "Sensors"
+      }
+    },
+    {
+    name: 'piezo1',
+    type: Piezo,
+    cfgfile: "config/fcf/devmgr/devices/piezo1.yaml"
+    },
+    {
+    name: 'drot1',
+    type: Drot,
+    cfgfile: "config/fcf/devmgr/devices/drot1.yaml",
+    widget: {
+         container: "Tracking"
+      }
+    },
+    {
+    name: 'adc1',
+    type: Adc,
+    cfgfile: "config/fcf/devmgr/devices/adc1.yaml",
+    widget: {
+         container: "Tracking"
+      }
+    },
+    {
+    name: 'iodev1',
+    type: IODev,
+    cfgfile: "config/fcf/devmgr/devices/iodev1.yaml",
+    widget: {
+         container: "IO Control"
+      }
+    }
+    ]
+

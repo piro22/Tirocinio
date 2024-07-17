@@ -1,0 +1,32 @@
+# Drot configuration type definition
+!cfg.include config/fcf/devmgr/definitions/motor.yaml:
+
+# Drot configuration for the controller
+!cfg.typedef DrotController(MotorController):
+    # reset limits. Derotator should not have software limits since
+    # it uses CIRCULAR_OPT.
+    min_pos:               !cfg.type:double 0
+    max_pos:               !cfg.type:double 0
+
+    # Derotator specific parameters
+    focus_sign:         !cfg.type:int32    -1
+    dir_sign:           !cfg.type:int32     1
+    stat_ref:           !cfg.type:double    0.0
+    sky_ref:            !cfg.type:double    0.0
+    elev_ref:           !cfg.type:double    0.0
+    user_ref:           !cfg.type:double    0.0
+    user_par1:          !cfg.type:double    0.0
+    user_par2:          !cfg.type:double    0.0
+    user_par3:          !cfg.type:double    0.0
+    user_par4:          !cfg.type:double    0.0
+    trk_period:         !cfg.type:int32     5
+    trk_threshold:      !cfg.type:double    1.0
+
+!cfg.typedef Drot(Motor):
+    type:                  !cfg.type:string Drot
+    mapfile:               !cfg.type:string "config/fcf/devmgr/mapping/drot.yaml"
+    axis_type:             !cfg.type:MotorAxisType CIRCULAR_OPT
+    initialisation:        !cfg.type:vector_MotorInitDefinition
+    ctrl_config:           !cfg.type:DrotController
+    positions:             !cfg.type:vector_MotorNamedPosition
+    tolerance:             !cfg.type:double 1                # Tolerance in UU

@@ -1,0 +1,23 @@
+# @ingroup calob_common
+# @copyright ESO - European Southern Observatory
+# @brief Calibration Framework configuration schema.
+
+!cfg.typedef DatabaseDef:
+    !cfg.required db_path:                  !cfg.type:string
+
+!cfg.typedef CalobDef:
+    !cfg.required calib_schedule_module:    !cfg.type:string
+    !cfg.required log_property_file:        !cfg.type:string
+    !cfg.required console_logger:           !cfg.type:string
+
+!cfg.typedef FitsCrawlerDef:
+    !cfg.required data_path:                !cfg.type:string
+    !cfg.required file_pattern:             !cfg.type:string "*.fits"
+    !cfg.required timeframe_start:          !cfg.type:string ""
+    !cfg.required timeframe_end:            !cfg.type:string ""
+
+!cfg.typedef ExporterObDef:
+    !cfg.required path_dc_template:         !cfg.type:string "resource/template/ifw/calob/daily_calib.obd.json"
+    !cfg.required path_dc:                  !cfg.type:string "calob/daily_calibration/daily_calib.obd.json"
+    !cfg.required obd_path:                 !cfg.type:string
+    !cfg.required obdx_path:                !cfg.type:string

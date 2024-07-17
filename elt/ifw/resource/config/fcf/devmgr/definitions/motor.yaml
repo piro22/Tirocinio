@@ -1,0 +1,73 @@
+# Motor configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+# Motor Axis Type
+!cfg.typedef MotorAxisType(string):
+    # CIRCULAR_OPT is circular optimized which means if tries to find the shorter way to
+    # reach the target position.
+    allowed_values: ['CIRCULAR', 'CIRCULAR_OPT', 'LINEAR']
+    default: 'LINEAR'
+
+# Motor Init Step Type
+!cfg.typedef MotorInitStepType(string):
+    allowed_values: ['FIND_INDEX',
+                     'FIND_REF_LE',
+                     'FIND_REF_UE',
+                     'FIND_LHW',
+                     'FIND_UHW',
+                     'DELAY',
+                     'MOVE_ABS',
+                     'MOVE_REL',
+                     'CALIB_ABS',
+                     'CALIB_REL',
+                     'CALIB_SWITCH',
+                     'END']
+    default: 'END'
+
+# Motor Init Structure
+!cfg.typedef MotorInitDefinition:
+    step:                  !cfg.type:MotorInitStepType
+    # Initialization step parameter 1
+    value1:                !cfg.type:double
+    # Initialization step parameter 2
+    value2:                !cfg.type:double
+
+# Motor Named Positions
+!cfg.typedef MotorNamedPosition:
+    name:                  !cfg.type:string
+    value:                 !cfg.type:double
+
+# Motor configuration for the controller
+!cfg.typedef MotorController:
+    velocity:              !cfg.type:double 3.0
+    min_pos:               !cfg.type:double 0
+    max_pos:               !cfg.type:double 360
+    active_low_lstop:      !cfg.type:boolean false
+    active_low_lhw:        !cfg.type:boolean false
+    active_low_ref:        !cfg.type:boolean false
+    active_low_index:      !cfg.type:boolean false
+    active_low_uhw:        !cfg.type:boolean false
+    active_low_ustop:      !cfg.type:boolean false
+    brake:                 !cfg.type:boolean false
+    low_brake:             !cfg.type:boolean false
+    low_inpos:             !cfg.type:boolean false
+    exec_pre_init:         !cfg.type:boolean false
+    exec_post_init:        !cfg.type:boolean false
+    exec_pre_move:         !cfg.type:boolean false
+    exec_post_move:        !cfg.type:boolean false
+    backlash:              !cfg.type:double 0.0
+    init_timeout:          !cfg.type:uint32 30000
+    move_timeout:          !cfg.type:uint32 120000
+    switch_timeout:        !cfg.type:uint32 10000
+    # Initialisation is the list of steps to initialise the motor
+    # Each motor must configure this list accordingly.
+
+
+!cfg.typedef Motor(DeviceOpcua):
+    type:                  !cfg.type:string Motor
+    mapfile:               !cfg.type:string "config/fcf/devmgr/mapping/motor.yaml"
+    axis_type:             !cfg.type:MotorAxisType
+    initialisation:        !cfg.type:vector_MotorInitDefinition
+    ctrl_config:           !cfg.type:MotorController
+    positions:             !cfg.type:vector_MotorNamedPosition
+    tolerance:             !cfg.type:double 1                # Tolerance in UU

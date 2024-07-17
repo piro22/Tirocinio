@@ -1,0 +1,36 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef LampCfgMap:
+    !cfg.required low_fault:         !cfg.type:string
+    !cfg.required low_on:            !cfg.type:string
+    !cfg.required low_switch:        !cfg.type:string
+    !cfg.required ignore_fault:      !cfg.type:string
+    !cfg.required invert_analog:     !cfg.type:string
+    !cfg.required analog_threshold:  !cfg.type:string
+    !cfg.required analog_range:      !cfg.type:string
+    !cfg.required cooldown:          !cfg.type:string
+    !cfg.required maxon:             !cfg.type:string
+    !cfg.required warmup:            !cfg.type:string
+    !cfg.required initial_state:     !cfg.type:string
+    !cfg.required initial_intensity: !cfg.type:string
+    !cfg.required timeout:           !cfg.type:string
+
+!cfg.typedef LampStatMap(DevStatMap):
+    !cfg.required intensity:        !cfg.type:string
+    !cfg.required check_time_left:  !cfg.type:string
+    !cfg.required time_left:        !cfg.type:string
+    !cfg.required on_analog:        !cfg.type:string
+    !cfg.required on_digital:       !cfg.type:string
+    !cfg.required analog_feedback:  !cfg.type:string
+
+!cfg.typedef LampRpcMap(DevRpcMap):
+    !cfg.required rpcSwitchOn:      !cfg.type:string
+    !cfg.required rpcSwitchOff:     !cfg.type:string
+
+!cfg.typedef LampMap:
+    !cfg.required cfg       : !cfg.type:LampCfgMap
+    !cfg.required stat      : !cfg.type:LampStatMap
+    !cfg.required rpc       : !cfg.type:LampRpcMap
+
+

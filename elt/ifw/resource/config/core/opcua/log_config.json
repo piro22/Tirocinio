@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "handlers": {
+        "logsink": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "backupCount": 5,
+            "filename": "CII_LOGSINK_FILENAME",
+            "formatter": "cii",
+            "maxBytes": 10485760
+        },
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "cii-brief",
+            "stream": "ext://sys.stdout"
+        }
+    },
+    "root": {
+        "handlers": [
+            "logsink"],
+        "level": "INFO"
+    },
+    "formatters": {
+        "cii": {
+            "format": "CII_LOG_PATTERN",
+            "datefmt": "CII_LOG_PATTERN_DATE"
+        },
+        "cii-brief": {
+            "format": "CII_SIMPLE_LOG_PATTERN",
+            "datefmt": "CII_LOG_PATTERN_DATE"
+        }
+    },
+    "loggers": {
+        "ifw.core.opcua": {
+          "handlers": [
+              "logsink",
+              "console"
+          ],
+          "level": "INFO"
+        },
+        "scxml4py": {
+            "handlers": [
+                "logsink",
+                "console"
+            ],
+            "level": "ERROR"
+          },
+          "asyncua.uaprotocol": {
+              "handlers": [
+                  "logsink",
+                  "console"
+              ],
+              "level": "ERROR"
+            }
+    }
+}

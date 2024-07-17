@@ -1,0 +1,42 @@
+# Sensor configuration type definition
+!cfg.include config/fcf/devmgr/definitions/device.yaml:
+
+!cfg.typedef IODevType(string):
+    # IO channel type
+    # reach the target position.
+    allowed_values: ['DI', 'AI', 'II', 'DO', 'AO', 'IO']
+    default: 'DI'
+
+# IODev Named values
+!cfg.typedef ChannelNamedValue:
+    name:                  !cfg.type:string
+    value:                 !cfg.type:string
+
+# Sensor Channel type
+!cfg.typedef BaseChannel:
+    !cfg.required name:    !cfg.type:string
+    description:           !cfg.type:string ""
+    alias:                 !cfg.type:string ""
+    header:                !cfg.type:boolean false
+    log:                   !cfg.type:boolean false
+    unit:                  !cfg.type:string ""
+    map:                   !cfg.type:string ""
+    fits_prefix:           !cfg.type:string ""
+    named_values:         !cfg.type:vector_ChannelNamedValue []
+
+
+# Sensor Channel type
+!cfg.typedef IODevChannel(BaseChannel):
+    !cfg.required type:    !cfg.type:IODevType
+
+# Sensor configuration for the controller
+!cfg.typedef SensorController:
+    timeout      : !cfg.type:uint32 2000
+
+!cfg.typedef IODev(DeviceOpcua):
+    type:    !cfg.type:string IODev
+    mapfile: !cfg.type:string
+    norpc: !cfg.type:boolean false
+    sensor: !cfg.type:boolean false
+    ctrl_config: !cfg.type:SensorController
+    channels: !cfg.type:vector_IODevChannel

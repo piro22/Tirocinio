@@ -1,0 +1,46 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/motorMap.yaml:
+
+!cfg.typedef AdcCfgMap:
+    !cfg.required pslope:            !cfg.type:string
+    !cfg.required poffset:           !cfg.type:string
+    !cfg.required tslope:            !cfg.type:string
+    !cfg.required toffset:           !cfg.type:string
+    !cfg.required afactor:           !cfg.type:string
+    !cfg.required zdlimit:           !cfg.type:string
+    !cfg.required minelev:           !cfg.type:string
+    !cfg.required trk_period:        !cfg.type:string
+    !cfg.required trk_threshold:     !cfg.type:string
+
+    mot1_signoff:                   !cfg.type:string
+    mot2_signoff:                   !cfg.type:string
+    mot1_signauto:                  !cfg.type:string
+    mot2_signauto:                  !cfg.type:string
+    mot1_signphi:                   !cfg.type:string
+    mot2_signphi:                   !cfg.type:string
+    mot1_refoff:                    !cfg.type:string
+    mot2_refoff:                    !cfg.type:string
+    mot1_refauto:                   !cfg.type:string
+    mot2_refauto:                   !cfg.type:string
+    mot1_coffset:                   !cfg.type:string
+    mot2_coffset:                   !cfg.type:string
+    mot1_poffset:                   !cfg.type:string
+    mot2_poffset:                   !cfg.type:string
+    mot1_drotfactor:                !cfg.type:string
+    mot2_drotfactor:                !cfg.type:string
+
+!cfg.typedef AdcStatMap(DevStatMap):
+    track_mode:        !cfg.type:string
+    alpha:             !cfg.type:string
+    delta:             !cfg.type:string
+
+!cfg.typedef AdcRpcMap(MotorRpcMap):
+    rpcMoveAngle:     !cfg.type:string
+    rpcStartTrack:    !cfg.type:string
+    rpcStopTrack:     !cfg.type:string
+
+# Adc Map Definition
+!cfg.typedef AdcMap:
+    !cfg.required cfg       : !cfg.type:AdcCfgMap
+    !cfg.required stat      : !cfg.type:AdcStatMap
+    !cfg.required rpc       : !cfg.type:AdcRpcMap

@@ -1,0 +1,22 @@
+# @copyright ESO - European Southern Observatory
+# @brief Example configuration for the Motor DevSim device (ADC Motor 1).
+
+!cfg.include config/fcf/devsim/motor/motor.schema.yaml:
+
+motor: !cfg.type:DevSimMotorCfg
+  opcua_profile:             "" # The OPC UA profile is defined globally for the ADC device
+  update_frequency:          1.123
+  sim_acceleration:          1.0
+  velocity_error:            0.0123456789
+  sim_pos_error:             0.0123456789
+  sim_tolerance:             3.0
+  simulated_start_pos:       21.12345
+  scale_factor:              0.087890625
+  min_position:              11.234
+  max_position:              55.0
+  timeout_init:              90.0
+  timeout_move:              90.0
+  timeout_switch:            300.0
+  disable_after_move:        true
+  default_velocity:          1.9898
+  sim_delay:                 0.1

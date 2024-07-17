@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM" version="1.0" initial="On">  
+  <state id="On"> 
+    <initial>
+      <transition target="On::NotOperational"/>
+    </initial>  
+    <state id="On::Operational"> 
+      <initial>
+        <transition target="On::Operational::Standstill"/>
+      </initial>  
+      <state id="On::Operational::Error"> 
+        <transition event="Move" target="On::Operational::Moving"> 
+          <customActionDomain:Move.Execute name="Move.Execute"/> 
+        </transition>  
+        <transition event="Disable" target="On::NotOperational::Ready"/> 
+      </state>  
+      <state id="On::Operational::Moving"> 
+        <invoke targettype="java" id="Moving" src="SMActivityMoving.java"/>  
+        <transition event="MoveDone" target="On::Operational::Standstill"/>  
+        <transition event="Stop" target="On::Operational::Stopping"> 
+          <customActionDomain:Stop.Execute name="Stop.Execute"/> 
+        </transition>  
+        <transition event="ErrFault" target="On::Operational::Error"> 
+          <customActionDomain:Err.Execute name="Err.Execute"/> 
+        </transition>  
+        <transition event="ErrBrake" target="On::Operational::Standstill"/>  
+        <transition event="Timeout" target="On::Operational::Error"/>  
+        <transition event="ErrLowerLimit" target="On::Operational::Standstill"/>  
+        <transition event="ErrUpperLimit" target="On::Operational::Standstill"/>  
+        <transition event="Move" target="On::Operational::Moving"/>  
+        <transition event="ErrTimeout" target="On::Operational::Stopping"/>  
+        <transition event="ErrTargetPar" target="On::Operational::Stopping"/>  
+        <transition event="ErrUserPreMove" target="On::Operational::Stopping"/>  
+        <transition event="ErrUserPostMove" target="On::Operational::Stopping"/>  
+        <transition event="ErrBrake" target="On::Operational::Error"/>  
+        <transition event="ErrEnable" target="On::Operational::Error"/>  
+        <transition event="ErrInPos" target="On::Operational::Error"/>  
+        <transition event="ErrLoaded" target="On::Operational::Error"/> 
+      </state>  
+      <state id="On::Operational::Standstill"> 
+        <transition event="Disable" target="On::NotOperational::Ready"/>  
+        <transition event="Move" target="On::Operational::Moving"> 
+          <customActionDomain:Move.Execute name="Move.Execute"/> 
+        </transition>  
+        <transition event="SetPosition" target="On::Operational::SettingPosition"/>  
+        <transition event="ErrHw" target="On::Operational::Error"> 
+          <customActionDomain:Stop.Execute name="Stop.Execute"/> 
+        </transition>  
+        <transition event="ErrFault" target="On::Operational::Error"/> 
+      </state>  
+      <state id="On::Operational::Stopping"> 
+        <invoke targettype="java" id="Stopping" src="SMActivityStopping.java"/>  
+        <transition event="StopDone" target="On::Operational::Standstill"/>  
+        <transition event="ErrFault" target="On::Operational::Error"/>  
+        <transition event="ErrStop" target="On::Operational::Error"/> 
+      </state>  
+      <state id="On::Operational::SettingPosition"> 
+        <transition event="SetPosDone" target="On::Operational::Standstill"/> 
+      </state>  
+      <transition event="Reset" target="On::NotOperational"> 
+        <customActionDomain:Reset.Execute name="Reset.Execute"/> 
+      </transition>  
+      <transition event="ErrHw" target="On::Operational::Error"/>  
+      <transition event="Move"> 
+        <customActionDomain:Move.Execute name="Move.Execute"/> 
+      </transition> 
+    </state>  
+    <state id="On::NotOperational"> 
+      <initial>
+        <transition target="On::NotOperational::NotReady"/>
+      </initial>  
+      <state id="On::NotOperational::NotReady"> 
+        <transition event="Init" target="On::NotOperational::Initialising"> 
+          <customActionDomain:Init.Execute name="Init.Execute"/> 
+        </transition>  
+        <transition event="Reset"> 
+          <customActionDomain:Reset.Execute name="Reset.Execute"/> 
+        </transition> 
+      </state>  
+      <state id="On::NotOperational::Initialising"> 
+        <invoke targettype="java" id="Initialising" src="SMActivityInitialising.java"/>  
+        <transition event="InitDone" target="On::NotOperational::Ready"> 
+          <customActionDomain:Init.Complete name="Init.Complete"/> 
+        </transition>  
+        <transition event="ErrInit" target="On::NotOperational::NotReady"/>  
+        <transition event="Stop" target="On::NotOperational::NotReady"> 
+          <customActionDomain:Init.Abort name="Init.Abort"/> 
+        </transition>  
+        <transition event="Reset" target="On::NotOperational::Aborting"> 
+          <customActionDomain:Init.Abort name="Init.Abort"/> 
+        </transition>  
+        <transition event="ErrBrake" target="On::NotOperational::NotReady"/>  
+        <transition event="ErrReset" target="On::NotOperational::NotReady"/>  
+        <transition event="Stop" target="On::NotOperational::Aborting"> 
+          <customActionDomain:Init.Abort name="Init.Abort"/> 
+        </transition> 
+      </state>  
+      <state id="On::NotOperational::Ready"> 
+        <transition event="Reset" target="On::NotOperational::NotReady"> 
+          <customActionDomain:Reset.Execute name="Reset.Execute"/> 
+        </transition>  
+        <transition event="ErrFault" target="On::NotOperational::NotReady"/>  
+        <transition event="Enable" target="On::Operational::Standstill"/>  
+        <transition event="Init"> 
+          <customActionDomain:Init.Complete name="Init.Complete"/> 
+        </transition> 
+      </state>  
+      <state id="On::NotOperational::Aborting"> 
+        <invoke targettype="java" id="Aborting" src="SMActivityAborting.java"/>  
+        <transition event="StopDone" target="On::NotOperational::NotReady"/>  
+        <transition event="Reset" target="On::NotOperational::NotReady"> 
+          <customActionDomain:Init.Abort name="Init.Abort"/> 
+        </transition> 
+      </state>  
+      <state id="On::NotOperational::Error"> 
+        <transition event="HwOk" target="On::NotOperational::NotReady"/> 
+      </state>  
+      <transition event="ErrHw" target="On::NotOperational::Error"/> 
+    </state>  
+    <transition event="" target="Off"/>  
+    <transition event="Stop"> 
+      <customActionDomain:Stop.Execute name="Stop.Execute"/> 
+    </transition> 
+  </state>  
+  <final id="Off"/> 
+</scxml>

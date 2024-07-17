@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/CUSTOM" version="1.0" initial="On">  
+  <state id="On"> 
+    <initial>
+      <transition target="On::NotOperational"/>
+    </initial>  
+    <state id="On::Operational"> 
+      <initial>
+        <transition target="On::Operational::Off"/>
+      </initial>  
+      <state id="On::Operational::Error">
+        <transition event="Off" target="On::Operational::SwitchingOff">
+            <customActionDomain:Off.Execute name="Off.Execute"/>
+        </transition>
+        <transition event="IsOn" target="On::Operational::SwitchingOn">
+            <customActionDomain:On.Execute name="On.Execute"/>
+        </transition>
+        <transition event="Disable" target="On::Operational::Disabling"/>
+        <transition event="IsOn" target="On::Operational::On"/>
+        <transition event="IsOff" target="On::Operational::Off"/>
+      </state>  
+      <state id="On::Operational::Disabling">
+        <invoke targettype="" id="Disabling"/>
+        <transition event="DisableOff" target="On::NotOperational::Ready::Off"/>
+        <transition event="DisableOn" target="On::NotOperational::Ready::On"/>
+        <transition event="DisableErr" target="On::NotOperational::Ready::Off">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition>
+        <transition event="Error" target="On::NotOperational::NotReady"/> 
+      </state>
+      <state id="On::Operational::Off">
+        <invoke targettype="" id="Off"/>
+        <transition event="On" target="On::Operational::SwitchingOn">
+          <customActionDomain:On.Execute name="On.Execute"/>
+        </transition>
+        <transition event="Disable" target="On::Operational::Disabling">
+          <customActionDomain:Disable.Execute name="Disable.Execute"/>
+        </transition>
+        <transition event="IsOn" target="On::Operational::On">
+          <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+        </transition>
+        <transition event="IsOn" target="On::Operational::Error">
+          <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+        </transition>
+        <transition event="Off" target="On::Operational::Off"/>
+      </state>
+      <state id="On::Operational::SwitchingOn">
+        <invoke targettype="" id="SwitchingOn"/>
+        <transition event="IsOn" target="On::Operational::On"/>
+        <transition event="ErrTimeout" target="On::Operational::Off"/>
+        <transition event="On" target="On::Operational::SwitchingOn"/>
+      </state>
+      <state id="On::Operational::SwitchingOff">
+        <invoke targettype="java" id="SwitchingOff"/>
+        <transition event="IsOff" target="On::Operational::Off"/>
+        <transition event="ErrTimeout" target="On::Operational::Off"/>
+      </state>
+      <state id="On::Operational::On">
+        <invoke targettype="" id="On"/>
+        <transition event="Off" target="On::Operational::SwitchingOff">
+          <customActionDomain:Off.Execute name="Off.Execute"/>
+        </transition>
+        <transition event="Disable" target="On::Operational::Disabling">
+          <customActionDomain:Disable.Execute name="Disable.Execute"/>
+        </transition>
+        <transition event="IsOff" target="On::Operational::Off">
+          <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+        </transition>
+        <transition event="ErrMaxOn" target="On::Operational::SwitchingOff">
+          <customActionDomain:Off.Execute name="Off.Execute"/>
+        </transition>
+        <transition event="On" target="On::Operational::On"/>
+        <transition event="LimitOn" target="On::Operational::SwitchingOff">
+          <customActionDomain:Off.Execute name="Off.Execute"/>
+        </transition>
+      </state>
+      <transition event="Reset" target="On::NotOperational"> 
+        <customActionDomain:Reset.Execute name="Reset.Execute"/> 
+      </transition>  
+      <transition event="ErrHw" target="On::Operational::Error"/>  
+      <transition event="ErrFault" target="On::Operational::Error"/> 
+    </state>  
+    <state id="On::NotOperational"> 
+      <initial>
+        <transition target="On::NotOperational::NotReady"/>
+      </initial>  
+      <state id="On::NotOperational::NotReady"> 
+        <transition event="Init" target="On::NotOperational::Initialising"> 
+          <customActionDomain:Init.Execute name="Init.Execute"/> 
+        </transition>  
+        <transition event="Reset"> 
+          <customActionDomain:Reset.Execute name="Reset.Execute"/> 
+        </transition> 
+      </state>  
+      <state id="On::NotOperational::Initialising"> 
+        <invoke targettype="" id="Initialising"/>
+        <transition event="InitOn" target="On::NotOperational::Ready::On">
+          <customActionDomain:Init.Complete name="Init.Complete"/>
+        </transition>
+        <transition event="InitOff" target="On::NotOperational::Ready::Off">
+          <customActionDomain:Init.Complete name="Init.Complete"/>
+        </transition>
+        <transition event="ErrInit" target="On::NotOperational::NotReady">
+          <customActionDomain:Err.Execute name="Err.Execute"/> 
+        </transition>  
+        <transition event="Reset" target="On::NotOperational::NotReady"> 
+          <customActionDomain:Init.Reset name="Init.Reset"/> 
+        </transition>  
+        <transition event="Stop" target="On::NotOperational::NotReady"> 
+          <customActionDomain:Init.Stop name="Init.Stop"/> 
+        </transition>
+      </state>  
+      <state id="On::NotOperational::Ready"> 
+        <initial>
+            <transition target="On::NotOperational::Ready::Off"/>
+        </initial>
+        <state id="On::NotOperational::Ready::Off">
+          <transition event="IsOn" target="On::NotOperational::Ready::On">
+            <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+          </transition>
+          <transition event="Enable" target="On::Operational::Off"/>
+        </state>
+        <state id="On::NotOperational::Ready::On">
+          <transition event="IsOff" target="On::NotOperational::Ready::Off">
+            <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+          </transition>
+          <transition event="Enable" target="On::Operational::On">
+            <customActionDomain:Enable.Complete name="Enable.Complete"/>
+          </transition>
+        </state>
+        <transition event="Reset" target="On::NotOperational::NotReady"> 
+          <customActionDomain:Reset.Execute name="Reset.Execute"/> 
+        </transition>
+      </state>  
+      <state id="On::NotOperational::Error"> 
+        <transition event="HwOk" target="On::NotOperational::NotReady"/> 
+      </state>  
+      <transition event="ErrHw" target="On::NotOperational::Error"/>  
+      <transition event="ErrFault" target="On::NotOperational::Error"/> 
+    </state>  
+    <transition event="" target="Off"/>  
+    <transition event="Stop"> 
+      <customActionDomain:Stop.Execute name="Stop.Execute"/> 
+    </transition> 
+  </state>  
+  <final id="Off"/> 
+</scxml>

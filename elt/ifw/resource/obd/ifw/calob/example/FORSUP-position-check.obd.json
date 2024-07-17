@@ -1,0 +1,63 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-position-check",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-position-check",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_gen_tec_calPosition",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Calibration Position Check"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "SEQ.LADC",
+          "type": "string",
+          "value": 30.0
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_coll",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Collimator template"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.COLL.NAID",
+          "type": "string",
+          "value": "COLL_SR+6"
+        }
+      ]
+    }
+  ]
+}

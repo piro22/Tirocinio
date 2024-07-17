@@ -1,0 +1,25 @@
+# server definition
+!cfg.include config/utils/bat/definitions.yaml:
+
+!cfg.typedef Subsystem:
+    !cfg.required name       : !cfg.type:string
+    scope       : !cfg.type:string               internal
+    type        : !cfg.type:string               sup::syssup::common::Generic
+    !cfg.required rr_endpoint : !cfg.type:string
+    !cfg.required ps_endpoint : !cfg.type:string
+    access      : !cfg.type:boolean               true
+
+!cfg.typedef Modes:
+    name       : !cfg.type:string
+    subsystems : !cfg.type:vector_string
+
+!cfg.typedef SysSup(IfwServer):
+    !cfg.required subsystems: !cfg.type:vector_Subsystem
+    op_modes: !cfg.type:vector_Modes []
+    ob_modes: !cfg.type:vector_Modes []
+
+
+
+
+
+

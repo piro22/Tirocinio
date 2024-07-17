@@ -1,0 +1,465 @@
+# @copyright ESO - European Southern Observatory
+# @brief Name Mapping File for the general purpose ELT ICS FCF Motor Device.
+
+################################################################################
+# Firmware Info Mapping:
+#-------------------------------------------------------------------------------
+InfoDate:               info.sDate
+InfoDescription:        info.sDescription
+InfoName:               info.sName
+InfoPlatform:           info.sPlatform
+InfoSynopsis:           info.sSynopsis
+InfoVersionMajor:       info.nVersionMajor
+InfoVersionMinor:       info.nVersionMinor
+################################################################################
+
+################################################################################
+# Configuration Parameters:
+#-------------------------------------------------------------------------------
+CfgPslope:              cfg.lrPslope(Double)
+CfgPpoffset:            cfg.lrPoffset(Double)
+CfgPtslope:             cfg.lrTslope(Double)
+CfgPtoffset:            cfg.lrToffset(Double)
+CfgPafactor:            cfg.lrAfactor(Double)
+CfgPzdlimit:            cfg.lrZDlimit(Double)
+CfgPminelev:            cfg.lrMinElev(Double)
+CfgPlatitude:           cfg.site.latitude(Double)
+CfgPlongitude:          cfg.site.longitude(Double)
+CfgPtrkPeriod:          cfg.nMinSkipCycles
+CfgTrkThreashold:       cfg.lrTrkThreshold(Double)
+CfgPmot1Signoff:        cfg.unitCfg[1].nSignOff
+CfgPmot2Signoff:        cfg.unitCfg[2].nSignOff
+CfgPmot1Signauto:       cfg.unitCfg[1].nSignAuto
+CfgPmot2Signauto:       cfg.unitCfg[2].nSignAuto
+CfgPmot1Signphi:        cfg.unitCfg[1].nSignPhi
+CfgPmot2Signphi:        cfg.unitCfg[2].nSignPhi
+CfgPmot1Refoff:         cfg.unitCfg[1].lrRefOff(Double)
+CfgPmot2Refoff:         cfg.unitCfg[2].lrRefOff(Double)
+CfgPmot1Refauto:        cfg.unitCfg[1].lrRefAuto(Double)
+CfgPmot2Refauto:        cfg.unitCfg[2].lrRefAuto(Double)
+CfgPmot1Coffset:        cfg.unitCfg[1].lrCoffset(Double)
+CfgPmot2Coffset:        cfg.unitCfg[2].lrCoffset(Double)
+CfgPmot1Poffset:        cfg.unitCfg[1].lrPosOffset(Double)
+CfgPmot2Poffset:        cfg.unitCfg[2].lrPosOffset(Double)
+CfgPmot1Drotfactor:     cfg.unitCfg[1].lrDrotFactor(Double)
+CfgPmot2Drotfactor:     cfg.unitCfg[2].lrDrotFactor(Double)
+################################################################################
+
+################################################################################
+# Control Parameters:
+#-------------------------------------------------------------------------------
+CtrlCommand:            ctrl.nCommand
+CtrlEnvLapserate:       ctrl.environment.lapserate(Double)
+CtrlEnvPressure:        ctrl.environment.pressure(Double)
+CtrlEnvTemperature:     ctrl.environment.temperature(Double)
+CtrlEnvHumidity:        ctrl.environment.humidity(Double)
+CtrlExecute:            ctrl.bExecute
+CtrlMode:               ctrl.nMode
+CtrlPosang:             ctrl.lrPosang
+CtrlTargetPos:          ctrl.lrTargetPos
+CtrlTargetVel:          ctrl.lrTargetVel
+################################################################################
+
+################################################################################
+# Status Parameters:
+#-------------------------------------------------------------------------------
+StatState:              stat.sm.sState
+StatSubstate:           stat.sm.sSubstate
+StatNState:             stat.sm.nState
+StatNSubstate:          stat.sm.nSubstate
+StatSnitialised:        stat.bInitialised
+StatTrackMode:          stat.nMode(Int16)
+StatAlpha:              stat.apparent.alpha(Double)
+StatDelta:              stat.apparent.delta(Double)
+StatErrorCode:          stat.nErrorCode
+StatStatus:             stat.nStatus
+StatLocal:              stat.bLocal
+StatCounter:            stat.nCounter(UInt32)
+StatLastCommandStr:     stat.sLastCommand
+StatActionDesc:         stat.sActionDesc
+StatEventDesc:          stat.sEventDesc
+StatRa:                 stat.lrRa(Double)
+StatDec:                stat.lrDec(Double)
+################################################################################
+
+################################################################################
+# RPC Methods:
+#-------------------------------------------------------------------------------
+RpcDisable:             rpc.Disable(O:ReturnValue(Int16))
+RpcEnable:              rpc.Enable(O:ReturnValue(Int16))
+RpcInit:                rpc.Init(O:ReturnValue(Int16))
+RpcMoveAbs:             rpc.MoveAbs(I:in_axis(Int32), I:in_lrPos(Double), I:in_lrVel(Double), O:ReturnValue(Int16))
+RpcMoveAngle:           rpc.MoveAngle(I:in_lrAngle(Double), O:ReturnValue(Int16))
+RpcMoveRel:             rpc.MoveRel(I:in_axis(Int32), I:in_lrPos(Double), I:in_lrVel(Double), O:ReturnValue(Int16))
+RpcMoveVel:             rpc.MoveVel(I:in_axis(Int32), I:in_lrVel(Double), O:ReturnValue(Int16))
+RpcOff:                 rpc.Off(O:ReturnValue(Int16))
+RpcReset:               rpc.Reset(O:ReturnValue(Int16))
+RpcStartTrack:          rpc.StartTrack(I:in_angle(Double), O:ReturnValue(Int16))
+RpcState:               rpc.State(O:StateStat(String))
+RpcStop:                rpc.Stop(O:ReturnValue(Int16))
+RpcStopTrack:           rpc.StopTrack(O:ReturnValue(Int16))
+RpcExit:                rpc.Exit(O:ReturnValue(Int16))
+
+# Only for the simulator, for test/engineering purposes:
+RpcGetNamespace:        rpc.GetNamespace(O:Namespace(String))
+################################################################################
+
+################################################################################
+# Nodes for Axis 1 (Motor 1)
+################################################################################
+
+################################################################################
+# Firmware Info Mapping:
+#-------------------------------------------------------------------------------
+InfoDateMotor1:               motor1.info.sDate
+InfoDescriptionMotor1:        motor1.info.sDescription
+InfoNameMotor1:               motor1.info.sName
+InfoPlatformMotor1:           motor1.info.sPlatform
+InfoSynopsisMotor1:           motor1.info.sSynopsis
+InfoVersionMajorMotor1:       motor1.info.nVersionMajor
+InfoVersionMinorMotor1:       motor1.info.nVersionMinor
+################################################################################
+
+################################################################################
+# Configuration Parameters:
+#-------------------------------------------------------------------------------
+CfgBacklashMotor1:            motor1.cfg.lrBacklash(Double)
+CfgDefaultVelocityMotor1:     motor1.cfg.lrDefaultVelocity(Double)
+CfgMaxPositionMotor1:         motor1.cfg.lrMaxPosition(Double)
+CfgMinPositionMotor1:         motor1.cfg.lrMinPosition(Double)
+CfgAxisTypeMotor1:            motor1.cfg.nAxisType
+CfgTimeoutInitMotor1:         motor1.cfg.nTimeoutInit(UInt32)
+CfgTimeoutMoveMotor1:         motor1.cfg.nTimeoutMove(UInt32)
+CfgTimeoutSwitchMotor1:       motor1.cfg.nTimeoutSwitch(UInt32)
+CfgUseBrakeMotor1:            motor1.cfg.bUseBrake
+CfgActiveLowBrakeMotor1:      motor1.cfg.bActiveLowBrake
+
+CfgArrActiveLow00Motor1:      motor1.cfg.bArrActiveLow[0].bValue
+CfgArrActiveLow01Motor1:      motor1.cfg.bArrActiveLow[1].bValue
+CfgArrActiveLow02Motor1:      motor1.cfg.bArrActiveLow[2].bValue
+CfgArrActiveLow03Motor1:      motor1.cfg.bArrActiveLow[3].bValue
+CfgArrActiveLow04Motor1:      motor1.cfg.bArrActiveLow[4].bValue
+CfgArrActiveLow05Motor1:      motor1.cfg.bArrActiveLow[5].bValue
+
+CfgActiveLowInPosMotor1:      motor1.cfg.bActiveLowInPos
+
+#============================================================
+# Initialisation Sequence:
+#------------------------------------------------------------
+CfgInitSeq00ActionMotor1:     motor1.cfg.strArrInitSeq[0].nAction
+CfgInitSeq00Value1Motor1:     motor1.cfg.strArrInitSeq[0].lrValue1(Double)
+CfgInitSeq00Value2Motor1:     motor1.cfg.strArrInitSeq[0].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq01ActionMotor1:     motor1.cfg.strArrInitSeq[1].nAction
+CfgInitSeq01Value1Motor1:     motor1.cfg.strArrInitSeq[1].lrValue1(Double)
+CfgInitSeq01Value2Motor1:     motor1.cfg.strArrInitSeq[1].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq02ActionMotor1:     motor1.cfg.strArrInitSeq[2].nAction
+CfgInitSeq02Value1Motor1:     motor1.cfg.strArrInitSeq[2].lrValue1(Double)
+CfgInitSeq02Value2Motor1:     motor1.cfg.strArrInitSeq[2].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq03ActionMotor1:     motor1.cfg.strArrInitSeq[3].nAction
+CfgInitSeq03Value1Motor1:     motor1.cfg.strArrInitSeq[3].lrValue1(Double)
+CfgInitSeq03Value2Motor1:     motor1.cfg.strArrInitSeq[3].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq04ActionMotor1:     motor1.cfg.strArrInitSeq[4].nAction
+CfgInitSeq04Value1Motor1:     motor1.cfg.strArrInitSeq[4].lrValue1(Double)
+CfgInitSeq04Value2Motor1:     motor1.cfg.strArrInitSeq[4].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq05ActionMotor1:     motor1.cfg.strArrInitSeq[5].nAction
+CfgInitSeq05Value1Motor1:     motor1.cfg.strArrInitSeq[5].lrValue1(Double)
+CfgInitSeq05Value2Motor1:     motor1.cfg.strArrInitSeq[5].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq06ActionMotor1:     motor1.cfg.strArrInitSeq[6].nAction
+CfgInitSeq06Value1Motor1:     motor1.cfg.strArrInitSeq[6].lrValue1(Double)
+CfgInitSeq06Value2Motor1:     motor1.cfg.strArrInitSeq[6].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq07ActionMotor1:     motor1.cfg.strArrInitSeq[7].nAction
+CfgInitSeq07Value1Motor1:     motor1.cfg.strArrInitSeq[7].lrValue1(Double)
+CfgInitSeq07Value2Motor1:     motor1.cfg.strArrInitSeq[7].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq08ActionMotor1:     motor1.cfg.strArrInitSeq[8].nAction
+CfgInitSeq08Value1Motor1:     motor1.cfg.strArrInitSeq[8].lrValue1(Double)
+CfgInitSeq08Value2Motor1:     motor1.cfg.strArrInitSeq[8].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq09ActionMotor1:     motor1.cfg.strArrInitSeq[9].nAction
+CfgInitSeq09Value1Motor1:     motor1.cfg.strArrInitSeq[9].lrValue1(Double)
+CfgInitSeq09Value2Motor1:     motor1.cfg.strArrInitSeq[9].lrValue2(Double)
+#============================================================
+
+CfgBLockMotor1:               motor1.cfg.bLock
+CfgLockPosMotor1:             motor1.cfg.lrLockPos
+CfgLockTolMotor1:             motor1.cfg.lrLockTol
+
+CfgExecUserPreInitMotor1:     motor1.cfg.bExecUserPreInit
+CfgExecUserPostInitMotor1:    motor1.cfg.bExecUserPostInit
+CfgExecUserPreMoveMotor1:     motor1.cfg.bExecUserPreMove
+CfgExecUserPostMoveMotor1:    motor1.cfg.bExecUserPostMove
+
+CfgCheckInPosMotor1:          motor1.cfg.bCheckInPos
+CfgDisableAfterMoveMotor1:    motor1.cfg.bDisableAfterMove
+
+CfgSoE_DriveMotor1:           motor1.cfg.bSoE_Drive
+
+CfgLogExtTimeMotor1:          motor1.cfg.bLogExtTime
+CfgDebugMotor1:               motor1.cfg.bDebug
+CfgLogMotor1:                 motor1.cfg.bLog
+
+CfgSimDelayMotor1:            motor1.cfg.lrSimDelay
+################################################################################
+
+################################################################################
+# Control Parameters:
+#-------------------------------------------------------------------------------
+CtrlCommandMotor1:            motor1.ctrl.nCommand
+CtrlExecuteMotor1:            motor1.ctrl.bExecute
+CtrlLocalCmdMotor1:           motor1.ctrl.bLocalCmd
+CtrlMoveTypeMotor1:           motor1.ctrl.nMoveType
+CtrlDirectionMotor1:          motor1.ctrl.nDirection
+CtrlPositionMotor1:           motor1.ctrl.lrPosition
+CtrlVelocityMotor1:           motor1.ctrl.lrVelocity
+################################################################################
+
+################################################################################
+# Status Parameters:
+#-------------------------------------------------------------------------------
+StatLocalMotor1:              motor1.stat.bLocal
+StatCounterMotor1:            motor1.stat.nCounter(UInt32)
+StatCmdCycleCounterMotor1:    motor1.stat.nCmdCycleCounter
+StatLastCommandMotor1:        motor1.stat.nLastCommand
+StatLastCommandStrMotor1:     motor1.stat.sLastCommand
+
+StatErrorCodeMotor1:          motor1.stat.nErrorCode
+StatStatusMotor1:             motor1.stat.nStatus
+StatRpcErrorCodeMotor1:       motor1.stat.nRpcErrorCode
+
+StatErrorTextMotor1:          motor1.stat.sErrorText
+StatRpcErrorTextMotor1:       motor1.stat.sRpcErrorText
+StatStatusMotor1:             motor1.stat.sStatus
+StatLibVersionMotor1:         motor1.stat.sLibVersion
+
+StatStateMotor1:              motor1.stat.sState
+StatSubstateMotor1:           motor1.stat.sSubstate
+StatNStateMotor1:             motor1.stat.nState
+StatNSubstateMotor1:          motor1.stat.nSubstate
+
+StatActionDescMotor1:         motor1.stat.sActionDesc
+StatEventDescMotor1:          motor1.stat.sEventDesc
+
+StatPosErrorMotor1:           motor1.stat.lrPosError(Double)
+StatPosTargetMotor1:          motor1.stat.lrPosTarget(Double)
+StatPosActualMotor1:          motor1.stat.lrPosActual(Double)
+
+StatScaleFactorMotor1:        motor1.stat.lrScaleFactor(Double)
+StatVelActualMotor1:          motor1.stat.lrVelActual(Double)
+
+StatBacklashStepMotor1:       motor1.stat.nBacklashStep
+StatInitStepMotor1:           motor1.stat.nInitStep
+StatInitActionMotor1:         motor1.stat.nInitAction
+
+StatInfoData1Motor1:          motor1.stat.nInfoData1(Int16)
+StatInfoData2Motor1:          motor1.stat.nInfoData2(Int16)
+
+StatModeMotor1:               motor1.stat.nMode
+
+StatAxisReadyMotor1:          motor1.stat.bAxisReady
+StatBrakeActiveMotor1:        motor1.stat.bBrakeActive
+StatEnabledMotor1:            motor1.stat.bEnabled
+StatInitialisedMotor1:        motor1.stat.bInitialised
+StatInPositionMotor1:         motor1.stat.bInPosition
+StatStopSwitchPosMotor1:      motor1.stat.bStopSwitchPos
+StatStopSwitchNegMotor1:      motor1.stat.bStopSwitchNeg
+
+StatLockMotor1:               motor1.stat.bLock
+
+StatSignal0ActiveMotor1:      motor1.stat.signals[0].bActive
+StatSignal1ActiveMotor1:      motor1.stat.signals[1].bActive
+StatSignal2ActiveMotor1:      motor1.stat.signals[2].bActive
+StatSignal3ActiveMotor1:      motor1.stat.signals[3].bActive
+StatSignal4ActiveMotor1:      motor1.stat.signals[4].bActive
+StatSignal5ActiveMotor1:      motor1.stat.signals[5].bActive
+
+StatAxisAccelMotor1:          motor1.stat.axis.lrAccel(Double)
+StatAxisScaleFactorMotor1:    motor1.stat.axis.lrScaleFactor(Double)
+StatAxisUnit1:                motor1.stat.axis.sUnits(String)
+################################################################################
+
+################################################################################
+# Nodes for Axis 2 (Motor 2)
+################################################################################
+
+################################################################################
+# Firmware Info Mapping:
+#-------------------------------------------------------------------------------
+InfoDateMotor2:               motor2.info.sDate
+InfoDescriptionMotor2:        motor2.info.sDescription
+InfoNameMotor2:               motor2.info.sName
+InfoPlatformMotor2:           motor2.info.sPlatform
+InfoSynopsisMotor2:           motor2.info.sSynopsis
+InfoVersionMajorMotor2:       motor2.info.nVersionMajor
+InfoVersionMinorMotor2:       motor2.info.nVersionMinor
+################################################################################
+
+################################################################################
+# Configuration Parameters:
+#-------------------------------------------------------------------------------
+CfgBacklashMotor2:            motor2.cfg.lrBacklash(Double)
+CfgDefaultVelocityMotor2:     motor2.cfg.lrDefaultVelocity(Double)
+CfgMaxPositionMotor2:         motor2.cfg.lrMaxPosition(Double)
+CfgMinPositionMotor2:         motor2.cfg.lrMinPosition(Double)
+CfgAxisTypeMotor2:            motor2.cfg.nAxisType
+CfgTimeoutInitMotor2:         motor2.cfg.nTimeoutInit(UInt32)
+CfgTimeoutMoveMotor2:         motor2.cfg.nTimeoutMove(UInt32)
+CfgTimeoutSwitchMotor2:       motor2.cfg.nTimeoutSwitch(UInt32)
+CfgUseBrakeMotor2:            motor2.cfg.bUseBrake
+CfgActiveLowBrakeMotor2:      motor2.cfg.bActiveLowBrake
+
+CfgArrActiveLow00Motor2:      motor2.cfg.bArrActiveLow[0].bValue
+CfgArrActiveLow01Motor2:      motor2.cfg.bArrActiveLow[1].bValue
+CfgArrActiveLow02Motor2:      motor2.cfg.bArrActiveLow[2].bValue
+CfgArrActiveLow03Motor2:      motor2.cfg.bArrActiveLow[3].bValue
+CfgArrActiveLow04Motor2:      motor2.cfg.bArrActiveLow[4].bValue
+CfgArrActiveLow05Motor2:      motor2.cfg.bArrActiveLow[5].bValue
+
+CfgActiveLowInPosMotor2:      motor2.cfg.bActiveLowInPos
+
+#============================================================
+# Initialisation Sequence:
+#------------------------------------------------------------
+CfgInitSeq00ActionMotor2:     motor2.cfg.strArrInitSeq[0].nAction
+CfgInitSeq00Value1Motor2:     motor2.cfg.strArrInitSeq[0].lrValue1(Double)
+CfgInitSeq00Value2Motor2:     motor2.cfg.strArrInitSeq[0].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq01ActionMotor2:     motor2.cfg.strArrInitSeq[1].nAction
+CfgInitSeq01Value1Motor2:     motor2.cfg.strArrInitSeq[1].lrValue1(Double)
+CfgInitSeq01Value2Motor2:     motor2.cfg.strArrInitSeq[1].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq02ActionMotor2:     motor2.cfg.strArrInitSeq[2].nAction
+CfgInitSeq02Value1Motor2:     motor2.cfg.strArrInitSeq[2].lrValue1(Double)
+CfgInitSeq02Value2Motor2:     motor2.cfg.strArrInitSeq[2].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq03ActionMotor2:     motor2.cfg.strArrInitSeq[3].nAction
+CfgInitSeq03Value1Motor2:     motor2.cfg.strArrInitSeq[3].lrValue1(Double)
+CfgInitSeq03Value2Motor2:     motor2.cfg.strArrInitSeq[3].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq04ActionMotor2:     motor2.cfg.strArrInitSeq[4].nAction
+CfgInitSeq04Value1Motor2:     motor2.cfg.strArrInitSeq[4].lrValue1(Double)
+CfgInitSeq04Value2Motor2:     motor2.cfg.strArrInitSeq[4].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq05ActionMotor2:     motor2.cfg.strArrInitSeq[5].nAction
+CfgInitSeq05Value1Motor2:     motor2.cfg.strArrInitSeq[5].lrValue1(Double)
+CfgInitSeq05Value2Motor2:     motor2.cfg.strArrInitSeq[5].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq06ActionMotor2:     motor2.cfg.strArrInitSeq[6].nAction
+CfgInitSeq06Value1Motor2:     motor2.cfg.strArrInitSeq[6].lrValue1(Double)
+CfgInitSeq06Value2Motor2:     motor2.cfg.strArrInitSeq[6].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq07ActionMotor2:     motor2.cfg.strArrInitSeq[7].nAction
+CfgInitSeq07Value1Motor2:     motor2.cfg.strArrInitSeq[7].lrValue1(Double)
+CfgInitSeq07Value2Motor2:     motor2.cfg.strArrInitSeq[7].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq08ActionMotor2:     motor2.cfg.strArrInitSeq[8].nAction
+CfgInitSeq08Value1Motor2:     motor2.cfg.strArrInitSeq[8].lrValue1(Double)
+CfgInitSeq08Value2Motor2:     motor2.cfg.strArrInitSeq[8].lrValue2(Double)
+#------------------------------------------------------------
+CfgInitSeq09ActionMotor2:     motor2.cfg.strArrInitSeq[9].nAction
+CfgInitSeq09Value1Motor2:     motor2.cfg.strArrInitSeq[9].lrValue1(Double)
+CfgInitSeq09Value2Motor2:     motor2.cfg.strArrInitSeq[9].lrValue2(Double)
+#============================================================
+
+CfgBLockMotor2:               motor2.cfg.bLock
+CfgLockPosMotor2:             motor2.cfg.lrLockPos
+CfgLockTolMotor2:             motor2.cfg.lrLockTol
+
+CfgExecUserPreInitMotor2:     motor2.cfg.bExecUserPreInit
+CfgExecUserPostInitMotor2:    motor2.cfg.bExecUserPostInit
+CfgExecUserPreMoveMotor2:     motor2.cfg.bExecUserPreMove
+CfgExecUserPostMoveMotor2:    motor2.cfg.bExecUserPostMove
+
+CfgCheckInPosMotor2:          motor2.cfg.bCheckInPos
+CfgDisableAfterMoveMotor2:    motor2.cfg.bDisableAfterMove
+
+CfgSoE_DriveMotor2:           motor2.cfg.bSoE_Drive
+
+CfgLogExtTimeMotor2:          motor2.cfg.bLogExtTime
+CfgDebugMotor2:               motor2.cfg.bDebug
+CfgLogMotor2:                 motor2.cfg.bLog
+
+CfgSimDelayMotor2:            motor2.cfg.lrSimDelay
+################################################################################
+
+################################################################################
+# Control Parameters:
+#-------------------------------------------------------------------------------
+CtrlCommandMotor2:            motor2.ctrl.nCommand
+CtrlExecuteMotor2:            motor2.ctrl.bExecute
+CtrlLocalCmdMotor2:           motor2.ctrl.bLocalCmd
+CtrlMoveTypeMotor2:           motor2.ctrl.nMoveType
+CtrlDirectionMotor2:          motor2.ctrl.nDirection
+CtrlPositionMotor2:           motor2.ctrl.lrPosition
+CtrlVelocityMotor2:           motor2.ctrl.lrVelocity
+################################################################################
+
+################################################################################
+# Status Parameters:
+#-------------------------------------------------------------------------------
+StatLocalMotor2:              motor2.stat.bLocal
+StatCounterMotor2:            motor2.stat.nCounter(UInt32)
+StatCmdCycleCounterMotor2:    motor2.stat.nCmdCycleCounter
+StatLastCommandMotor2:        motor2.stat.nLastCommand
+StatLastCommandStrMotor2:     motor2.stat.sLastCommand
+
+StatErrorCodeMotor2:          motor2.stat.nErrorCode
+StatStatusMotor2:             motor2.stat.nStatus
+StatRpcErrorCodeMotor2:       motor2.stat.nRpcErrorCode
+
+StatErrorTextMotor2:          motor2.stat.sErrorText
+StatRpcErrorTextMotor2:       motor2.stat.sRpcErrorText
+StatStatusMotor2:             motor2.stat.sStatus
+StatLibVersionMotor2:         motor2.stat.sLibVersion
+
+StatStateMotor2:              motor2.stat.sState
+StatSubstateMotor2:           motor2.stat.sSubstate
+StatNStateMotor2:             motor2.stat.nState
+StatNSubstateMotor2:          motor2.stat.nSubstate
+
+StatActionDescMotor2:         motor2.stat.sActionDesc
+StatEventDescMotor2:          motor2.stat.sEventDesc
+
+StatPosErrorMotor2:           motor2.stat.lrPosError(Double)
+StatPosTargetMotor2:          motor2.stat.lrPosTarget(Double)
+StatPosActualMotor2:          motor2.stat.lrPosActual(Double)
+
+StatScaleFactorMotor2:        motor2.stat.lrScaleFactor(Double)
+StatVelActualMotor2:          motor2.stat.lrVelActual(Double)
+
+StatBacklashStepMotor2:       motor2.stat.nBacklashStep
+StatInitStepMotor2:           motor2.stat.nInitStep
+StatInitActionMotor2:         motor2.stat.nInitAction
+
+StatInfoData1Motor2:          motor2.stat.nInfoData1(Int16)
+StatInfoData2Motor2:          motor2.stat.nInfoData2(Int16)
+
+StatModeMotor2:               motor2.stat.nMode
+
+StatAxisReadyMotor2:          motor2.stat.bAxisReady
+StatBrakeActiveMotor2:        motor2.stat.bBrakeActive
+StatEnabledMotor2:            motor2.stat.bEnabled
+StatInitialisedMotor2:        motor2.stat.bInitialised
+StatInPositionMotor2:         motor2.stat.bInPosition
+StatStopSwitchPosMotor2:      motor2.stat.bStopSwitchPos
+StatStopSwitchNegMotor2:      motor2.stat.bStopSwitchNeg
+
+StatLockMotor2:               motor2.stat.bLock
+
+StatSignal0ActiveMotor2:      motor2.stat.signals[0].bActive
+StatSignal1ActiveMotor2:      motor2.stat.signals[1].bActive
+StatSignal2ActiveMotor2:      motor2.stat.signals[2].bActive
+StatSignal3ActiveMotor2:      motor2.stat.signals[3].bActive
+StatSignal4ActiveMotor2:      motor2.stat.signals[4].bActive
+StatSignal5ActiveMotor2:      motor2.stat.signals[5].bActive
+
+StatAxisAccelMotor2:          motor2.stat.axis.lrAccel(Double)
+StatAxisScaleFactorMotor2:    motor2.stat.axis.lrScaleFactor(Double)
+StatAxisUnit2:                motor2.stat.axis.sUnits(String)
+################################################################################

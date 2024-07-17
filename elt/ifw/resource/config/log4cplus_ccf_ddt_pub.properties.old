@@ -1,0 +1,15 @@
+# Set options for appender named "ROLLING"
+# ROLLING should be a RollingFileAppender, with maximum file size of 10 MB
+# using at most one backup file. ROLLING's layout is TTCC, using the
+# ISO8061 date format with context printing enabled.
+log4cplus.rootLogger=ERROR, ROLLING, STDOUT
+log4cplus.appender.ROLLING=log4cplus::RollingFileAppender
+log4cplus.appender.ROLLING.MaxFileSize=10MB
+log4cplus.appender.ROLLING.MaxBackupIndex=1
+log4cplus.appender.ROLLING.layout=log4cplus::PatternLayout
+log4cplus.appender.ROLLING.layout.ConversionPattern=%d{%FT%T.%q} %-5p %m%n
+log4cplus.appender.ROLLING.File=${HOME}/ddtRemoteClient.log
+
+log4cplus.appender.STDOUT=log4cplus::ConsoleAppender
+log4cplus.appender.STDOUT.layout=log4cplus::PatternLayout
+log4cplus.appender.STDOUT.layout.ConversionPattern=%d{%FT%T.%q} %-5p %m%n

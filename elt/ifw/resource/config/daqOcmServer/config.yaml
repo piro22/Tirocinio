@@ -1,0 +1,12 @@
+cfg:
+    instrument_id: "UNDEF"
+    req_endpoint: "zpb.rr://127.0.0.1:12081/" # IP address and port used to accept requests
+    pub_endpoint: "zpb.ps://127.0.0.1:12082/" # IP address and port used to accept requests
+    oldb_conn_timeout: 2 # timeout in seconds when connecting to runtime DB
+    sm_scxml: "config/daqOcmServer/sm.xml"
+    log_properties: "config/daqOcmServer/log.properties"
+
+    # DPM communication configuration
+    dpm:
+        req_endpoint: "zpb.rr://127.0.0.1:12083/"
+        pub_endpoint: "zpb.ps://127.0.0.1:12084/"

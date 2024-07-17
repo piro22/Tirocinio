@@ -1,0 +1,305 @@
+!cfg.include schema/core/dit/did/did.schema.yaml:
+
+header: !cfg.type:DidHeader
+  name: dictionary/fcf/devmgr/server/fcf.did.yaml
+  scope: FCF
+  description: |
+    Standard Dictionary for the FCF Package.
+    It defines all the parameters for the Standard Devices.
+
+
+INS# MOT# ID: !cfg.type:DidStrKey
+  comment: Motor ID
+  description: |
+    Motor ID.
+
+INS# MOT# NAME: !cfg.type:DidStrKey
+  comment: Motor name
+  description: |
+    Motor name.
+
+INS# MOT# STAT: !cfg.type:DidStrKey
+  comment: Motor status
+  description: |
+    Motor status.
+
+INS# MOT# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether Motor device is ignored.
+
+INS# MOT# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Motor device is simulated.
+
+INS# MOT# POS: !cfg.type:DidDblKey
+  format: f
+  unit: UU
+  comment: Motor position
+  description: |
+    Motor position.
+
+INS# MOT# POSNAME: !cfg.type:DidStrKey
+  comment: Motor named position
+  description: |
+    Motor named position.
+
+INS# DROT# ID: !cfg.type:DidStrKey
+  comment: Derotator ID
+  description: |
+    Derotator ID.
+
+INS# DROT# NAME: !cfg.type:DidStrKey
+  comment: Derotator name
+  description: |
+    Derotator name.
+
+INS# DROT# STAT: !cfg.type:DidStrKey
+  comment: Derotator status
+  description: |
+    Derotator status.
+
+INS# DROT# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether Drot device is ignored.
+
+INS# DROT# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Drot device is simulated.
+
+INS# DROT# POS: !cfg.type:DidDblKey
+  format: f
+  unit: UU
+  comment: Derotator position
+  description: |
+    Derotator position.
+
+INS# DROT# POSANG: !cfg.type:DidDblKey
+  format: f
+  unit: deg
+  comment: Derotator position angle
+  description: |
+    Derotator position angle.
+
+INS# DROT# RA: !cfg.type:DidDblKey
+  format: f
+  unit: deg
+  comment: Derotator alpha
+  description: |
+    Derotator alpha.
+
+INS# DROT# DEC: !cfg.type:DidDblKey
+  format: f
+  unit: deg
+  comment: Derotator delta
+  description: |
+    Derotator delta.
+
+INS# DROT# MODE: !cfg.type:DidStrKey
+  comment: Derotator mode
+  description: |
+    Derotator mode.
+
+INS# FILT# NAME: !cfg.type:DidStrKey
+  comment: Filter name
+  description: |
+    Filter name.
+
+INS# LAMP# ID: !cfg.type:DidStrKey
+  comment: Lamp ID
+  description: |
+    Lamp ID.
+
+INS# LAMP# NAME: !cfg.type:DidStrKey
+  comment: Lamp name
+  description: |
+    Lamp name.
+
+INS# LAMP# STAT: !cfg.type:DidStrKey
+  comment: Lamp state
+  description: |
+    Lamp state.
+
+INS# LAMP# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether Lamp device is ignored.
+
+INS# LAMP# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Lamp device is simulated.
+
+INS# SHUT# ID: !cfg.type:DidStrKey
+  comment: Shutter ID
+  description: |
+    Shutter ID.
+
+INS# SHUT# NAME: !cfg.type:DidStrKey
+  comment: Shutter name
+  description: |
+    Shutter name.
+
+INS# SHUT# STAT: !cfg.type:DidStrKey
+  comment: Shutter state
+  description: |
+    Shutter state.
+
+INS# SHUT# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether Shutter device is ignored.
+
+INS# SHUT# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Shutter device is simulated.
+
+INS# MECH# ID: !cfg.type:DidStrKey
+  comment: Mechanical ID
+  description: |
+    Mechanical ID.
+
+INS# MECH# NAME: !cfg.type:DidStrKey
+  comment: Mechanical name
+  description: |
+    Mechanical name.
+
+INS# MECH# STAT: !cfg.type:DidStrKey
+  comment: Mechanical state
+  description: |
+    Mechanical state.
+
+INS# MECH# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether Mechanical device is ignored.
+
+INS# MECH# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Mechanical device is simulated.
+
+INS# OPTI# ID: !cfg.type:DidStrKey
+  comment: Opti ID
+  description: |
+    Opti ID.
+
+INS# OPTI# NAME: !cfg.type:DidStrKey
+  comment: Opti name
+  description: |
+    Opti name.
+
+INS# OPTI# STAT: !cfg.type:DidStrKey
+  comment: Opti status
+  description: |
+    Opti status.
+
+INS# OPTI# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether optical device is ignored.
+
+INS# OPTI# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether optical device is simulated.
+
+INS# SENSOR# NAME: !cfg.type:DidStrKey
+  comment: Sensor name
+  description: |
+    Sensor name.
+
+INS# SENSOR# ID: !cfg.type:DidStrKey
+  comment: Sensor ID
+  description: |
+    Sensor ID.
+
+INS# SENSOR# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Device ignored flag.
+
+INS# SENSOR# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Sensor device is simulated.
+
+INS# SENSOR# CH# VAL: !cfg.type:DidDblKey
+  format: f
+  unit: deg
+  comment: Channel value
+  description: |
+    Channel value.
+
+INS# SENSOR# CH# STAT: !cfg.type:DidStrKey
+  comment: Channel state
+  description: |
+    Channel state.
+
+INS# IODEV# NAME: !cfg.type:DidStrKey
+  comment: Sensor name
+  description: |
+    Sensor name.
+
+INS# IODEV# ID: !cfg.type:DidStrKey
+  comment: Sensor ID
+  description: |
+    Sensor ID.
+
+INS# IODEV# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Device ignored flag.
+
+INS# IODEV# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether Sensor device is simulated.
+
+INS# IODEV# CH# VAL: !cfg.type:DidDblKey
+  format: f
+  unit: deg
+  comment: Channel value
+  description: |
+    Channel value.
+
+INS# IODEV# CH# STAT: !cfg.type:DidStrKey
+  comment: Channel state
+  description: |
+    Channel state.
+
+INS# ADC# ID: !cfg.type:DidStrKey
+  comment: ADC ID
+  description: |
+    ADC ID.
+
+INS# ADC# NAME: !cfg.type:DidStrKey
+  comment: ADC name
+  description: |
+    ADC name.
+
+INS# ADC# STAT: !cfg.type:DidStrKey
+  comment: ADC status
+  description: |
+    ADC status.
+
+INS# ADC# POS: !cfg.type:DidDblKey
+  format: f
+  unit: UU
+  comment: ADC position
+  description: |
+    ADC position.
+
+INS# ADC# DEVIGN: !cfg.type:DidStrKey
+  comment: Device ignored flag
+  description: |
+    Reports whether ADC device is ignored.
+
+INS# ADC# DEVSIM: !cfg.type:DidStrKey
+  comment: Device simulation flag
+  description: |
+    Reports whether ADC device is simulated.

@@ -1,0 +1,51 @@
+# server definition
+!cfg.include config/sup/syssup/server/definitions.yaml:
+
+server: !cfg.type:SysSup
+    server_id       : 'sup2'
+    req_endpoint    : "zpb.rr://127.0.0.1:14001/"
+    pub_endpoint    : "zpb.ps://127.0.0.1:14005/"
+    db_timeout      : 2000
+    db_task_period  : 3
+    req_timeout     : 60000
+    scxml           : "config/sup/syssup/server/sm.xml"
+    log_properties  : "config/sup/syssup/server/log_cii_properties.cfg"
+    oldb_prefix     : "ins1"
+    ob_modes        : [
+    {
+    name: Spectrography,
+    subsystems: ['subsim1','subsim2']
+    },
+    {
+    name: Imaging,
+    subsystems: ['subsim3']
+    }
+    ]
+    op_modes        : []
+    subsystems      : [
+    {
+    name: 'subsim1',
+    scope: internal,
+    type: sup::syssup::common::Generic,
+    rr_endpoint: "zpb.rr://127.0.0.1:15085/StdCmds",
+    ps_endpoint: "zpb.ps://127.0.0.1:15045/",
+    access: true
+    },
+    {
+    name: 'subsim2',
+    scope: internal,
+    type: sup::syssup::common::Generic,
+    rr_endpoint: "zpb.rr://127.0.0.1:15086/StdCmds",
+    ps_endpoint: "zpb.ps://127.0.0.1:15046/",
+    access: true
+    },
+    {
+    name: 'subsim3',
+    scope: internal,
+    type: sup::syssup::common::Generic,
+    rr_endpoint: "zpb.rr://127.0.0.1:15087/StdCmds",
+    ps_endpoint: "zpb.ps://127.0.0.1:15047/",
+    access: true
+    }
+    ]
+

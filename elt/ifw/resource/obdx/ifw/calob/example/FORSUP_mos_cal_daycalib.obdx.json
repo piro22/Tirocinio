@@ -1,0 +1,227 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "FORSUP_mos_cal_daycalib",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "FORSUP_mos_cal_daycalib",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_mos_cal_daycalib",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.ID",
+          "type": "string",
+          "value": "FORSUP_mos_cal_daycalib"
+        },
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Mos screen flat and wavelength combined calibration"
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "<% clb.x.forsup_camera(h) %>"
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "<% clb.tbl['DET.MODE'][(h['DET.READ.CLOCK'],h['DET.WIN1.BINX'],h['DET.WIN1.BINY'])] %>"
+        },
+        {
+          "name": "DET.WIN1.STRX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRX'] %>"
+        },
+        {
+          "name": "DET.WIN1.STRY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRY'] %>"
+        },
+        {
+          "name": "DET.WIN1.NX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NX'] * h.get('DET.WIN1.BINX') %>"
+        },
+        {
+          "name": "DET.WIN1.NY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NY'] * h.get('DET.WIN1.BINY') %>"
+        },
+        {
+          "name": "DET.WIN1.ST",
+          "type": "string",
+          "value": "<% clb.tbl['DET.WIN'][h.get('DET.WIN1.NX')] %>"
+        },
+        {
+          "name": "INS1.GRIS.NAME",
+          "type": "string",
+          "value": "<% clb.x.forsup_grism(h) %>"
+        },
+        {
+          "name": "INS1.FILT1.NAME",
+          "type": "string",
+          "value": "<% clb.x.forsup_filter(h) %>"
+        },
+        {
+          "name": "INS1.FILT2.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS1.LAMP1.NAID",
+          "type": "string",
+          "value": "FlatBlue+1"
+        },
+        {
+          "name": "INS1.LAMP2.NAID",
+          "type": "string",
+          "value": "FlatBlue+2"
+        },
+        {
+          "name": "INS1.LAMP3.NAID",
+          "type": "string",
+          "value": "FlatRed+1"
+        },
+        {
+          "name": "INS1.LAMP4.NAID",
+          "type": "string",
+          "value": "FlatRed+2"
+        },
+        {
+          "name": "INS1.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS1.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS1.FOCF.SETUP",
+          "type": "string",
+          "value": "<% clb.x.forsup_mos(h, clb) %>"
+        },
+        {
+          "name": "SEQ.NEXPO1",
+          "type": "integer",
+          "value": 7
+        },
+        {
+          "name": "SEQ.TIME1",
+          "type": "string",
+          "value": "<% clb.x.forsup_exptime(h, clb, 'MOS', 'FLAT') %>"
+        },
+        {
+          "name": "INS1.LAMP1.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP1.FLAT.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME1'))  %>"
+        },
+        {
+          "name": "INS1.LAMP2.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.FLAT.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME1'))  %>"
+        },
+        {
+          "name": "INS1.LAMP3.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP3.FLAT.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME1'))  %>"
+        },
+        {
+          "name": "INS1.LAMP4.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP4.FLAT.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME1'))  %>"
+        },
+        {
+          "name": "INS1.LAMP5.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP5.FLAT.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME1'))  %>"
+        },
+        {
+          "name": "INS1.LAMP6.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP6.FLAT.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME1'))  %>"
+        },
+        {
+          "name": "INS2.LAMP1.NAID",
+          "type": "string",
+          "value": "He+1"
+        },
+        {
+          "name": "INS2.LAMP2.NAID",
+          "type": "string",
+          "value": "HgCd+2"
+        },
+        {
+          "name": "INS2.LAMP3.NAID",
+          "type": "string",
+          "value": "Ar+1"
+        },
+        {
+          "name": "INS2.LAMP4.NAID",
+          "type": "string",
+          "value": "Ar+2"
+        },
+        {
+          "name": "INS2.LAMP5.NAID",
+          "type": "string",
+          "value": "Ne+1"
+        },
+        {
+          "name": "INS2.LAMP6.NAID",
+          "type": "string",
+          "value": "Ne+2"
+        },
+        {
+          "name": "SEQ.NEXPO2",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "SEQ.TIME2",
+          "type": "string",
+          "value": "<% clb.x.forsup_exptime(h, clb, 'MOS', 'WAVE') %>"
+        },
+        {
+          "name": "INS2.LAMP1.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP1.ARC.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME2'))  %>"
+        },
+        {
+          "name": "INS2.LAMP2.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.ARC.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME2'))  %>"
+        },
+        {
+          "name": "INS2.LAMP3.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.ARC.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME2'))  %>"
+        },
+        {
+          "name": "INS2.LAMP4.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.ARC.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME2'))  %>"
+        },
+        {
+          "name": "INS2.LAMP5.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.ARC.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME2'))  %>"
+        },
+        {
+          "name": "INS2.LAMP6.TIME",
+          "type": "string",
+          "value": "<% clb.x.forsup_neg2minusone(clb.tbl['LAMP2.ARC.TIME'][(h.get('INS1.GRIS.NAME'),h.get('INS1.FILT1.NAME'))], h.get('SEQ.TIME2'))  %>"
+        }
+      ]
+    }
+  ]
+}

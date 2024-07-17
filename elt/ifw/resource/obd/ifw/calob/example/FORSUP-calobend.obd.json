@@ -1,0 +1,255 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-calobend",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-calobend",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_img_cal_coll",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Collimator template"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.COLL.NAID",
+          "type": "string",
+          "value": "COLL_SR+6"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_lss_tec_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Long slit screen flat calibration"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "LSS"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 3
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 600
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "DET.WIN1.ST",
+          "type": "string",
+          "value": "F"
+        },
+        {
+          "name": "DET.WIN1.STRX",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.WIN1.STRY",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.WIN1.NX",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.WIN1.NY",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.SLIT.NAID",
+          "type": "string",
+          "value": "lSlit1_0arcsec"
+        },
+        {
+          "name": "INS.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_150I+27"
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS.FILT2.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "DPR.CATG",
+          "type": "string",
+          "value": "TEST"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 4
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 300
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "DET.WIN1.ST",
+          "type": "string",
+          "value": "F"
+        },
+        {
+          "name": "DET.WIN1.STRX",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.WIN1.STRY",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.WIN1.NX",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.WIN1.NY",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS.FILT2.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "DPR.CATG",
+          "type": "string",
+          "value": "TEST"
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_gen_tec_standby",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Place FORSUP in state STANDBY"
+        }
+      ]
+    }
+  ]
+}

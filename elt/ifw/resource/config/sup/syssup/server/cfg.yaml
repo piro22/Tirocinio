@@ -1,0 +1,20 @@
+# server definition
+!cfg.include config/sup/syssup/server/definitions.yaml:
+
+
+server: !cfg.type:SysSup
+    server_id       : 'sup'
+    req_endpoint    : "zpb.rr://127.0.0.1:13082/"
+    pub_endpoint    : "zpb.ps://127.0.0.1:13346/"
+    db_timeout      : 2000
+    scxml           : "config/sup/syssup/server/sm.xml"
+    log_properties  : "config/sup/syssup/server/log_cii_properties.cfg"
+    mon_timeout     : 5000
+    req_timeout     : 60000
+    oldb_prefix     : "ins1"
+    subsystems      : []
+    ob_modes        : []
+    op_modes        : []
+
+
+

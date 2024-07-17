@@ -1,0 +1,210 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+# As default, we have foreeseen a maximum of 30 channels per type.
+# If this is not enough it can be extended by every application.
+
+!cfg.typedef DIMap:
+    di1:              !cfg.type:string
+    di2:              !cfg.type:string
+    di3:              !cfg.type:string
+    di4:              !cfg.type:string
+    di5:              !cfg.type:string
+    di6:              !cfg.type:string
+    di7:              !cfg.type:string
+    di8:              !cfg.type:string
+    di9:              !cfg.type:string
+    di10:              !cfg.type:string
+    di11:              !cfg.type:string
+    di12:              !cfg.type:string
+    di13:              !cfg.type:string
+    di14:              !cfg.type:string
+    di15:              !cfg.type:string
+    di16:              !cfg.type:string
+    di17:              !cfg.type:string
+    di18:              !cfg.type:string
+    di19:              !cfg.type:string
+    di20:              !cfg.type:string
+    di21:              !cfg.type:string
+    di22:              !cfg.type:string
+    di23:              !cfg.type:string
+    di24:              !cfg.type:string
+    di25:              !cfg.type:string
+    di26:              !cfg.type:string
+    di27:              !cfg.type:string
+    di28:              !cfg.type:string
+    di29:              !cfg.type:string
+    di30:              !cfg.type:string
+
+!cfg.typedef AIMap:
+    ai1:              !cfg.type:string
+    ai2:              !cfg.type:string
+    ai3:              !cfg.type:string
+    ai4:              !cfg.type:string
+    ai5:              !cfg.type:string
+    ai6:              !cfg.type:string
+    ai7:              !cfg.type:string
+    ai8:              !cfg.type:string
+    ai9:              !cfg.type:string
+    ai10:              !cfg.type:string
+    ai11:              !cfg.type:string
+    ai12:              !cfg.type:string
+    ai13:              !cfg.type:string
+    ai14:              !cfg.type:string
+    ai15:              !cfg.type:string
+    ai16:              !cfg.type:string
+    ai17:              !cfg.type:string
+    ai18:              !cfg.type:string
+    ai19:              !cfg.type:string
+    ai20:              !cfg.type:string
+    ai21:              !cfg.type:string
+    ai22:              !cfg.type:string
+    ai23:              !cfg.type:string
+    ai24:              !cfg.type:string
+    ai25:              !cfg.type:string
+    ai26:              !cfg.type:string
+    ai27:              !cfg.type:string
+    ai28:              !cfg.type:string
+    ai29:              !cfg.type:string
+    ai30:              !cfg.type:string
+
+!cfg.typedef IIMap:
+    ii1:              !cfg.type:string
+    ii2:              !cfg.type:string
+    ii3:              !cfg.type:string
+    ii4:              !cfg.type:string
+    ii5:              !cfg.type:string
+    ii6:              !cfg.type:string
+    ii7:              !cfg.type:string
+    ii8:              !cfg.type:string
+    ii9:              !cfg.type:string
+    ii10:              !cfg.type:string
+    ii11:              !cfg.type:string
+    ii12:              !cfg.type:string
+    ii13:              !cfg.type:string
+    ii14:              !cfg.type:string
+    ii15:              !cfg.type:string
+    ii16:              !cfg.type:string
+    ii17:              !cfg.type:string
+    ii18:              !cfg.type:string
+    ii19:              !cfg.type:string
+    ii20:              !cfg.type:string
+    ii21:              !cfg.type:string
+    ii22:              !cfg.type:string
+    ii23:              !cfg.type:string
+    ii24:              !cfg.type:string
+    ii25:              !cfg.type:string
+    ii26:              !cfg.type:string
+    ii27:              !cfg.type:string
+    ii28:              !cfg.type:string
+    ii29:              !cfg.type:string
+    ii30:              !cfg.type:string
+
+!cfg.typedef DOMap:
+    do1:              !cfg.type:string
+    do2:              !cfg.type:string
+    do3:              !cfg.type:string
+    do4:              !cfg.type:string
+    do5:              !cfg.type:string
+    do6:              !cfg.type:string
+    do7:              !cfg.type:string
+    do8:              !cfg.type:string
+    do9:              !cfg.type:string
+    do10:              !cfg.type:string
+    do11:              !cfg.type:string
+    do12:              !cfg.type:string
+    do13:              !cfg.type:string
+    do14:              !cfg.type:string
+    do15:              !cfg.type:string
+    do16:              !cfg.type:string
+    do17:              !cfg.type:string
+    do18:              !cfg.type:string
+    do19:              !cfg.type:string
+    do20:              !cfg.type:string
+    do21:              !cfg.type:string
+    do22:              !cfg.type:string
+    do23:              !cfg.type:string
+    do24:              !cfg.type:string
+    do25:              !cfg.type:string
+    do26:              !cfg.type:string
+    do27:              !cfg.type:string
+    do28:              !cfg.type:string
+    do29:              !cfg.type:string
+    do30:              !cfg.type:string
+
+!cfg.typedef AOMap:
+    ao1:              !cfg.type:string
+    ao2:              !cfg.type:string
+    ao3:              !cfg.type:string
+    ao4:              !cfg.type:string
+    ao5:              !cfg.type:string
+    ao6:              !cfg.type:string
+    ao7:              !cfg.type:string
+    ao8:              !cfg.type:string
+    ao9:              !cfg.type:string
+    ao10:              !cfg.type:string
+    ao11:              !cfg.type:string
+    ao12:              !cfg.type:string
+    ao13:              !cfg.type:string
+    ao14:              !cfg.type:string
+    ao15:              !cfg.type:string
+    ao16:              !cfg.type:string
+    ao17:              !cfg.type:string
+    ao18:              !cfg.type:string
+    ao19:              !cfg.type:string
+    ao20:              !cfg.type:string
+    ao21:              !cfg.type:string
+    ao22:              !cfg.type:string
+    ao23:              !cfg.type:string
+    ao24:              !cfg.type:string
+    ao25:              !cfg.type:string
+    ao26:              !cfg.type:string
+    ao27:              !cfg.type:string
+    ao28:              !cfg.type:string
+    ao29:              !cfg.type:string
+    ao30:              !cfg.type:string
+
+!cfg.typedef IOMap:
+    io1:              !cfg.type:string
+    io2:              !cfg.type:string
+    io3:              !cfg.type:string
+    io4:              !cfg.type:string
+    io5:              !cfg.type:string
+    io6:              !cfg.type:string
+    io7:              !cfg.type:string
+    io8:              !cfg.type:string
+    io9:              !cfg.type:string
+    io10:              !cfg.type:string
+    io11:              !cfg.type:string
+    io12:              !cfg.type:string
+    io13:              !cfg.type:string
+    io14:              !cfg.type:string
+    io15:              !cfg.type:string
+    io16:              !cfg.type:string
+    io17:              !cfg.type:string
+    io18:              !cfg.type:string
+    io19:              !cfg.type:string
+    io20:              !cfg.type:string
+    io21:              !cfg.type:string
+    io22:              !cfg.type:string
+    io23:              !cfg.type:string
+    io24:              !cfg.type:string
+    io25:              !cfg.type:string
+    io26:              !cfg.type:string
+    io27:              !cfg.type:string
+    io28:              !cfg.type:string
+    io29:              !cfg.type:string
+    io30:              !cfg.type:string
+
+!cfg.typedef IODevRpcMap(DevRpcMap):
+    !cfg.required rpcSetOutputs:       !cfg.type:string
+
+!cfg.typedef IODevMap:
+    !cfg.required stat      : !cfg.type:DevStatMap
+    !cfg.required rpc       : !cfg.type:IODevRpcMap
+    diChannels              : !cfg.type:DIMap
+    aiChannels              : !cfg.type:AIMap
+    iiChannels              : !cfg.type:IIMap
+    doChannels              : !cfg.type:DOMap
+    aoChannels              : !cfg.type:AOMap
+    ioChannels              : !cfg.type:IOMap

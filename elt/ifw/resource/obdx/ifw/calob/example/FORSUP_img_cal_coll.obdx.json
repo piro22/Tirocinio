@@ -1,0 +1,32 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "FORSUP_img_cal_coll",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "FORSUP_img_cal_coll",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_img_cal_coll",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Collimator template"
+        },
+        {
+          "name": "INS.COLL.NAID",
+          "type": "string",
+          "value": "<% h['INS.COLL.NAME']+h['INS.COLL.ID'] %>"
+        }
+      ]
+    }
+  ]
+}

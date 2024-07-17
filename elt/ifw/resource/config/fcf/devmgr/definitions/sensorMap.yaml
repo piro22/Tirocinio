@@ -1,0 +1,11 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/iodevMap.yaml:
+
+
+!cfg.typedef SensorMap:
+    !cfg.required stat      : !cfg.type:DevStatMap
+    !cfg.required rpc       : !cfg.type:DevRpcMap
+    diChannels              : !cfg.type:DIMap
+    aiChannels              : !cfg.type:AIMap
+    iiChannels              : !cfg.type:IIMap
+

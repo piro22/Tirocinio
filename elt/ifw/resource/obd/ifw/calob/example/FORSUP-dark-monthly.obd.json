@@ -1,0 +1,88 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-dark-monthly",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-dark-monthly",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_img_cal_dark",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Dark."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1800
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_dark",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Dark."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 3
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 1800
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}

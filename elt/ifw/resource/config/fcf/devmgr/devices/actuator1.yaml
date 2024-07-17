@@ -1,0 +1,16 @@
+!cfg.include config/fcf/devmgr/definitions/actuator.yaml:
+
+actuator1: !cfg.type:Actuator
+  overview: 'Actuator device example 1'
+  description: "Actuator device example 1 description"
+  type: Actuator
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN.Actuator1                           # OPCUA attribute prefix
+  namespace: 4
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://134.171.12.182:4840      # Simulation address
+  fits_prefix: "MECH1"
+  ctrl_config:
+    timeout      : 2000
+
+

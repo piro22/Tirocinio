@@ -1,0 +1,142 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "FORSUP_hiti_cal_scrflat_fast",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "FORSUP_hiti_cal_scrflat_fast",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_hiti_cal_scrflat_fast",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "HIT-I screen flat calibration"
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "R"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 5
+        },
+        {
+          "name": "INS.LAMP1.NAID",
+          "type": "string",
+          "value": "FlatBlue+1"
+        },
+        {
+          "name": "INS.LAMP2.NAID",
+          "type": "string",
+          "value": "FlatBlue+2"
+        },
+        {
+          "name": "INS.LAMP3.NAID",
+          "type": "string",
+          "value": "FlatRed+1"
+        },
+        {
+          "name": "INS.LAMP4.NAID",
+          "type": "string",
+          "value": "FlatRed+2"
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "<% cbl.tbl['LAMP5.HITI.NAID'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.LAMP6.NAID",
+          "type": "string",
+          "value": "<% cbl.tbl['LAMP6.HITI.NAID'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "<% clb.x.forsup_filter(h) %>"
+        },
+        {
+          "name": "INS.FILT2.NAME",
+          "type": "string",
+          "value": "none"
+        },
+        {
+          "name": "INS.SLIT.WID",
+          "type": "string",
+          "value": "<% clb.x.forsup_slit(h, clb, 'MOS') %>"
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "<% clb.tbl['HITI.CLKIND'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "DET.WIN1.STRX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRX'] %>"
+        },
+        {
+          "name": "DET.WIN1.STRY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRY'] %>"
+        },
+        {
+          "name": "DET.WIN1.NX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NX'] * h.get('DET.WIN1.BINX') %>"
+        },
+        {
+          "name": "DET.WIN1.NY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NY'] * h.get('DET.WIN1.BINY') %>"
+        },
+        {
+          "name": "DET.WIN1.ST",
+          "type": "string",
+          "value": "[TABLE DET.WIN $DET.WIN1.NX]"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "string",
+          "value": "<% clb.tbl['LAMP1.HITI.FLAT'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "string",
+          "value": "<% clb.tbl['LAMP2.HITI.FLAT'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.LAMP3.TIME",
+          "type": "string",
+          "value": "<% clb.tbl['LAMP3.HITI.FLAT'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.LAMP4.TIME",
+          "type": "string",
+          "value": "<% clb.tbl['LAMP4.HITI.FLAT'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "string",
+          "value": "<% clb.tbl['LAMP5.HITI.FLAT'][clb.x.forsup_filter(h)] %>"
+        },
+        {
+          "name": "INS.LAMP6.TIME",
+          "type": "string",
+          "value": "<% clb.tbl['LAMP6.HITI.FLAT'][clb.x.forsup_filter(h)] %>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-stability-mos",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-stability-mos",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_specphot_cal_daycalib",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "MOS Weekly Check"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "MOS"
+        },
+        {
+          "name": "INS1.FILT1.NAME",
+          "type": "string",
+          "value": "GG435+81"
+        },
+        {
+          "name": "INS1.GRIS.NAME",
+          "type": "string",
+          "value": "GRIS_300V+10"
+        },
+        {
+          "name": "INS1.LAMP1.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS1.LAMP2.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS1.LAMP3.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS1.LAMP4.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS1.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+4"
+        },
+        {
+          "name": "INS1.LAMP5.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS1.LAMP6.NAID",
+          "type": "string",
+          "value": "FlatRed+3"
+        },
+        {
+          "name": "INS1.LAMP6.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS1.SLIT.WID",
+          "type": "string",
+          "value": 1.0
+        },
+        {
+          "name": "INS2.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS2.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS2.LAMP3.TIME",
+          "type": "integer",
+          "value": 15
+        },
+        {
+          "name": "INS2.LAMP4.TIME",
+          "type": "integer",
+          "value": 15
+        },
+        {
+          "name": "INS2.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS2.LAMP6.TIME",
+          "type": "integer",
+          "value": 0
+        },
+        {
+          "name": "INS2.SLIT.WID",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO1",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "SEQ.NEXPO2",
+          "type": "integer",
+          "value": 1
+        },
+        {
+          "name": "SEQ.SPEC.OFFSET",
+          "type": "integer",
+          "value": 500
+        },
+        {
+          "name": "SEQ.SPEC.TARG",
+          "type": "string",
+          "value": "MOS_center"
+        },
+        {
+          "name": "SEQ.TIME1",
+          "type": "string",
+          "value": 3.0
+        },
+        {
+          "name": "SEQ.TIME2",
+          "type": "string",
+          "value": 30.0
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "ANY"
+        }
+      ]
+    }
+  ]
+}

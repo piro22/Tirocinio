@@ -1,0 +1,14 @@
+# @copyright ESO - European Southern Observatory
+# @brief Example configuration for the ADC DevSim device.
+
+!cfg.include config/fcf/devsim/adc/adc.schema.yaml:
+
+adc: !cfg.type:DevSimAdcCfg
+  server_name:            "Adc1"
+  cfg_motor1:             "config/fcf/devsim/adc/adc1Motor1.cfg.yaml"
+  cfg_motor2:             "config/fcf/devsim/adc/adc1Motor2.cfg.yaml"
+  motor1_step:            1.01
+  motor2_step:            1.15
+  update_frequency:       1.1
+  default_velocity:       1.9898
+  sim_delay:              0.1

@@ -1,0 +1,24 @@
+
+!cfg.typedef Timeout(uint32):
+  default: 5000  #timeout in milliseconds
+  min: 1
+
+!cfg.typedef IfwServer:
+   !cfg.required server_id       : !cfg.type:string
+   !cfg.required req_endpoint    : !cfg.type:string
+   !cfg.required pub_endpoint    : !cfg.type:string
+   !cfg.optional db_timeout      : !cfg.type:Timeout
+   !cfg.optional db_task_period  : !cfg.type:uint32
+   !cfg.required scxml           : !cfg.type:string  # State machine XML file used by the server
+   !cfg.required log_properties  : !cfg.type:string
+   !cfg.optional req_timeout     : !cfg.type:Timeout # Timeout for req/rep.
+   !cfg.optional mon_timeout     : !cfg.type:Timeout # Timeout for monitoring blocking calls
+   !cfg.optional dictionaries    : !cfg.type:vector_string # List of dictionaries
+   !cfg.optional oldb_prefix     : !cfg.type:string  # OLDB prefix
+   !cfg.optional fits_prefix     : !cfg.type:string  # FITS prefix for metadata header
+   !cfg.optional version         : !cfg.type:string
+
+
+
+
+

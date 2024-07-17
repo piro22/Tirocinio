@@ -1,0 +1,33 @@
+# @copyright ESO - European Southern Observatory
+# @brief CII Configuration Service Schema for the Motor DevSim device.
+
+!cfg.include schema/fcf/devsim/devsim.schema.yaml:
+
+!cfg.typedef DevSimMotorCfg(DevSimCommonCfg):
+  opcua_profile:                        !cfg.type:string "config/fcf/devsim/motor/motor.namespace.yaml"
+  state_machine_scxml:                  !cfg.type:string "config/fcf/devsim/motor/motor.scxml.xml"
+
+  # Velocity in % (random in interval [-CfgVelocityError; CfgVelocityError]):
+  !cfg.required velocity_error:         !cfg.type:double
+
+  # Position error in % (random in interval [-CfgSimPosError; CfgSimPosError]):
+  !cfg.required sim_pos_error:          !cfg.type:double
+
+  # Simulation Tolerance in UU:
+  !cfg.required sim_tolerance:          !cfg.type:double
+
+  # CfgSimulatedStartPos == -1: Random position in Min/Max Pos interval.
+  !cfg.required sim_start_pos:          !cfg.type:double
+
+  !cfg.required scale_factor:           !cfg.type:double
+
+  !cfg.required min_position:           !cfg.type:double
+  !cfg.required max_position:           !cfg.type:double
+
+  !cfg.required timeout_init:           !cfg.type:double
+  !cfg.required timeout_move:           !cfg.type:double
+  !cfg.required timeout_switch:         !cfg.type:double
+
+  !cfg.required disable_after_move:     !cfg.type:boolean
+
+  !cfg.required default_velocity:       !cfg.type:double

@@ -1,0 +1,18 @@
+# CCF Camera Name Mapping for Allied Vision Technology GigE Vision Cameras
+
+dcs.expo.time:              "ExposureTimeAbs"
+dcs.expo.win_start_x:       "OffsetX"
+dcs.expo.win_start_y:       "OffsetY"
+dcs.expo.win_width:         "Width"
+dcs.expo.win_height:        "Height"
+dcs.expo.bin_x:             "BinningHorizontal"
+dcs.expo.bin_y:             "BinningVertical"
+dcs.expo.frame_rate:        "AcquisitionFrameRateAbs"
+dcs.expo.frame_rate_limit:  "AcquisitionFrameRateLimit"
+
+cam.id:                     "CameraID"
+cam.model:                  "CameraModel"
+
+cam.chip.width:             "SensorWidth"
+cam.chip.height:            "SensorHeight"
+cam.chip.resolution:        "SensorBits"

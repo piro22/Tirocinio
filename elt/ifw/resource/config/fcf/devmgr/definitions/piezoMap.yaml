@@ -1,0 +1,52 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef PiezoCfgMap:
+    max_on:         !cfg.type:string
+    num_axis:       !cfg.type:string
+    full_range1:    !cfg.type:string
+    full_range2:    !cfg.type:string
+    full_range3:    !cfg.type:string
+    home1:          !cfg.type:string
+    home2:          !cfg.type:string
+    home3:          !cfg.type:string
+    lower_limit1:   !cfg.type:string
+    lower_limit2:   !cfg.type:string
+    lower_limit3:   !cfg.type:string
+    upper_limit1:   !cfg.type:string
+    upper_limit2:   !cfg.type:string
+    upper_limit3:           !cfg.type:string
+    user_to_bit_input1:     !cfg.type:string
+    user_to_bit_input2:     !cfg.type:string
+    user_to_bit_input3:     !cfg.type:string
+    user_offset_input1:     !cfg.type:string
+    user_offset_input2:     !cfg.type:string
+    user_offset_input3:     !cfg.type:string
+    user_to_bit_output1:    !cfg.type:string
+    user_to_bit_output2:    !cfg.type:string
+    user_to_bit_output3:    !cfg.type:string
+    user_offset_output1:    !cfg.type:string
+    user_offset_output2:    !cfg.type:string
+    user_offset_output3:    !cfg.type:string
+
+!cfg.typedef PiezoStatMap(DevStatMap):
+    !cfg.required mon_act_pos_bit1:  !cfg.type:string
+    !cfg.required mon_act_pos_bit2:  !cfg.type:string
+    !cfg.required mon_act_pos_bit3:  !cfg.type:string
+    !cfg.required mon_act_pos_usr1:  !cfg.type:string
+    !cfg.required mon_act_pos_usr2:  !cfg.type:string
+    !cfg.required mon_act_pos_usr3:  !cfg.type:string
+
+!cfg.typedef PiezoRpcMap(DevRpcMap):
+    !cfg.required rpcAuto:          !cfg.type:string
+    !cfg.required rpcPos:           !cfg.type:string
+    !cfg.required rpcHome:          !cfg.type:string
+    !cfg.required rpcMoveBits:      !cfg.type:string
+    !cfg.required rpcMoveUser:      !cfg.type:string
+
+!cfg.typedef PiezoMap:
+    !cfg.required cfg       : !cfg.type:PiezoCfgMap
+    !cfg.required stat      : !cfg.type:PiezoStatMap
+    !cfg.required rpc       : !cfg.type:PiezoRpcMap
+
+

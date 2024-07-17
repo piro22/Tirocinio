@@ -1,0 +1,527 @@
+!cfg.include schema/core/dit/did/did.schema.yaml:
+
+#===============================================================================
+header: !cfg.type:DidHeader
+  name: dictionary/dit/stddid/primary.did.yaml
+  scope: Generic
+  description: |
+    Dictionary defining the non-hierarchical keyword cards used in ESO FITS files.
+    DICB: Reviewed for compliance with ESO-044156/7.
+#===============================================================================
+
+#===============================================================================
+# Mandatory keywords:
+#===============================================================================
+SIMPLE: !cfg.type:DidBoolKey
+  comment: Standard FITS
+  description: |
+    SIMPLE must be equal to 'T' to conform to FITS.
+#-------------------------------------------------------------------------------
+BITPIX: !cfg.type:DidIntKey
+  comment: Nb of bits per pixel value
+  description: |
+    Number of bits used to store pixel values
+    See Definition of FITS -- IAUFWG 3.0 (July 2008)
+    The only valid values are:
+      8  character of unsigned binary integer
+     16  16-bit twos-complement binary integer
+     32  32-bit twos-complement binary integer
+    -32  IEEE single precision floating point
+    -64  IEEE double precision floating point
+#-------------------------------------------------------------------------------
+NAXIS: !cfg.type:DidIntKey
+  comment: Nb of axes in data array
+  description: |
+    Number of axes of the data array (limited to less than 999).
+    A value of 0 signifies that no data follow the
+    header in the HDU (header and data unit).
+#-------------------------------------------------------------------------------
+NAXIS#: !cfg.type:DidIntKey
+  comment: Nb of pixels in each dimension
+  description: |
+    Number of pixels along the n axis in the array.
+    Possible values for <axis direction> are:
+    rows (1), columns (2), frame (3)
+#-------------------------------------------------------------------------------
+EXTEND: !cfg.type:DidBoolKey
+  comment: FITS extension may be present
+  description: |
+    Set to T when extension used.
+    This keyword has to appear in the primary header
+    immediately after the last NAXISn card image, or,
+    if NAXIS=0, the NAXIS card image.
+#-------------------------------------------------------------------------------
+END: !cfg.type:DidStrKey
+  comment: 
+  description: |
+    This keyword signals the end of the header unit. It
+    has to be last keyword in the header and has no value
+    associated with it.
+    Columns 9 to 80 shall be filled with ASCII blanks.
+#===============================================================================
+
+#===============================================================================
+# File history keywords:
+#===============================================================================
+DATE: !cfg.type:DidStrKey
+  comment: Date this file was written
+  description: |
+    UTC date on which this file was written.
+    The following format shall be used:
+    YYYY-MM-DDThh:mm:ss.sss
+#-------------------------------------------------------------------------------
+ORIGIN: !cfg.type:DidStrKey
+  comment: Organisation/location of origin
+  description: |
+    Observatory source of this file.
+    The value is either 'ESO-LASILLA',
+    'ESO-PARANAL' or 'ESO-GARCHING'.
+#===============================================================================
+
+#===============================================================================
+# Observation related keywords:
+#===============================================================================
+DATE-OBS: !cfg.type:DidStrKey
+  comment: Observing date
+  description: |
+    UTC date on which the data of this file were obtained.
+    The format used is YYYY-MM-DDThh:mm:ss.sss
+#-------------------------------------------------------------------------------
+TELESCOP: !cfg.type:DidStrKey
+  comment: Telescope identifier
+  description: |
+    ESO telescope identifier as defined in ESO-044156
+#-------------------------------------------------------------------------------
+INSTRUME: !cfg.type:DidStrKey
+  comment: Instrument used
+  description: |
+    ESO acronym for the instrument generating the data product.
+#-------------------------------------------------------------------------------
+OBSERVER: !cfg.type:DidStrKey
+  comment: Name of observer
+  description: |
+    Initials, family name of observer.
+#-------------------------------------------------------------------------------
+OBJECT: !cfg.type:DidStrKey
+  comment: Target description
+  description: |
+    Identification of target observed.
+#-------------------------------------------------------------------------------
+EQUINOX: !cfg.type:DidDblKey
+  format: .1f
+  comment: Standard FK5
+  description: |
+    Epoch of the mean equator and equinox of the
+    coordinate system used to express the WCS mapping.
+    Should always be 2000.0 (FK5).
+    Should not be present if RADECSYS='ICRS'.
+#-------------------------------------------------------------------------------
+PI-COI: !cfg.type:DidStrKey
+  comment: Name(s) of proposer(s)
+  description: |
+    Name(s) of proposer(s) (as opposed to observer)
+#-------------------------------------------------------------------------------
+RADECSYS: !cfg.type:DidStrKey
+  comment: Coordinate system
+  description: |
+    Coordinate system. Normally 'FK5' or 'ICRS'.
+#-------------------------------------------------------------------------------
+MJD-OBS: !cfg.type:DidStrKey
+  comment: Observation start
+  description: |
+    Modified Julian Day of the start of the exposure.
+    The MJD is related to the Julian Day (JD) via the
+    formula: MJD = JD-2400000.5
+    The comment includes a civil representation of
+    the date and time. 8 decimals are required
+    for a precision of one millisecond, 5 decimals
+    for a precision of one second.
+#-------------------------------------------------------------------------------
+TIMESYS: !cfg.type:DidStrKey
+  comment: Time system used
+  description: |
+    The standard abbreviation of the principal time system
+    used for the time-related keywords and the data.
+    This keyword needs to be present only if the system
+    used is other than UTC. Allowed values are listed in:
+    http://tycho.usno.navy.mil/systime.html
+#-------------------------------------------------------------------------------
+EXPTIME: !cfg.type:DidDblKey
+  format: .3f
+  unit: s
+  comment: (s) Integration time
+  description: |
+    The integration time for a single observation. In
+    averaged infrared observations this corresponds to DIT.
+    Note that this does not represent the photon statistics.
+#-------------------------------------------------------------------------------
+RA: !cfg.type:DidDblKey
+  format: .6f
+  unit: deg
+  comment: (deg) RA (J2000) pointing
+  description: |
+    Telescope pointing in mean places of equinox J2000,
+    expressed in decimal degrees. The comment
+    field include the value expressed in hours, minutes
+    and seconds.
+#-------------------------------------------------------------------------------
+DEC: !cfg.type:DidDblKey
+  format: .5f
+  unit: deg
+  comment: (deg) DEC (J2000) pointing
+  description: |
+    Telescope pointing in mean places of equinox J2000,
+    expressed in decimal degrees. The comment
+    field include the value expressed in degrees, minutes
+    and seconds.
+#-------------------------------------------------------------------------------
+AIRMASS: !cfg.type:DidDblKey
+  format: .5f
+  unit: TBD
+  comment: (TBD) Averaged airmass
+  description: |
+    Average airmass for the optical axis during the
+    exposure computed for the time while the shutter is open.
+#-------------------------------------------------------------------------------
+LST: !cfg.type:DidDblKey
+  format: .3f
+  unit: s
+  comment: (s) Local Sidereal Time
+  description: |
+    Local Sidereal Time at start of the exposure in
+    seconds elapsed since sidereal midnight.
+    The comment includes a civil representation of the value.
+#-------------------------------------------------------------------------------
+UTC: !cfg.type:DidDblKey
+  format: .3f
+  unit: s
+  comment: (s) Universal Time UTC
+  description: |
+    Universal Time at start of the exposure in seconds elapsed since midnight.
+    The comment includes a civil representation of the value.
+#===============================================================================
+
+#===============================================================================
+# Commentary keywords:
+#===============================================================================
+COMMENT: !cfg.type:DidStrKey
+  comment: 
+  description: |
+    This keyword is used to include comments in the header.
+#-------------------------------------------------------------------------------
+HISTORY: !cfg.type:DidStrKey
+  comment: 
+  description: |
+    This keyword is used to include history information in the header.
+#===============================================================================
+
+#===============================================================================
+# Array keywords:
+#===============================================================================
+BZERO: !cfg.type:DidDblKey
+  format: e
+  comment: real=pixel_value*BSCALE+BZERO
+  description: |
+    Offset to be applied to values in the frame to
+    obtain original pixel values. See BSCALE.
+    BZERO is only included when not equal 0.
+    Note that for unsigned integer with 16 bits this is
+    frequently used to 'offset' to -32768.0
+    This keyword is of type double even for integer data
+    (positive BITPIX).
+#-------------------------------------------------------------------------------
+BSCALE: !cfg.type:DidDblKey
+  format: e
+  comment: real=pixel_value*BSCALE+BZERO
+  description: |
+    Scale to be applied to values in the frame to
+    obtain original pixel values. See BZERO.
+    BSCALE should only be included when not equal to 1.0
+    This keyword is of type double even for integer data.
+#-------------------------------------------------------------------------------
+BUNIT: !cfg.type:DidStrKey
+  comment: Physical unit
+  description: |
+    String describing the physical unit of the array
+    values. Must conform to the recommendations of the
+    IAU Style manual and ESO-044156.
+#-------------------------------------------------------------------------------
+BLANK: !cfg.type:DidIntKey
+  comment: Value used for null pixels
+  description: |
+    Value used to specify the undefined pixel values.
+    BLANK is normally used to fill out regions of the
+    frame that have not been exposed e.g. because of
+    windowing.
+    The value used must be within the dynamic range
+    given in BITPIX.
+    BLANK is not allowed for non-integer pixels
+    (negative BITPIX).
+#-------------------------------------------------------------------------------
+CTYPEi: !cfg.type:DidStrKey
+  comment: Coordinate system of <axis direction>
+  description: |
+    Name of the coordinate represented by axis n.
+    Possible values for <axis direction> are:
+    rows (1), columns (2), frame (3)
+    Examples for values are 'PIXEL', 'RA---TAN', 'DEC--TAN'.
+#-------------------------------------------------------------------------------
+CRPIXi: !cfg.type:DidDblKey
+  format: .1f
+  comment: Reference pixel
+  description: |
+    Pixel position of the reference point in axis n.
+    Possible values for <axis direction> are:
+    rows (1), columns (2), frame (3)
+    By convention the center of the pixel is pix.0,
+    pix.5 gives the right edge of the pixel.
+    It is recommended to use the reference pixel to
+    identify the optical axis.
+#-------------------------------------------------------------------------------
+CRVALi: !cfg.type:DidDblKey
+  format: .5f
+  comment: Coordinate at reference pixel
+  description: |
+    Coordinate value as specified by CTYPEn at reference pixel CRPIXn.
+    Possible values for <axis direction> are:
+    rows (1), columns (2), frame (3)
+    If world coordinates are used (i.e. CTYPEn is either
+    RA---TAN and DEC--TAN), the comment field includes the
+    value expressed in hours, minutes and seconds (RA) or
+    degrees, minutes, and seconds (DEC).
+    The unit has to be degrees, if RA and DEC are used as
+    world coordinates.
+#-------------------------------------------------------------------------------
+DATAMAX: !cfg.type:DidDblKey
+  format: .7f
+  comment: Maximal pixel value
+  description: |
+    Maximum pixel value across the frame (excludes special values, i.e BLANK).
+    Recommended but not required.
+#-------------------------------------------------------------------------------
+DATAMIN: !cfg.type:DidDblKey
+  format: .7f
+  comment: Maximal pixel value
+  description: |
+    Minimum pixel value across the frame excludes special values, i.e. BLANK).
+    Recommended but not required.
+#-------------------------------------------------------------------------------
+CHECKSUM: !cfg.type:DidStrKey
+  comment: ASCII 1's complement checksum
+  description: |
+    32 bit Cyclic Redundant Check (CRC)
+    calculation of the frame. It uses the CCITT
+    standard CRC polynomials.
+    http://fits.gsfc.nasa.gov/registry/checksum.html
+#-------------------------------------------------------------------------------
+DATASUM: !cfg.type:DidStrKey
+  comment: Checksum of the data section only
+  description: |
+    The checksum calculated for the data sections only.
+    For dataless records this keyword should be set to '0'.
+    http://fits.gsfc.nasa.gov/registry/checksum.html
+#-------------------------------------------------------------------------------
+ORIGFILE: !cfg.type:DidStrKey
+  comment: Original filename
+  description: |
+    The name when it was generated on instrument workstation.
+#-------------------------------------------------------------------------------
+ARCFILE: !cfg.type:DidStrKey
+  comment: Archive filename
+  description: |
+    Unique Data Product ID within the ESO Data Flow System.
+#-------------------------------------------------------------------------------
+CDBFILE: !cfg.type:DidStrKey
+  comment: Filename in the archive calibration database
+  description: |
+    The filename given to a file on ingestion into the
+    archive calibration database.
+#===============================================================================
+
+#===============================================================================
+# World Coordinate System keywords:
+#
+# These keywords follow the proposal by Greisen and Calabretta
+# (December 1999)
+#===============================================================================
+CDn_ms: !cfg.type:DidDblKey
+  format: f
+  comment: Coordinate translation matrix element
+  description: |
+    Gives the translation from array axis n to coordinate axis m.
+    For images the comment should read SS.ss arcsec per pixel
+#-------------------------------------------------------------------------------
+CUNITi: !cfg.type:DidStrKey
+  comment: Unit of coordinate translation
+  description: |
+    Unit of the coordinate in n axis n.
+#-------------------------------------------------------------------------------
+PVn_ks: !cfg.type:DidDblKey
+  format: f
+  comment: Coordinate projection parameter
+  description: |
+    Describes the parameter k for the axis n.
+    Required for certain coordinate types
+#-------------------------------------------------------------------------------
+CRDERn: !cfg.type:DidDblKey
+  format: f
+  comment: Random error in coordinate <n>
+  description: |
+    Gives the representative average value of the
+    random error over the range of the coordinate
+#-------------------------------------------------------------------------------
+CSYERns: !cfg.type:DidDblKey
+  format: f
+  comment: Systematic error in coordinate <n>
+  description: |
+    Gives the representative average value of the
+    systematic error over the range of the coordinate
+#===============================================================================
+
+#===============================================================================
+# Keyword to be used exclusively in FITS extensions:
+#===============================================================================
+XTENSION: !cfg.type:DidStrKey
+  comment: FITS extension first keyword
+  description: |
+    Indicates start of an extension block in the FITS file.
+    This keyword is mandatory for an extension header and
+    must not appear in the primary header.
+    Possible values are:
+      'TABLE   '    for ASCII tables
+      'BINTABLE'    for binary tables
+      'IMAGE   '    for image extensions
+#-------------------------------------------------------------------------------
+PCOUNT: !cfg.type:DidIntKey
+  comment: Parameter count
+  description: |
+    Must be 0 in IMAGE and TABLE extensions
+    In BINTABLE extensions number of bytes that follow the
+    main data table.
+    Must immediately follow the last of NAXISn keywords.
+    See Definition of FITS -- IAUFWG 3.0 (July 2008).
+#-------------------------------------------------------------------------------
+GCOUNT: !cfg.type:DidIntKey
+  comment: Group count
+  description: |
+    Must be 1 in IMAGE, TABLE and BINTABLE extensions.
+    Must immediately follow the PCOUNT keyword.
+    See Definition of FITS -- IAUFWG 3.0 (July 2008).
+#-------------------------------------------------------------------------------
+EXTNAME: !cfg.type:DidStrKey
+  comment: FITS extension name
+  description: |
+    Used to distinguish different extensions of the same type in the FITS file.
+#-------------------------------------------------------------------------------
+EXTVER: !cfg.type:DidIntKey
+  comment: FITS extension identification
+  description: |
+    Used to distinguish different extensions of the same
+    type and name in the FITS file.
+#-------------------------------------------------------------------------------
+EXTLEVEL: !cfg.type:DidIntKey
+  comment: FITS extension level
+  description: |
+    Used to establish a hierarchical separation among
+    extensions within a FITS file.
+#-------------------------------------------------------------------------------
+INHERIT: !cfg.type:DidBoolKey
+  comment: Primary header keywords are inherited
+  description: |
+    Indication whether the keywords from the header of the
+    primary HDU are inherited into the extension.
+#-------------------------------------------------------------------------------
+
+#===============================================================================
+# Specific for table extensions (both binary and ASCII tables):
+#===============================================================================
+TFIELDS: !cfg.type:DidIntKey
+  comment: Number of fields per row
+  description: |
+    This keyword is mandatory for tables.
+    Must immediately follow the GCOUNT keyword.
+#-------------------------------------------------------------------------------
+TFORMn: !cfg.type:DidStrKey
+  comment: Format of field n
+  description: |
+    This keyword is mandatory for tables.
+    See Definition of FITS -- IAUFWG 3.0 (July 2008).
+    The format follows the one of ANSI FORTAN-77.
+
+    Allowed values for ASCII tables are:
+    (w and d are the number of decimals to be specified)
+
+      - Aw:     Characters.
+      - Iw:     Decimal integers.
+      - Fw.d:   Single precision real.
+      - Ew.d:   Single precision real, exponential notation.
+      - Dw.d:   Double precision real, exponential notation.
+
+    A repeat count is not allowed for ASCII tables.
+
+    Allowed data types for binary tables are:
+
+      - L: Logical.
+      - X: Bit.
+      - B: Unsigned byte
+      - I: 16-bit integer
+      - J: 32-bit integer
+      - A: Character.
+      - E: Single precision floating point.
+      - D: Double precision floating point.
+      - C: Single precision complex.
+      - M: Double precision complex.
+      - P: Array descriptor.
+
+    A repeat count can be combined with these data type,e.g. 5A, 7I
+#-------------------------------------------------------------------------------
+TBCOLn: !cfg.type:DidIntKey
+  comment: Number of first column of field <n>
+  description: |
+    This keyword is mandatory for ASCII tables.
+    It specifies the column in which field <n> starts.
+#===============================================================================
+
+#===============================================================================
+# Other allowed table extension keywords:
+#===============================================================================
+TSCALn: !cfg.type:DidDblKey
+  comment: real=table_value*TSCAL<n>+TZERO<n>
+  format: e
+  description: |
+    Scale to be applied to values in the table to
+    obtain original pixel values. See TZEROn.
+    TSCALn is only included when not equal 1.
+#-------------------------------------------------------------------------------
+TZEROn: !cfg.type:DidDblKey
+  comment: real=table_value*TSCAL<n>+TZERO<n>
+  format: e
+  description: |
+    Offset to be applied to values in the table to
+    obtain original pixel values. See TSCALn.
+    TZEROn is only included when not equal 0.0 .
+#-------------------------------------------------------------------------------
+TNULLn: !cfg.type:DidStrKey
+  comment: Value used for null entries
+  description: |
+    Value used to specify the undefined table values.
+#-------------------------------------------------------------------------------
+TTYPEn: !cfg.type:DidStrKey
+  comment: Name of field <n>
+  description: |
+    Use of identical names for different fields should be avoided.
+#-------------------------------------------------------------------------------
+TUNITn: !cfg.type:DidStrKey
+  comment: Physical unit of field <n>
+  description: |
+    Physical unit of field <n>
+#-------------------------------------------------------------------------------
+TDISPn: !cfg.type:DidStrKey
+  comment: Recommended display of <n>
+  description: |
+    Describes the recommended display of the contents of field n.
+    See Definition of FITS -- IAUFWG 3.0 (July 2008).
+    Only used for binary table extensions.
+#===============================================================================
+
+# EOF

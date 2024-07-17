@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" xmlns:customActionDomain="http://my.custom-actions.domain/custom" version="1.0" initial="On">
+  <state id="On">
+    <initial>
+      <transition target="On::NotOperational"/>
+    </initial>  
+    <state id="On::Operational">
+      <initial>
+        <transition target="On::Operational::Closed"/>
+      </initial>  
+      <state id="On::Operational::Error">
+        <transition event="Close" target="On::Operational::Closing">
+          <customActionDomain:Close.Execute name="Close.Execute"/>
+        </transition>  
+        <transition event="Open" target="On::Operational::Opening">
+          <customActionDomain:Open.Execute name="Open.Execute"/>
+        </transition>  
+        <transition event="Disable" target="On::Operational::Disabling"/>
+        <transition event="IsClosed" target="On::Operational::Closed"/>
+        <transition event="IsOpen" target="On::Operational::Open"/>
+      </state>  
+      <state id="On::Operational::Open">
+        <transition event="Close" target="On::Operational::Closing">
+          <customActionDomain:Close.Execute name="Close.Execute"/>
+        </transition>  
+        <transition event="Disable" target="On::Operational::Disabling">
+          <customActionDomain:Disable.Execute name="Disable.Execute"/>
+        </transition>  
+        <transition event="IsClosed" target="On::Operational::Closed">
+          <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+        </transition>  
+        <transition event="ErrFault" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition>  
+        <transition event="ErrAllActive" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition>  
+        <transition event="ErrNoneActive" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition> 
+      </state>  
+      <state id="On::Operational::Opening">
+        <!-- invoke targettype="java" id="Opening" src="SmActivityOpening.java"/ -->
+        <invoke id="ActivityOpening"/>
+        <transition event="IsOpen" target="On::Operational::Open"/>
+        <transition event="ErrFault" target="On::Operational::Error"/>
+        <transition event="Stop" target="On::Operational::Error"/>
+        <transition event="IsClosed" target="On::Operational::Error"/>
+        <transition event="ErrAllActive" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition> 
+      </state>  
+      <state id="On::Operational::Closing">
+        <!-- invoke targettype="java" id="Closing" src="SmActivityClosing.java"/ -->
+        <invoke id="ActivityClosing"/>
+        <transition event="IsClosed" target="On::Operational::Closed"/>
+        <transition event="ErrFault" target="On::Operational::Error"/>
+        <transition event="Stop" target="On::Operational::Error"/>
+        <transition event="IsOpen" target="On::Operational::Error"/>
+        <transition event="ErrAllActive" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition> 
+      </state>  
+      <state id="On::Operational::Closed">
+        <transition event="Open" target="On::Operational::Opening">
+          <customActionDomain:Open.Execute name="Open.Execute"/>
+        </transition>  
+        <transition event="Disable" target="On::Operational::Disabling">
+          <customActionDomain:Disable.Execute name="Disable.Execute"/>
+        </transition>  
+        <transition event="IsOpen" target="On::Operational::Open">
+          <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+        </transition>  
+        <transition event="ErrFault" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition>  
+        <transition event="ErrAllActive" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition>  
+        <transition event="ErrNoneActive" target="On::Operational::Error">
+          <customActionDomain:Err.Execute name="Err.Execute"/>
+        </transition> 
+      </state>  
+      <state id="On::Operational::Disabling">
+        <!-- invoke targettype="java" id="Disabling" src="SmActivityDisabling.java"/ -->
+        <invoke id="ActivityDisabling"/>
+        <transition event="DisableOpen" target="On::NotOperational::Ready::Open"/>
+        <transition event="DisableClosed" target="On::NotOperational::Ready::Closed"/>
+        <transition event="ErrDisable" target="On::NotOperational::NotReady"/>
+      </state>  
+      <transition event="Reset" target="On::NotOperational">
+        <customActionDomain:Reset.Execute name="Reset.Execute"/>
+      </transition>  
+      <transition event="HwErr" target="On::Operational::Error"/>
+    </state>  
+    <state id="On::NotOperational">
+      <initial>
+        <transition target="On::NotOperational::NotReady"/>
+      </initial>  
+      <state id="On::NotOperational::NotReady">
+        <transition event="Init" target="On::NotOperational::Initialising">
+          <customActionDomain:Init.Execute name="Init.Execute"/>
+        </transition>  
+        <transition event="Reset"/>
+      </state>  
+      <state id="On::NotOperational::Initialising">
+        <!-- invoke targettype="java" id="Initialising" src="SmActivityInitialising.java"/ -->
+        <invoke id="ActivityInitialising"/>
+        <transition event="InitOpen" target="On::NotOperational::Ready::Open">
+          <customActionDomain:Init.Complete name="Init.Complete"/>
+        </transition>  
+        <transition event="ErrInit" target="On::NotOperational::NotReady"/>
+        <transition event="Stop" target="On::NotOperational::NotReady">
+          <customActionDomain:Init.Abort name="Init.Abort"/>
+        </transition>  
+        <transition event="Reset" target="On::NotOperational::NotReady">
+          <customActionDomain:Init.Abort name="Init.Abort"/>
+        </transition>  
+        <transition event="InitClosed" target="On::NotOperational::Ready::Closed">
+          <customActionDomain:Init.Complete name="Init.Complete"/>
+        </transition> 
+      </state>  
+      <state id="On::NotOperational::Ready">
+        <initial>
+          <transition target="On::NotOperational::Ready::Closed"/>
+        </initial>  
+        <state id="On::NotOperational::Ready::Open">
+          <transition event="IsClosed" target="On::NotOperational::Ready::Closed">
+            <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+          </transition>  
+          <transition event="Enable" target="On::Operational::Open">
+            <customActionDomain:Enable.Complete name="Enable.Complete"/>
+          </transition> 
+        </state>  
+        <state id="On::NotOperational::Ready::Closed">
+          <transition event="IsOpen" target="On::NotOperational::Ready::Open">
+            <customActionDomain:Unexp.Execute name="Unexp.Execute"/>
+          </transition>  
+          <transition event="Enable" target="On::Operational::Closed">
+            <customActionDomain:Enable.Complete name="Enable.Complete"/>
+          </transition> 
+        </state>  
+        <transition event="Reset" target="On::NotOperational::NotReady"/>
+        <transition event="ErrFault" target="On::NotOperational::NotReady"/>
+      </state>  
+      <state id="On::NotOperational::Error">
+        <transition event="HwOk" target="On::NotOperational::NotReady"/>
+      </state>  
+      <transition event="HwErr" target="On::NotOperational::Error"/>
+    </state>  
+    <transition event="PowerOff" target="Off"/>
+    <transition event="Stop">
+      <customActionDomain:Stop.Execute name="Stop.Execute"/>
+    </transition> 
+    <transition event="On">
+      <customActionDomain:On.Execute name="On.Execute"/>
+    </transition> 
+  </state>  
+  <final id="Off"/>
+</scxml>

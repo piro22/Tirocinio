@@ -1,0 +1,17 @@
+!cfg.include config/fcf/devmgr/definitions/lamp.yaml:
+
+lamp1: !cfg.type:Lamp
+  overview: 'Lamp device example 1'
+  description: "Lamp device example 1 description"
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN.Lamp2                           # OPCUA attribute prefix
+  namespace: 4
+  simulated: false
+  ignored: false
+  dev_endpoint: opc.tcp://134.171.59.99:4840
+  sim_endpoint: opc.tcp://134.171.12.182:4840      # Simulation address
+  fits_prefix: "LAMP1"
+  ctrl_config: !cfg.type:LampController
+    analog_threshold: 100
+
+

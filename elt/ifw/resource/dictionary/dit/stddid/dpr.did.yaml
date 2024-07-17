@@ -1,0 +1,33 @@
+!cfg.include schema/core/dit/did/did.schema.yaml:
+
+# Converted from ESO-VLT-DIC.DPR
+
+header: !cfg.type:DidHeader
+  name: dpr
+  scope: Generic
+  description: |
+    Provides the Data Product category keywords for the output data products.
+
+DPR DID: !cfg.type:DidStrKey
+  comment: DPR Dictionary
+  description: |
+    Data Product DID
+
+DPR CATG: !cfg.type:DidStrKey
+  comment: Observation category
+  description: |
+    Category according to section 4.7 of GEN-SPE-ESO-19400-0794.
+    (science, calib, test, simulation, other)
+
+DPR TYPE: !cfg.type:DidStrKey
+  comment: Observation type
+  description: |
+    Type of observation according to section 4.7
+    of GEN-SPE-ESO-19400-0794.
+
+DPR TECH: !cfg.type:DidStrKey
+  comment: Observation technique
+  description: |
+    Observation technique according to section 4.7
+    of GEN-SPE-ESO-19400-0794.
+

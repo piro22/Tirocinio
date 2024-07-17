@@ -1,0 +1,382 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "f2ocal-contamination",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "FORSUp",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "f2ocal-contamination",
+    "userComments": "A",
+    "instrumentComments": "AA"
+  },
+  "templates": [
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "integer",
+          "value": 100
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "u_HIGH+112"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 3
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 2.0
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "b_HIGH+113"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 4
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 1.1
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "b_HIGH+113"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 5
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 1.4
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "v_HIGH+114"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 6
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 1.4
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "R_SPECIAL+76"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "templateName": "FORSUP_img_cal_scrflat",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Imaging screen flat."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 7
+        },
+        {
+          "name": "DET.WIN1.UIT1",
+          "type": "string",
+          "value": 3.6
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "INS.FILT1.NAME",
+          "type": "string",
+          "value": "I_BESS+77"
+        },
+        {
+          "name": "INS.LAMP1.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP2.TIME",
+          "type": "integer",
+          "value": -1
+        },
+        {
+          "name": "INS.LAMP5.NAID",
+          "type": "string",
+          "value": "FlatBlue+3"
+        },
+        {
+          "name": "INS.LAMP5.TIME",
+          "type": "integer",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

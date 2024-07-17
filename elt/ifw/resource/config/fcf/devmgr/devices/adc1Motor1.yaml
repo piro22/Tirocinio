@@ -1,0 +1,34 @@
+!cfg.include config/fcf/devmgr/definitions/motor.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+adc1_motor1: !cfg.type:Motor
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN_FAST.adc.motor1                       # OPCUA attribute prefix
+  dev_endpoint: opc.tcp://134.171.59.98:4840
+  sim_endpoint: opc.tcp://134.171.57.209:4840       # Simulation address
+  fits_prefix: "MOT1"
+  axis_type:             CIRCULAR_OPT
+  initialisation: [
+  {
+  step: 'END',
+  value1: 0.0,
+  value2: 0.0
+  }
+  ]
+
+  ctrl_config:
+    velocity:              3.0
+    min_pos:               0.0
+    max_pos:               0.0
+    active_low_lstop:      false
+    active_low_lhw:        false
+    active_low_ref:        true
+    active_low_index:      false
+    active_low_uhw:        true
+    active_low_ustop:      false
+    brake:                 false
+    low_brake:             false
+    low_inpos:             false
+    backlash:              0.0
+
+
