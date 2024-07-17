@@ -1,0 +1,6 @@
+"""
+@copyright ESO - European Southern Observatory
+"""
+from wtools import package
+package.declare_package(recurse='*')
+

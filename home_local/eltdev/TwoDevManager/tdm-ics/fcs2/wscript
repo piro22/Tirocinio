@@ -1,0 +1,11 @@
+"""
+@file
+@ingroup fcs
+@copyright ESO - European Southern Observatory
+
+@defgroup 
+@ingroup fcs
+@brief C++ example applications based on RAD
+"""
+from wtools.package import declare_package
+declare_package(recurse='devices server devsim clib cli gui')

@@ -1,0 +1,22 @@
+"""
+@file
+@ingroup gui_fcfgui
+@copyright ESO - European Southern Observatory
+
+@defgroup gui_fcfgui Main GUI
+@ingroup gui
+@brief Main GUI
+"""
+from wtools import module
+
+module.declare_qt5cprogram(target='fcsGui', \
+                           use='QT5CORE QT5GUI QT5WIDGETS QT5PRINTSUPPORT hiredis redis++\
+                           yaml-cpp libzmq libczmq BOOST protobuf rad.cpp.core \
+                           xerces-c cii.mal-common cii.mal cfitsio log4cplus \
+                           rad.cpp.services rad.cpp.utils \
+                           ifw.widgets \
+                           fcf.gui.msglib fcf.gui.wdglib \
+                           fcs.gui.wdglib \
+                           fcs.gui.wdglib \
+                           ifw_sia \
+                           stdif-cxx devmgr.fcfif-cxx devmgr.common')

@@ -1,0 +1,9 @@
+2024-06-13 18:47:59,734 [-1] <seq> INFO:(log.logConfig):89: seq logger initialized
+2024-06-13 18:47:59,735 [-1] <seq.lib> INFO:(log.logConfig):92: seq.lib logger initialized
+2024-06-13 18:47:59,735 [-1] <seq.lib.log> INFO:(log.logConfig):95: log filename: seq_server_146884.log
+2024-06-13 18:47:59,735 [-1] <seq.seq.cli.seq_server> INFO:(seq_server.server):222: Sequencer Server starting... elthost:8001
+2024-06-13 18:47:59,735 [-1] <seq.seq.cli.seq_server> INFO:(seq_server.start_server):148: seq server listening on elthost:8001
+2024-06-13 18:47:59,736 [-1] <seq.seq.cli.seq_server> INFO:(seq_server.start_seq_shell):66: Subprocess seq shell starting
+2024-06-13 18:47:59,736 [-1] <seq.seq.cli.seq_server> INFO:(seq_server.start_seq_shell):68: start seq shell as: seqtool shell --topic-id elthost_8001 --log-level INFO 
+2024-06-13 18:48:01,123 [-1] <seq.seq.cli.seq_server> INFO:(seq_server.talk_to_client):105: Connection from ('10.0.2.15', 43786)
+2024-06-13 18:48:01,374 [-1] <seq.seq.cli.seq_server> INFO:(seq_server.talk_to_client):105: Connection from ('10.0.2.15', 43794)

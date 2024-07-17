@@ -1,0 +1,27 @@
+# @ingroup tdm_calob
+# @copyright ESO - European Southern Observatory
+# @brief tdm CalOb Module Configuration.
+
+!cfg.include config/ifw/calob/schema/calob_cfg.schema.yaml:
+
+database: !cfg.type:DatabaseDef
+  db_path: "calob/tdm/db/calibration_history.db"
+
+calob: !cfg.type:CalobDef
+  calib_schedule_module: "tdm.calob.calob_schedule"
+  log_property_file: "config/ifw/calob/log/log_config.json"
+  console_logger: "elt.log.test"
+
+fits_crawler: !cfg.type:FitsCrawlerDef
+  # Note: Normally data will be stored under the "DATAROOT" area and "data_path"
+  # should be set to the relative path under "DATAROOT".
+  data_path: "$INTROOT/resource/tmp_image/tdm/calob"
+  file_pattern: "*.fits"
+  timeframe_start: ""
+  timeframe_end: ""
+
+exporter_ob: !cfg.type:ExporterObDef
+  path_dc_template: "template/calob/daily_calib.obd.json"
+  path_dc: "calob/tdm/daily_calibration/daily_calib.obd.json"
+  obd_path: "obd/calob"
+  obdx_path: "obdx/calob"

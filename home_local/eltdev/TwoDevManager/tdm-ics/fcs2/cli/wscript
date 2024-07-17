@@ -1,0 +1,7 @@
+"""
+@copyright ESO - European Southern Observatory
+"""
+from wtools.module import declare_pyprogram
+declare_pyprogram(target='fcscli',
+                  use='\
+                       devmgr.clib')

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>styles/Takezo/Takezo.qss</file>
+        <file>styles/Combinear/Combinear.qss</file>
+        <file>styles/Diffnes/Diffnes.qss</file>
+        <file>styles/Combinear/Combinear.png</file>
+        <file>styles/Combinear/License.txt</file>
+        <file>styles/Diffnes/Diffnes.png</file>
+        <file>styles/Diffnes/License.txt</file>
+        <file>styles/Takezo/License.txt</file>
+        <file>styles/Takezo/Takezo.png</file>
+        <file>styles/Default/Default.qss</file>
+	<file>images/eso-logo-color.png</file>
+        <file>images/setup.svg</file>
+        <file>images/gui.svg</file>
+    </qresource>
+</RCC>

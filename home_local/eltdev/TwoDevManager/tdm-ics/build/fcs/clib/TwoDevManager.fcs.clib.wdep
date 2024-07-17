@@ -1,0 +1,13 @@
+{
+    "name": "TwoDevManager.fcs.clib",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "a824aee384673b3105e55363d8d60bb9",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

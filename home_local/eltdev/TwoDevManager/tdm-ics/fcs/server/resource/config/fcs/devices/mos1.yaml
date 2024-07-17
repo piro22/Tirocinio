@@ -1,0 +1,16 @@
+!cfg.include config/fcs/definitions/mos.yaml:
+
+mos1: !cfg.type:Mos
+  type:           Mos
+  interface:      Softing
+  identifier:     PLC1 # OPCUA Object Identifier
+  prefix:         MAIN.Mos1 # OPCUA attribute prefix
+  simulated:      true
+  dev_endpoint:   opc.tcp://134.171.59.98:4840
+  sim_endpoint:   opc.tcp://127.0.0.1:8888 # Simulation address
+  fits_prefix:    "OPTI1"
+  mapfile:        "config/fcs/mapping/mos.yaml"
+  ctrl_config:
+    timeout:       2000
+
+

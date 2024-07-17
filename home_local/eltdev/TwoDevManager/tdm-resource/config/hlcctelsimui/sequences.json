@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "deployment": [
+    {
+      "type": "DEV",
+        "sequence_names": ["DEV Manual Startup", "DEV Manual Shutdown", "DEV Startup", "DEV Shutdown", "Segment Exchange mode"]
+    },
+    {
+      "type": "ECM",
+      "sequence_names": ["ECM Startup", "ECM Shutdown", "Segment Exchange mode"]
+    },
+    {
+      "type": "INS",
+      "sequence_names": ["INS Startup", "INS Shutdown"]
+    }
+  ],
+  "sequences": [
+    {
+      "name": "DEV Manual Startup",
+      "command": "seqtool run hlccseq.simStartup",
+      "description": "OLDB Check -> Start Processes -> Operational (fixed ports)"
+    },
+    {
+      "name": "DEV Manual Shutdown",
+      "command": "seqtool run hlccseq.simShutdown",
+      "description": "PARK Position -> Not Operational -> Exit (fixed ports)"
+    },
+    {
+      "name": "DEV Startup",
+      "command": "seqtool run hlccseq.hlccDevStartup",
+      "description": "OLDB Check -> Start Processes -> Operational (nomad develoment configuration)"
+    },
+    {
+      "name": "DEV Shutdown",
+      "command": "seqtool run hlccseq.hlccDevShutdown",
+      "description": "PARK Position -> Not Operational -> Exit (nomad develoment configuration)"
+    },
+    {
+      "name": "ECM Startup",
+      "command": "seqtool run hlccseq.hlccEcmStartup",
+      "description": "OLDB Check -> Start Processes -> Operational (nomad ECM configuration)"
+    },
+    {
+      "name": "ECM Shutdown",
+      "command": "seqtool run hlccseq.hlccEcmShutdown",
+      "description": "PARK Position -> Not Operational -> Exit (nomad ECM configuration)"
+    },
+    {
+      "name": "INS Startup",
+      "command": "seqtool run tdmstoo.startup_hlcc",
+      "description": "OLDB Check -> Start Processes -> Operational (nomad INS configuration)"
+    },
+    {
+      "name": "INS Shutdown",
+      "command": "seqtool run tdmstoo.shutdown_hlcc",
+      "description": "PARK Position -> Not Operational -> Exit (nomad INS configuration)"
+    },
+
+    {
+      "name": "Segment Exchange mode",
+      "command": "seqtool run hlccseq.simSegmentExchangeMode",
+      "description": "Switch telescope to Segment Exchange Mode"
+    }
+
+  ]
+}

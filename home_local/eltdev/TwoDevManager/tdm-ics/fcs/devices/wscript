@@ -1,0 +1,29 @@
+"""
+@file
+@ingroup fcs_devices
+@copyright ESO - European Southern Observatory
+
+
+@defgroup fcs
+@ingroup fcs_devices
+@brief FCS Devices Library
+"""
+
+from wtools.module import declare_cshlib
+
+declare_cshlib(target='fcsDevices', use='yaml-cpp BOOST\
+                                            rad.cpp.core rad.cpp.services \
+                                            rad.cpp.sm rad.scxml4cpp.engine \
+                                            rad.scxml4cpp.parser xerces-c  \
+                                            open62541 cpp-netlib-uri\
+                                            log4cplus fmt cfitsio CCfits azmq libzmq hiredis redis++ \
+                                            cii.mal-common \
+                                            cii.mal nlohmann_json\
+                                            ifw-core.utils.base \
+                                            ifw-core.utils.system \
+                                            ifw-core.utils.conversion \
+                                            ifw-core.utils.string \
+                                            ifw-core.utils.bat \
+                                            ifw-core.dit.did.didlib \
+                                            devmgr.common \
+                                            devmgr.fcfif_cxx', features='radgen')

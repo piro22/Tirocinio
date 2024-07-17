@@ -1,0 +1,24 @@
+2024-06-27 20:06:51,189 [-1] <seq.user> INFO:(log.logConfig):96: User's Logging initialized
+2024-06-27 20:16:06,703 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence __seq_ROOT__ starting
+2024-06-27 20:16:06,711 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence System Startup/Shutdown Sequence starting
+2024-06-27 20:16:06,722 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence System Stop starting
+2024-06-27 20:16:06,769 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Stop Subsystem Jobs starting
+2024-06-27 20:16:13,005 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Stop Subsystem Jobs finish
+2024-06-27 20:16:13,012 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Stop Device Simulators starting
+2024-06-27 20:16:19,175 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Stop Device Simulators finish
+2024-06-27 20:16:19,178 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Stop Subsystem Simulators starting
+2024-06-27 20:16:22,234 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Stop Subsystem Simulators finish
+2024-06-27 20:16:23,255 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence System Stop finish
+2024-06-27 20:16:23,259 [27] <seq.user> INFO:(startup.create_dirs):281: OLAS directory already exist at .
+2024-06-27 20:16:23,264 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence System Start starting
+2024-06-27 20:16:25,859 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Start Device Simulators starting
+2024-06-27 20:16:42,808 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Start Device Simulators finish
+2024-06-27 20:16:42,811 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Start Subsystem Simulators starting
+2024-06-27 20:16:50,895 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Start Subsystem Simulators finish
+2024-06-27 20:16:50,899 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Start Jobs starting
+2024-06-27 20:17:06,535 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Start Jobs finish
+2024-06-27 20:17:06,536 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence System Start finish
+2024-06-27 20:17:06,548 [-1] <seq.user> INFO:(sequence.start_step):144: Sequence Move to Operational starting
+2024-06-27 20:17:18,551 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence Move to Operational finish
+2024-06-27 20:17:18,552 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence System Startup/Shutdown Sequence finish
+2024-06-27 20:17:18,553 [-1] <seq.user> INFO:(sequence.end_step):155: Sequence __seq_ROOT__ finish

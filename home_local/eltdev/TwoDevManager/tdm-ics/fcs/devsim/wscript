@@ -1,0 +1,25 @@
+"""
+@copyright ESO - European Southern Observatory
+"""
+
+from wtools.module import declare_pyprogram
+declare_pyprogram(target='fcsDevsimMos',
+                  py_package='src/tdm/fcs',                  
+                  use='yaml-cpp BOOST \
+                  rad.cpp.core rad.cpp.services \
+                  rad.cpp.sm rad.scxml4cpp.engine \
+                  rad.scxml4cpp.parser xerces-c  \
+                  ifw_sia \
+                  log4cplus cfitsio hiredis\
+                  cii.mal-common \
+                  cii.mal \
+                  ifw-core.ctd.cpp.defines \
+                  ifw-core.ctd.cpp.system \
+                  ifw-core.ctd.cpp.conversion \
+                  ifw-core.ctd.cpp.string \
+                  ifw-core.dit.cpp.did.didlib \
+                  devmgr.common \
+                  devmgr.fcfif_cxx', features='radgen')
+
+
+

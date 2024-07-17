@@ -1,0 +1,13 @@
+{
+    "name": "TwoDevManager.tdmstoo",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "69de655281f00487585ce718a83b2b54",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

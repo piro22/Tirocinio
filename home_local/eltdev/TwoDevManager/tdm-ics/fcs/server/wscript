@@ -1,0 +1,32 @@
+"""
+@file
+@ingroup fcs
+@copyright ESO - European Southern Observatory
+
+@defgroup fcs
+@ingroup fcs_server
+@brief C++ device manager application based on FCF
+"""
+from wtools.module import declare_cprogram
+
+declare_cprogram(target='fcsDevmgr',
+                 features='radgen',
+                 use='yaml-cpp cxx BOOST fmt hiredis redis++ cfitsio CCfits log4cplus \
+                 xerces-c cii.mal-common cii.mal \
+                 libczmq libzmq protobuf protoc\
+                 rad.cpp.core \
+                 rad.cpp.services \
+                 rad.cpp.sm \
+                 rad.cpp.utils \
+                 rad.cpp.mal \
+                 open62541 \
+                 ifw-core.utils.bat \
+                 devmgr.common \
+                 devmgr.devices \
+                 stdif-cxx \
+                 metadaqif-cxx \
+                 fcs.devices  \
+                 devmgr.fcfif-cxx')
+
+
+ 

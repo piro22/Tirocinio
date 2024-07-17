@@ -1,0 +1,18 @@
+# device mapping configuration
+!cfg.include config/fcf/devmgr/definitions/devmap.yaml:
+
+!cfg.typedef MosCfgMap:
+    !cfg.required timeout:        !cfg.type:string
+
+!cfg.typedef MosRpcMap(DevRpcMap):
+    !cfg.required rpcPing:        !cfg.type:string
+
+!cfg.typedef MosMap:
+    !cfg.required cfg:            !cfg.type:MosCfgMap
+    !cfg.required stat:           !cfg.type:DevStatMap
+    !cfg.required rpc:            !cfg.type:MosRpcMap
+
+
+
+
+

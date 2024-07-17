@@ -1,0 +1,13 @@
+"""
+@file
+@ingroup gui
+@copyright ESO - European Southern Observatory
+
+@defgroup gui FCF Graphical User Interfaces modules
+@ingroup FcfProject
+@brief FCF Graphical User Interfaces
+"""
+
+from wtools.package import declare_package
+
+declare_package(recurse='wdglib fcsgui pyfcsgui')

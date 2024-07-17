@@ -1,0 +1,66 @@
+
+"""
+@file
+@copyright ESO - European Southern Observatory
+
+@defgroup TwoDevManager
+@brief my project description
+"""
+
+import os
+
+from wtools.project import declare_project, default_build
+
+def configure(cnf):
+    radbasedir = os.environ.get('RAD_ROOT', cnf.env.PREFIX)
+    pkgs = ('CCfits cfitsio cpp-netlib-uri hiredis redis++ nlohmann_json open62541 libczmq '
+           'libzmq azmq fmt protobuf xerces-c yaml-cpp log4cplus ')
+
+    for pkg in pkgs.split():
+        cnf.check_cfg(package=pkg, uselib_store=pkg, args='--cflags --libs')
+
+    # Load radgen waf tool
+    cnf.load('radgen_tool', tooldir=radbasedir + '/share/waftools/')
+    pkgs = ('rad.cpp.core rad.cpp.mal rad.cpp.services rad.cpp.sm rad.cpp.utils rad.py.rad '
+            'rad.scxml4cpp.engine rad.scxml4cpp.parser rad.scxml4py '
+            'config-ng.cpp.config-ng '
+            'ifw-core.utils.conversion '
+            'ifw-core.utils.string '
+            'ifw-core.utils.system '
+            'ifw-core.utils.bat '
+            'ifw-core.pyutils.opcua '
+            'ifw-core.pyutils.utils '
+            'ifw-core.dit.did.didlib '
+            'ifw-core.dit.fits.fitslib '
+            )
+
+    for pkg in pkgs.split():
+        cnf.check_wdep(wdep_name=pkg, uselib_store=pkg)
+
+    cnf.check_wdep(wdep_name='cii.mal-common.cpp.mal-common', uselib_store='cii.mal-common')
+    cnf.check_wdep(wdep_name='cii.mal.cpp.mal', uselib_store='cii.mal')
+    cnf.check_wdep(wdep_name='std.if-cxx', uselib_store='stdif-cxx')
+    cnf.check_wdep(wdep_name='std.if-cxx-zpb', uselib_store='stdif-cxx-zpb')
+    cnf.check_wdep(wdep_name='std.if-python', uselib_store='stdif-python')
+    cnf.check_wdep(wdep_name='ifw-wdglib.widgets', uselib_store='ifw.widgets')
+    cnf.check_wdep(wdep_name='ifw-fcf.devmgr.fcfif', uselib_store='devmgr.fcfif')
+    cnf.check_wdep(wdep_name='ifw-fcf.devmgr.common', uselib_store='devmgr.common')
+    cnf.check_wdep(wdep_name='ifw-fcf.devmgr.devices', uselib_store='devmgr.devices')
+    cnf.check_wdep(wdep_name='ifw-fcf.gui.wdglib', uselib_store='fcf.gui.wdglib')
+    cnf.check_wdep(wdep_name='ifw-fcf.gui.msglib', uselib_store='fcf.gui.msglib')
+    cnf.check_wdep(wdep_name='metadaq.if-cxx', uselib_store='metadaqif-cxx')
+    cnf.check_wdep(wdep_name='metadaq.if-cxx-zpb', uselib_store='metadaqif-cxx-zpb')
+    cnf.check_wdep(wdep_name='metadaq.if-python', uselib_store='metadaqif-python')
+    cnf.check_wdep(wdep_name='ifw-fcf.devmgr.fcfif-cxx', uselib_store='devmgr.fcfif-cxx')
+    cnf.check_wdep(wdep_name='ifw-fcf.devmgr.fcfif-cxx-zpb', uselib_store='devmgr.fcfif-cxx-zpb')
+
+
+declare_project('TwoDevManager', '2.1.0-alpha',
+                requires='cxx qt5 boost python pyqt5 protoc cii gtest nosetests',
+                recurse='fcs tdmstoo seq utils calob',
+                boost_libs='program_options system regex filesystem thread coroutine chrono',
+                cxx_std='c++17')
+
+
+
+

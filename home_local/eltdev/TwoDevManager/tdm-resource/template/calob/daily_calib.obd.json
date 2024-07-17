@@ -1,0 +1,17 @@
+{
+    "obId": 0,
+    "itemType": "OB",
+    "name": "CalOb Template",
+    "executionTime": 0,
+    "runId": "string",
+    "instrument": "TwoDevManager",
+    "ipVersion": "string",
+    "obsDescription": {
+        "name": "Daily Calibrations",
+        "userComments": "CalOb Template",
+        "instrumentComments": "CalOb Template"
+    },
+    "templates": []
+}
+
+

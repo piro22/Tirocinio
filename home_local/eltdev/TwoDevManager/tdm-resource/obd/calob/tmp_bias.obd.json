@@ -1,0 +1,124 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "tmp_bias",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "TwoDevManager",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "tmp_bias",
+    "userComments": "CalOb Template",
+    "instrumentComments": "CalOb Template"
+  },
+  "templates": [
+    {
+      "templateName": "tdmseq.tdm_img_cal_bias",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "tdm_img_cal_bias"
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 2
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,2x2,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 20
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "ANY"
+        }
+      ]
+    },
+    {
+      "templateName": "tdmseq.tdm_img_cal_bias",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Bias."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 3
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "100kHz,2x2,high"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 20
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "ANY"
+        }
+      ]
+    },
+    {
+      "templateName": "tdmseq.tdm_img_cal_bias",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "Bias."
+        },
+        {
+          "name": "TPL.MODE",
+          "type": "string",
+          "value": "IMG"
+        },
+        {
+          "name": "TPL.SEQNO",
+          "type": "integer",
+          "value": 4
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "200kHz,1x1,low"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 20
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "ANY"
+        }
+      ]
+    }
+  ]
+}

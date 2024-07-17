@@ -1,0 +1,3 @@
+from wtools.module import declare_pyqt5package
+declare_pyqt5package(target='tdm')
+

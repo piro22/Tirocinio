@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="MAIN" Id="{07fc51db-b93c-4752-b89c-c4e857c6b83c}" SpecialFunc="None">
+    <Declaration><![CDATA[//
+//Created by MakePlcProject $Id: Program.cs 332645 2020-05-19 14:21:53Z wpirani $
+//
+PROGRAM MAIN
+
+VAR
+	//Devices
+	{attribute 'OPC.UA.DA':='1'}
+	Motor1:			FB_MOTOR;
+
+	{attribute 'OPC.UA.DA':='1'}
+	Lamp1:			FB_LAMP;
+
+	{attribute 'OPC.UA.DA':='1'}
+	Shutter1:		FB_SHUTTER;
+
+	//Simulators
+	{attribute 'OPC.UA.DA':='1'}
+	SIM_Motor1:		FB_SIM_MOTOR;
+
+	{attribute 'OPC.UA.DA':='1'}
+	SIM_Lamp1:		FB_SIM_LAMP;
+
+	{attribute 'OPC.UA.DA':='1'}
+	SIM_Shutter1:	FB_SIM_SHUTTER;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//
+//Devices
+//
+Motor1(sName:='Motor1',	nNOVRAM_DevId:=0);
+
+Lamp1(in_sName:='Lamp1');
+
+Shutter1(in_sName:='Shutter1');
+
+//
+// Simulators
+//
+SIM_Motor1(ptrCfg:=ADR(Motor1.cfg),	ptrStat:=ADR(Motor1.stat));
+
+SIM_Lamp1(ptrDev:=ADR(Lamp1));
+
+SIM_Shutter1(ptrDev:=ADR(Shutter1));
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="318" Count="7" />
+      <LineId Id="334" Count="0" />
+      <LineId Id="326" Count="7" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

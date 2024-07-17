@@ -1,0 +1,11 @@
+# @copyright ESO - European Southern Observatory
+# @brief Example Configuration file for the Mos1 device.
+
+!cfg.include config/fcs/devsim/mos/mos.schema.yaml:
+
+mos: !cfg.type:DevSimMosCfg
+  server_name:            Mos1
+  sim_delay:              1.0
+  sim_init_time:          2.0
+  initial_state:          false
+  log_cfg:                 "config/fcs/devsim/log_config.json"

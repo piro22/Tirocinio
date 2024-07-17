@@ -1,0 +1,21 @@
+"""
+@file
+@ingroup gui_wdglib
+@copyright ESO - European Southern Observatory
+
+@defgroup gui_wdglib Widget Library
+@ingroup gui
+@brief FCF Widget Library
+"""
+from wtools.module import declare_qt5cshlib
+
+
+
+declare_qt5cshlib(target='fcsGuiWdglib', use='QT5CORE QT5GUI QT5WIDGETS QT5PRINTSUPPORT \
+                                        libzmq azmq libczmq log4cplus BOOST  hiredis cfitsio \
+                                        log4cplus xerces-c cii.mal-common cii.mal\
+                                        ifw_sia cpp-netlib-uri\
+                                        fcf.gui.wdglib \
+                                        fcs.devices\
+                                        devmgr.fcfif-cxx \
+                                        rad.cpp.utils')

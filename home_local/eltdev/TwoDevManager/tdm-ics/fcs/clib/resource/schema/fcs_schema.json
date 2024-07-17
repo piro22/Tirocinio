@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "title": "FCS custom schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+       "id": {
+          "type": "string",
+          "description": "Device identifier."
+        },
+        "param": {
+          "$ref": "#/definitions/param"
+        } 
+    }
+  },  
+  "definitions": {
+    "param": {
+      "type": "object",
+      "properties": {
+        "shutter": {
+          "$ref": "shutter_schema.json#/definitions/shutter"
+        },
+        "actuator": {
+          "$ref": "actuator_schema.json#/definitions/actuator"
+        },
+        "lamp": {
+          "$ref": "lamp_schema.json#/definitions/lamp"
+        },
+        "motor": {
+          "$ref": "motor_schema.json#/definitions/motor"
+        },
+        "drot": {
+          "$ref": "drot_schema.json#/definitions/drot"
+        },
+        "adc": {
+          "$ref": "adc_schema.json#/definitions/adc"
+        },
+        "piezo": {
+          "$ref": "piezo_schema.json#/definitions/piezo"
+        },
+        "mos": {
+          "$ref": "mos_schema.json#/definitions/mos"
+        }
+      },
+      "oneOf": [
+ 		 { "required":
+    		[ "shutter" ] },
+    	         { "required":
+    		[ "actuator" ] },
+ 		 { "required":
+   		    [ "lamp" ] },
+   		 { "required":
+   		    [ "motor" ] },
+   		 { "required":
+   		    [ "drot" ] },
+   		 { "required":
+   		    [ "adc" ] },
+   		 { "required":
+   		    [ "piezo" ] },
+                 { "required":
+                    [ "mos" ] }
+		] 
+    }
+  }
+}

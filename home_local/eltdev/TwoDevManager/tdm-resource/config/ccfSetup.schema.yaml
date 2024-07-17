@@ -1,0 +1,20 @@
+!cfg.include schema/ccf/common/setup.schema.yaml:
+
+!cfg.typedef Pipeline1TypeDef(PipelineSetupTypeDef):
+  !cfg.required proc1_recipe1:              !cfg.type:RecipeSetupTypeDef
+  !cfg.required proc1_recipe2:              !cfg.type:RecipeSetupTypeDef
+  !cfg.required proc1_recipe3:              !cfg.type:RecipeSetupTypeDef
+  !cfg.required ddt_pub:                    !cfg.type:DdtPublisherTypeDef
+  !cfg.required fits_pub:                   !cfg.type:FitsPublisherTypeDef
+
+!cfg.typedef Pipeline2TypeDef(PipelineSetupTypeDef):
+  !cfg.required proc2_recipe1:              !cfg.type:RecipeSetupTypeDef
+  !cfg.required proc2_recipe2:              !cfg.type:RecipeSetupTypeDef
+  !cfg.required test_pub21:                 !cfg.type:PublisherSetupTypeDef
+  !cfg.required test_pub22:                 !cfg.type:PublisherSetupTypeDef
+
+!cfg.typedef DcsEx:
+  !cfg.required expo:                       !cfg.type:ExposureTypeDef
+  !cfg.required sim:                        !cfg.type:SimulationTypeDef
+  !cfg.required pipeline1:                  !cfg.type:Pipeline1TypeDef
+  !cfg.required pipeline2:                  !cfg.type:Pipeline2TypeDef

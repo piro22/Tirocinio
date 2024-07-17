@@ -1,0 +1,4 @@
+
+from wtools.module import declare_pypackage
+declare_pypackage(target='tdm')
+

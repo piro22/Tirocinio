@@ -1,0 +1,57 @@
+{
+    "obId": 0,
+    "itemType": "OB",
+    "name": "obex 1",
+    "executionTime": 0,
+    "runId": "string",
+    "instrument": "TWODEVMANAGER",
+    "ipVersion": "string",
+    "obsDescription": {
+        "name": "Setup first FCS",
+        "userComments": "Open first Fcs with initialized param",
+        "instrumentComments": "AA"
+    },
+    "constraints": {
+        "name": "string",
+        "seeing": 0,
+        "airmass": 0,
+        "moonDistance": 0,
+        "waterVapour": 0,
+        "atm": "string",
+        "fli": 0,
+        "strehlRatio": 0,
+        "skyTransparency": "string",
+        "twilight": 0
+    },
+    "target": {
+        "name": "string",
+        "ra": "string",
+        "dec": "string",
+        "coordinateSystem": "ICRS",
+        "comment": "string"
+    },
+    "templates": [
+        {
+            "templateName": "tdmseq.tdm_fcs2_base_param",
+            "type": "string",
+            "parameters": [
+               {
+                   "name": "INS.LAMP1.INTPOWER",
+                   "type": "integer",
+                   "value": 66
+               },
+               {
+                   "name": "INS.LAMP1.ON",
+                   "type": "string",
+                   "value": "true"
+               }
+           ]
+        }
+    ],
+    "pi": {
+        "firstName": "string",
+        "lastName": "string",
+        "email": "user@example.com"
+    }
+}
+

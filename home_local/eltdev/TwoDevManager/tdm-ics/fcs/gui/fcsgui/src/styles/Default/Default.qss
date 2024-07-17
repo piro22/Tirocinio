@@ -1,0 +1,86 @@
+QPushButton#stopButton
+{
+  color: white;
+  background-color: darkRed;
+}
+
+/* Dynamic style for disabling the device widget elements */
+QComboBox[disabled=true]
+{
+  color: gray;
+  background: white;
+}
+
+QPushButton[disabled=true]
+{
+  color: gray;
+  background: white;
+}
+
+
+QSpinBox[disabled=true]
+{
+  color: gray;
+  background: white;
+}
+
+QDoubleSpinBox[disabled=true]
+{
+  color: gray;
+  background: white;
+}
+
+QLabel[disabled=true]
+{
+  color: gray;
+  background: white;
+}
+
+/* Dynamic style for simulation and local buttons */
+QPushButton[simled=true]
+{
+  color: white;
+  background-color: orange;
+}
+
+QPushButton[errled=true]
+{
+  color: white;
+  background-color: darkRed;
+}
+
+QPushButton[localled=true]
+{
+  color: black;
+  background-color: yellow;
+}
+
+/* Enable hover over setup button */
+QPushButton::hover
+{
+    border: 2px solid darkRed;
+    border-radius: 2px;
+
+}
+
+/* Dynamic style for state and substate */
+QLabel[undefined=true]
+{
+  color: white;
+  background-color: darkRed;
+  border: 1px;
+}
+
+QLabel[notoperational=true]
+{
+  color: white;
+  background-color: rgb(255, 153, 51);
+  border: 1px;
+}
+
+QLabel[operational=true]
+{
+  color: white;
+  background-color: black;
+  border: 1px;
+}

@@ -1,0 +1,72 @@
+{
+  "obId": 0,
+  "itemType": "OB",
+  "name": "tmp_bias_dyn",
+  "executionTime": 0,
+  "runId": "string",
+  "instrument": "TwoDevManager",
+  "ipVersion": "string",
+  "obsDescription": {
+    "name": "tmp_bias_dyn",
+    "userComments": "CalOb Template",
+    "instrumentComments": "CalOb Template"
+  },
+  "templates": [
+    {
+      "templateName": "tdmseq.tdm_mos_cal_bias",
+      "type": "string",
+      "parameters": [
+        {
+          "name": "TPL.NAME",
+          "type": "string",
+          "value": "tdm_mos_cal_bias"
+        },
+        {
+          "name": "SEQ.NEXPO",
+          "type": "integer",
+          "value": 20
+        },
+        {
+          "name": "SEQ.CCD",
+          "type": "string",
+          "value": "<% clb.x.tdm_camera(h) %>"
+        },
+        {
+          "name": "DET.READ.CLKIND",
+          "type": "string",
+          "value": "<% clb.tbl['DET.MODE'][(h.get('DET.READ.CLOCK'), h.get('DET.WIN1.BINX'), h.get('DET.WIN1.BINY'))] %>"
+        },
+        {
+          "name": "DET.WIN1.STRX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRX'] %>"
+        },
+        {
+          "name": "DET.WIN1.STRY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.STRY'] %>"
+        },
+        {
+          "name": "DET.WIN1.NX",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NX'] * h.get('DET.WIN1.BINX') %>"
+        },
+        {
+          "name": "DET.WIN1.NY",
+          "type": "string",
+          "value": "<% h['DET.WIN1.NY'] * h.get('DET.WIN1.BINY') %>"
+        },
+        {
+          "name": "DET.WIN1.ST",
+          "type": "string",
+          "value": "<% clb.tbl['DET.WIN'][h.get('DET.WIN1.NX')] %>"
+        },
+        {
+          "name": "INS1.FOCF.SETUP",
+          "type": "string",
+          "value": "<% clb.x.tdm_mos(h, clb) %>"
+        }
+      ]
+    }
+  ]
+}

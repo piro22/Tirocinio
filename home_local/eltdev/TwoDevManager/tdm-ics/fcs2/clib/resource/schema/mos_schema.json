@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+      "mos": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["MOVE" ],
+          "description": "Mos action."
+        },
+        "tip": {
+          "type": "number",
+          "description": "volts."
+        },
+        "tilt": {
+          "type": "number",
+          "description": "olts."
+        },
+        "piston": {
+          "type": "number",
+          "description": "volts."
+        }
+      },
+      "required": ["action"]
+    }
+  }
+}

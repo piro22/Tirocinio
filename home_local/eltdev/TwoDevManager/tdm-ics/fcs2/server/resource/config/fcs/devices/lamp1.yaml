@@ -1,0 +1,13 @@
+!cfg.include config/fcf/devmgr/definitions/lamp.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+lamp1: !cfg.type:Lamp
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN.Lamp1                           # OPCUA attribute prefix
+  simulated: true
+  dev_endpoint: opc.tcp://134.171.59.98:4840
+  sim_endpoint: opc.tcp://127.0.0.1:7577      # Simulation endpoint of OPCUA server
+  fits_prefix: "LAMP1"
+  ctrl_config:
+    low_fault:        false                     # If T, signal is active low
+

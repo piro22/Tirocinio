@@ -1,0 +1,13 @@
+{
+    "name": "TwoDevManager.calob",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "8eac96d7e1926e0010be1048fa2385f7",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

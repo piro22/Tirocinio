@@ -1,0 +1,3 @@
+cfg:
+    oldb_uri_prefix: cii.oldb:/elt/tdm/dpm
+    log_properties: config/daq/dpm-log.properties

@@ -1,0 +1,48 @@
+
+InfoDate:             info.sDate
+InfoDescription:      info.sDescription
+InfoName:             info.sName
+InfoPlatform:         info.sPlatform
+InfoSynopsis: 	      info.sSynopsis
+InfoVersionMajor:     info.nVersionMajor
+InfoVersionMinor:     info.nVersionMinor
+
+CtrlExecute:          ctrl.bExecute
+CtrlIntensity:        ctrl.lrIntensity(Double)
+CtrlCommand:          ctrl.nCommand
+
+CfgDebug:             cfg.bDebug
+CfgLogExtTime:        cfg.bLogExtTime
+CfgLog:               cfg.bLog
+CfgName:              cfg.sName
+CfgTimeout:           cfg.nTimeout(UInt32)
+
+StatActionDesc:       stat.sActionDesc
+StatCycleCounter:     stat.nCycleCounter(UInt32)
+StatErrorCode:        stat.nErrorCode
+StatErrorText:        stat.sErrorText
+StatEventDesc:        stat.sEventDesc
+StatHwStatus:         stat.sHwStatus
+StatHwStatusNum:      stat.nHwStatus
+StatLastCommand:      stat.sLastCommand
+StatLastCommandNum:   stat.nLastCommand
+StatLibVersion:       stat.sLibVersion
+StatLocal:            stat.bLocal
+StatRpcErrorCode:     stat.nRpcErrorCode
+StatRpcErrorText:     stat.sRpcErrorText
+StatState:            stat.sState
+StatStateNum:         stat.nState
+StatStatus:           stat.sStatus
+StatStatusNum:        stat.nStatus
+StatSubstate:         stat.sSubstate
+StatSubstateNum:      stat.nSubstate
+StatNCounter:         stat.nCounter(UInt32)
+
+RpcDisable:           rpc.Disable(O:ReturnValue(Int16))
+RpcEnable:            rpc.Enable(O:ReturnValue(Int16))
+RpcExit:              rpc.Exit(O:ReturnValue(Int16))
+RpcInit:              rpc.Init(O:ReturnValue(Int16))
+RpcReset:             rpc.Reset(O:ReturnValue(Int16))
+RpcState:             rpc.State(O:StateStat(String))
+RpcStop:              rpc.Stop(O:ReturnValue(Int16))
+RpcPing:              rpc.Ping(O:ReturnValue(Int16))
