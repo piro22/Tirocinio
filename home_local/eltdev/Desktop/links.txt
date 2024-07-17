@@ -1,0 +1,22 @@
+Installazione ELT framework:
+https://www.eso.org/projects/elt/develop/ifw/ifw-doc/manuals/ifw/src/docs/installation.html
+
+ESO GitLab Wiki
+https://gitlab.eso.org/ecos/eltsw-docs/-/wikis/KnowledgeBase/CII
+
+
+
+
+
+DA GUARDARE
+/elt/ifw/resource/config/fcf/devsim/motor/
+
+/home_local/eltdev/prova/prv-ics/fcs/devsim/resource/config/fcs/devsim/
+
+
+PER FILE DI NOMAD 
+/var/nomad/alloc/
+
+
+PER Template da usare in OB
+/home_local/eltdev/INTROOT/lib/python3.9/site-packages/

@@ -1,0 +1,21 @@
+usare journalctl -f e in un altro cmd usare:
+
+nomad status -> per vedere tutti i job attivi in nomad
+nomad status (id job) -> vedo lo stato di un job specifico es. fcs
+----> se in Allocations non c'è nulla vuol dire che il job non è stato neanche creato
+nomad stop -purge (id job) elimina il job da nomad
+
+nomad run job.nomad -> dal path /home-local/prova/prv-resources/nomad/ fa partire qualsiasi job senza usare il sequencer
+----> per esempio nomad run fcs2.nomad
+
+Quando leggo local/job.yaml nei file di config si fa riferimento ad un percorso fittizio /var/nomad/alloc/(id lungo del job)/...
+Andando poi in fcs/local/... si trovano i file di configuraizone job.yaml
+
+I file job.yaml nel percorso fcs/local/... vengono creati a partire dai due file job.yaml.tpl e job.nomad all'interno
+del percorso /home-local/prova/prv-resources/nomad/
+
+
+
+--------IMPORTANTE---------
+/elt/ifw/resource/config/fcf/devmgr/server/
+Sistemare i file cfg.yaml all'interno di questo percorso, in genere non vanno toccati

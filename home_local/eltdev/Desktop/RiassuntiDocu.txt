@@ -1,0 +1,182 @@
+EMACS COPY ALT-W || CUT CTRL-W || PASTE CTRL-Y
+
+
+--------------------------------------------ELT ICS Core Component--------------------------------------------
+
+----------------------Data Interface Dictionary----------------------
+Il suo obiettivo è di definire i parametri, which are written in the data product meta data section.che sono scritti nei dati del product (sezione metadata)
+This is normally the FITS(Flexible Image Transportation System) keywords in the FITS data files.
+Il formato DID si basa su CII Configuration Service
+
+ESEMPIO:
+cfg.include schema/core/dit/did/did.schema.yaml:
+
+#===============================================================================
+header: !cfg.type:DidHeader
+  name: dictionary/dit/stddid/primary.did.yaml
+  scope: Generic
+  description: |
+    Dictionary defining the non-hierarchical keyword cards used in ESO FITS files.
+    DICB: Reviewed for compliance with ESO-044156/7.
+#===============================================================================
+
+#===============================================================================
+# Mandatory keywords:
+#===============================================================================
+SIMPLE: !cfg.type:DidBoolKey
+  comment: Standard FITS
+  description: |
+    SIMPLE must be equal to 'T' to conform to FITS.
+#-------------------------------------------------------------------------------
+BITPIX: !cfg.type:DidIntKey
+  comment: Nb of bits per pixel value
+  description: |
+    Number of bits used to store pixel values
+    See Definition of FITS -- IAUFWG 3.0 (July 2008)
+    The only valid values are:
+      8  character of unsigned binary integer
+      16  16-bit twos-complement binary integer
+      32  32-bit twos-complement binary integer
+     -32  IEEE single precision floating point
+     -64  IEEE double precision floating point
+#-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------ELT ICS Function Control Framework (FCF)--------------------------------------------
+----------------------Device Manager Configuration----------------------
+Si usa yaml: http://yaml.org/spec/
+
+ESEMPIO DI CONFIGURAZIONE SERVER:
+
+# server definition
+!cfg.include fcf/devmgr/definitions/server.yaml:
+
+server: !cfg.type:FcfServer
+    server_id       : 'fcs1'
+    req_endpoint    : "zpb.rr://127.0.0.1:12082/"
+    pub_endpoint    : "zpb.ps://127.0.0.1:12345/"
+    db_endpoint     : "127.0.0.1:6379"
+    db_timeout      : 2000
+    scxml           : "fcf/devmgr/server/sm.xml"
+    dictionaries    : ["dictionary/dit/stddid/primary.did.yaml", "dictionary/fcf/devmgr/server/fcf.did"]
+    log_properties  : "fcf/devmgr/server/log_properties.cfg"
+    fits_prefix     : "INS1"
+    oldb_prefix     : "ins8"
+    req_timeout     : 300000
+    devices         : [
+    {
+    name: 'shutter1',
+    type: Shutter,
+    cfgfile: "fcf/devmgr/devices/shutter1.yaml"
+    },
+    {
+    name: 'lamp1',
+    type: Lamp,
+    cfgfile: "fcf/devmgr/devices/lamp1.yaml"
+    },
+    {
+    name: 'actuator1',
+    type: Actuator,
+    cfgfile: "fcf/devmgr/devices/actuator1.yaml"
+    },
+    {
+    name: 'motor1',
+    type: Motor,
+    cfgfile: "fcf/devmgr/devices/motor1.yaml"
+    },
+    {
+    name: 'piezo1',
+    type: Piezo,
+    cfgfile: "fcf/devmgr/devices/piezo1.yaml"
+    },
+    {
+    name: 'sensor1',
+    type: Sensor,
+    cfgfile: "fcf/devmgr/devices/sensor1.yaml"
+    },
+    {
+    name: 'adc1',
+    type: Adc,
+    cfgfile: "fcf/devmgr/devices/adc1.yaml"
+    },
+    {
+    name: 'drot1',
+    type: Drot,
+    cfgfile: "fcf/devmgr/devices/drot1.yaml"
+    }
+    ]
+
+ogni device ha attributi e configurazioni diverse, per esempio lo shutter ha ctrl_config::low_open
+
+ESEMPIO DI SHUTTER CONFIGURATION
+
+!cfg.include fcf/devmgr/definitions/shutter.yaml:
+
+# Please note some parameters are inherited and therefore not defined here.
+shutter1: !cfg.type:Shutter
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN.Shutter1                        # OPCUA attribute prefix
+  simulated: true
+  dev_endpoint: opc.tcp://134.171.59.98:4
+  sim_endpoint: opc.tcp://127.0.0.1:7576            # Simulation address
+  fits_prefix: "SHUT1"
+  ctrl_config: !cfg.type:ShutterController
+     initial_state:  false                              # If T, initial state is open
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+----------------------Database----------------------
+Si usa OLDB e si apre scrivendo in console oldbGui
+La configurazione del server viene salvata nel db e si puo controllare
+Ogni device ha delle proprietà (keyes) proprie
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+----------------------Command Interface----------------------
+E' un modo per dare comandi ai device tramite serialization.
+I device deserializzano il messaggio e comunicano l'azione da svolgere al corrispondente PLCs tramite l'interfaccia con LCS.
+
+I comandi di Setup concorrenti vengono svolti da thread diversi che vengono generati ogni volta che viene mandato un comando di Setup
+
+Tramite terminale posso ricevere informazioni sui device attivi, prima serve aprire seqtool gui, poi fare geturi fcs-req e successivamente fcfClient [geturi fcs-req] DevStatus "[vuoto/dispositivoSpecifico]"
+
+Comando per ignorare un device fcfClient [geturi fcs-req] Ignore/StopIgn "[deviceSpecifico]"
+
+Ci sono poi comandi per ottenere i log generici o specifici dei dispositivi che si vannno a tracciare
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+----------------------PLC Libraries----------------------
+BOH QUI NON SI CAPISCE UN CAZZO
