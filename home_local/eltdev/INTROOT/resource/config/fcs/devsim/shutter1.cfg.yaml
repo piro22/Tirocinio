@@ -1,0 +1,9 @@
+# @copyright ESO - European Southern Observatory
+# @brief Configuration file for the Shutter1 device.
+
+!cfg.include config/fcf/devsim/shutter/shutter.schema.yaml:
+
+shutter: !cfg.type:DevSimShutterCfg
+  server_name:              "Shutter1"
+  initial_state:            false
+  log_cfg:                  "config/fcs/devsim/log_config.json"

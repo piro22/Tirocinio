@@ -1,0 +1,35 @@
+{
+    "name": "fors1.fcs.devices",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "0270ea372f2df420fb6e64ca0b13aa69",
+    "dependencies": [
+        "rad.cpp.core",
+        "rad.cpp.services",
+        "rad.cpp.sm",
+        "rad.scxml4cpp.engine",
+        "rad.scxml4cpp.parser",
+        "cii.mal-common.cpp.mal-common",
+        "cii.mal.cpp.mal",
+        "ifw-core.utils.system",
+        "ifw-core.utils.conversion",
+        "ifw-core.utils.string",
+        "ifw-core.utils.bat",
+        "ifw-core.dit.did.didlib",
+        "ifw-fcf.devmgr.common"
+    ],
+    "attributes": {
+        "INCLUDES": [
+            "/home_local/eltdev/INTROOT/include"
+        ],
+        "LIB": [
+            "fcsDevices"
+        ],
+        "STLIB": [],
+        "LIBPATH": [
+            "/home_local/eltdev/INTROOT/lib64"
+        ],
+        "STLIBPATH": []
+    }
+}

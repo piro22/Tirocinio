@@ -1,0 +1,13 @@
+{
+    "name": "fors1.seq.tpl",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "3ce4f2e655cd3d6b3c3975afb5c69141",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

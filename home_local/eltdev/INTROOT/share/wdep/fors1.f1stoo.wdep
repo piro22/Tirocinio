@@ -1,0 +1,13 @@
+{
+    "name": "fors1.f1stoo",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "21d7c5d673a8c43e30269e0e545f9ffa",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+!cfg.include config/fcf/devsim/iodev/iodev.schema.yaml:
+
+iodev: !cfg.type:DevSimIoDevCfg
+  server_name:              "Iodev2"
+  auto_enter_op:            true
+  sim_init_time:            2
+  update_frequency:         5
+  log_cfg:                 "config/fcs/devsim/log_config.json"
+
+  # Digital input channels:
+  # Pars: period high/low [s].
+  di1_function:            "di_square_wave(10.0, 1.0)"
+  di2_function:            "di_square_wave(5.0, 5)"
+  di3_function:            "di_square_wave(1.0, 2.0)"
+  di4_value:               true
+
+  # Analog input channels:
+  # Pars: Period [s], scale, offset.
+  ai1_function:            "ai_sine_wave(10.0, 1.0, 0)"
+  ai2_function:            "ai_sine_wave(1.0, 2.0, 5)"
+  ai3_function:            "ai_sine_wave(20.0, 15, 0)"
+  ai4_value:               1234
+
+  # Integer Input channels:
+  ii1_function:            "ii_sine_wave(30, 10, 0)"
+  ii2_function:            "ii_sine_wave(3, 12, 11)"
+  ii3_value:               12345

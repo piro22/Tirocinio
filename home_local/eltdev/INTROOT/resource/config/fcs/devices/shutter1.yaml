@@ -1,0 +1,13 @@
+!cfg.include config/fcf/devmgr/definitions/shutter.yaml:
+
+shutter1: !cfg.type:Shutter
+  identifier: PLC1                             # OPCUA Object Identifier
+  prefix: MAIN.Shutter1                        # OPCUA attribute prefix
+  simulated: true
+  dev_endpoint: opc.tcp://134.171.59.98:4840
+  sim_endpoint: opc.tcp://127.0.0.1:7576       # Simulation endpoint of OPCUA server
+  fits_prefix: "SHUT1"
+  ctrl_config:
+    initial_state:  false
+
+

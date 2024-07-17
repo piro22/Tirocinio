@@ -1,0 +1,13 @@
+{
+    "name": "prova.seq.prvseq",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "f1b7e9b58ca56fe9fbb8c0c1e2bba414",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

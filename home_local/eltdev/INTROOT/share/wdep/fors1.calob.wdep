@@ -1,0 +1,13 @@
+{
+    "name": "fors1.calob",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "c3bc71216f0f6154f318ca7780561e07",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

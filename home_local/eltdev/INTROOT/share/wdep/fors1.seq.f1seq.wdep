@@ -1,0 +1,13 @@
+{
+    "name": "fors1.seq.f1seq",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "0763d641d07a75fa746fb9a6b16bbf74",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "TwoDevManager.seq.tdmseq",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "a9a400c8886f23186352aee7365224b0",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

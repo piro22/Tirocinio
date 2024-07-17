@@ -1,0 +1,28 @@
+{
+    "name": "prova.fcs.gui.wdglib",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "d1ebc5785a7ef9b1b047b57f72126ae6",
+    "dependencies": [
+        "cii.mal-common.cpp.mal-common",
+        "cii.mal.cpp.mal",
+        "ifw-fcf.gui.wdglib",
+        "prova.fcs.devices",
+        "ifw-fcf.devmgr.fcfif-cxx",
+        "rad.cpp.utils"
+    ],
+    "attributes": {
+        "INCLUDES": [
+            "/home_local/eltdev/INTROOT/include"
+        ],
+        "LIB": [
+            "fcsGuiWdglib"
+        ],
+        "STLIB": [],
+        "LIBPATH": [
+            "/home_local/eltdev/INTROOT/lib64"
+        ],
+        "STLIBPATH": []
+    }
+}

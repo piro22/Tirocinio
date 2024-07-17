@@ -1,0 +1,27 @@
+# @copyright ESO - European Southern Observatory
+# @brief Configuration file for the Motor2 device.
+
+!cfg.include config/fcf/devsim/motor/motor.schema.yaml:
+
+motor: !cfg.type:DevSimMotorCfg
+  server_name:              Motor2
+  sim_delay:                1.0
+  sim_acceleration:         1.0
+  log_cfg:                  "config/fcs/devsim/log_config.json"
+
+  velocity_error:           0.0123456789
+  sim_pos_error:            0.0123456789
+  sim_tolerance:            1.0
+  simulated_start_pos:      12.9876
+  scale_factor:             0.087890625
+
+  min_position:             11.234
+  max_position:             221.0
+
+  timeout_init:             90
+  timeout_move:             90
+  timeout_switch:           300
+
+  disable_after_move:       true
+
+  default_velocity:         2.123

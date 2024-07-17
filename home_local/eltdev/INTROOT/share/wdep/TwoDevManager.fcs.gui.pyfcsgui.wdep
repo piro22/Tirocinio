@@ -1,0 +1,13 @@
+{
+    "name": "TwoDevManager.fcs.gui.pyfcsgui",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "c82a1f3c922589cb49903ea9f8011a0b",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

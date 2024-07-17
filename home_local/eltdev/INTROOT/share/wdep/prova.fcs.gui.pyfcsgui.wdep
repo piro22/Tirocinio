@@ -1,0 +1,13 @@
+{
+    "name": "prova.fcs.gui.pyfcsgui",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "d1f9678dd06d52aff1b0759395762b59",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "prova.prvstoo",
+    "version": "2.1.0-alpha",
+    "arch": "x86_64",
+    "os": "linux",
+    "signature": "7b99c17c98c419ccf4afebfb51fe431a",
+    "dependencies": [],
+    "attributes": {
+        "PYTHONPATH": [
+            "/home_local/eltdev/INTROOT/lib/python3.9/site-packages"
+        ]
+    }
+}
