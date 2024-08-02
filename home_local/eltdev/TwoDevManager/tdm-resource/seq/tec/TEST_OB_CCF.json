@@ -1,0 +1,57 @@
+{
+    "obId": 0,
+    "itemType": "OB",
+    "name": "obex 1",
+    "executionTime": 0,
+    "runId": "string",
+    "instrument": "TWODEVMANAGER",
+    "ipVersion": "string",
+    "obsDescription": {
+        "name": "My OB(A)",
+        "userComments": "A",
+        "instrumentComments": "AA"
+    },
+    "constraints": {
+        "name": "string",
+        "seeing": 0,
+        "airmass": 0,
+        "moonDistance": 0,
+        "waterVapour": 0,
+        "atm": "string",
+        "fli": 0,
+        "strehlRatio": 0,
+        "skyTransparency": "string",
+        "twilight": 0
+    },
+    "target": {
+        "name": "string",
+        "ra": "string",
+        "dec": "string",
+        "coordinateSystem": "ICRS",
+        "comment": "string"
+    },
+    "templates": [
+        {
+            "templateName": "tdmseq.tdm_CCF_only_2PARAM",
+            "type": "string",
+            "parameters": [
+               {
+                   "name": "DET.EXP.TIME",
+                   "type": "integer",
+                   "value": 12
+               },
+               {
+				   "name": "BIN.X",
+				   "type": "integer",
+				   "value": 2
+		       }   
+           ]
+        }
+    ],
+    "pi": {
+        "firstName": "string",
+        "lastName": "string",
+        "email": "user@example.com"
+    }
+}
+

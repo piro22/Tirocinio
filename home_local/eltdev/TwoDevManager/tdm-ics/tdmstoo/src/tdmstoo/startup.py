@@ -138,6 +138,8 @@ class Tpl(Sequence):
                     name="stop secondary FCS"),
             ait(partial(tpl.stop_job, nomad_client=my_nomad, job_id="tdmccf"),
                     name="stop CCF"),
+            ait(partial(tpl.stop_job, nomad_client=my_nomad, job_id="tdmccf2"),
+                    name="stop CCF2"),
             ait(partial(tpl.stop_job, nomad_client=my_nomad, job_id="dpm"),
                     name="stop DPM"),
             ait(partial(tpl.stop_job, nomad_client=my_nomad, job_id="ocm"),
@@ -174,8 +176,9 @@ class Tpl(Sequence):
                         name="stop CCS TELIF simulator"),
                         name="Stop CCS TELIF Simulators")
 
-        broker = ait(partial(tpl.stop_job, nomad_client=my_nomad,
-                 job_id="tdmbroker"), name="stop DDT Broker")
+        broker = Sequence.create(ait(partial(tpl.stop_job, nomad_client=my_nomad, job_id="tdmbroker"), name="stop DDT Broker 1"), 
+        ait(partial(tpl.stop_job, nomad_client=my_nomad, job_id="tdmbroker2"), name="stop DDT Broker 2"), 
+        name="stop Brokers")
 
         if hlcc_available():
             return Sequence.create(systems, devsim, subsim, ccsif, broker, name="System Stop")
@@ -189,8 +192,9 @@ class Tpl(Sequence):
             tpl = Tpl()
         my_nomad = tpl.nomad
 
-        broker = ait(partial(tpl.start_job, nomad_client=my_nomad,
-                job_file="tdmbroker.nomad"), name="start DDT broker")
+        broker = Sequence.create(ait(partial(tpl.start_job, nomad_client=my_nomad, job_file="tdmbroker.nomad"), name="start DDT broker 1"), 
+        ait(partial(tpl.start_job, nomad_client=my_nomad, job_file="tdmbroker2.nomad"), name="start DDT broker 2"), 
+        name="start Brokers")
 
         devsim = Sequence.create(
                 ait(partial(tpl.start_job, nomad_client=my_nomad, job_file="lamp1sim.nomad"),
@@ -229,9 +233,10 @@ class Tpl(Sequence):
                             name="start FCS"),
                 ait(partial(tpl.start_job, nomad_client=my_nomad, job_file="fcs2.nomad"),
                             name="start secondary FCS"),
-                ait(partial(tpl.start_job, nomad_client=my_nomad,
-                            job_file="tdmccf.nomad"),
+                ait(partial(tpl.start_job, nomad_client=my_nomad,job_file="tdmccf.nomad"),
                             name="start CCF"),
+                ait(partial(tpl.start_job, nomad_client=my_nomad,job_file="tdmccf2.nomad"),
+                            name="start CCF2"),
                 ait(partial(tpl.start_job, nomad_client=my_nomad, job_file="ocm.nomad"),
                             name="start OCM"),
                 ait(partial(tpl.start_job, nomad_client=my_nomad, job_file="syssup.nomad"),
